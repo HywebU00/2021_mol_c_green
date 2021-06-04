@@ -1,0 +1,106 @@
+ /* sitemap */
+ .sitemap {
+     margin: 0px auto 1em;
+     @extend %clearfix;
+     p {
+         font-size: .813em;
+         kbd {
+             border: 1px solid #AAA;
+             background: transparent;
+             color: $color-word;
+             padding: 0 .3em;
+             margin: 0 .2em .1em;
+             kbd {
+                 border: none;
+             }
+         }
+     }
+     .accesskeyDefine {
+         padding: 1em 3em;
+         background: #fff;
+         border-radius: 5px;
+         li {
+             margin-bottom: 10px;
+         }
+     }
+ }
+ // $sitemapLength : 4;
+ // $sitemapWidth:100%/ $sitemapLength;
+ $sitemapWidth:100%;
+ .cascading {
+     border-top: 1px solid #CCC;
+     // @include gutter;
+     box-sizing: border-box;
+     ul {
+         @include li-reset;
+     }
+     li {
+         line-height: 1.5;
+         width: $sitemapWidth;
+         display: inline-block;
+         vertical-align: top;
+         margin: 0 -5px 1em 0; // margin-right:改為負5;
+         box-sizing: border-box;
+         padding: 0px .5em;
+         a {
+             margin: .2em 0;
+             color: #222;
+             padding: .5em;
+             display: block;
+             font-size: 1.25em;
+             font-weight: bold;
+             border-bottom: 3px solid $primaryColor;
+             &:hover,
+             &:focus {
+                 color: $primaryColor !important;
+                 text-decoration: none;
+             }
+         }
+         ul {
+             padding: 0;
+             margin: .5em 0;
+             display: flex;
+             flex-wrap: wrap;
+             li {
+                 flex: none;
+                 flex-basis: 31%;
+                 margin: 0 1.16% 20px;
+                 padding: 0;
+                 @include screen('mobile') {
+                     flex-basis: 48%;
+                     margin: 0 1% 5px;
+                 }
+                 @media(max-width: 480px) {
+                     flex-basis: 100%;
+                     margin: 0 0 5px;
+                 }
+                 a {
+                     display: block;
+                     font-size: 1em;
+                     padding: 10px;
+                     border-bottom: none;
+                     border-radius: 5px;
+                     background-color: transparent;
+                     font-weight: normal;
+                     background-color: #ddd;
+                 }
+                 ul {
+                     padding: 0;
+                     margin: 1em;
+                     display: block;
+                     li {
+                         width: 100%;
+                         margin: 0 0 5px;
+                         a {
+                             display: block;
+                             background-color: transparent;
+                             border-radius: 0;
+                             border-bottom: 1px dashed #ccc;
+                             padding: .2em 0;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }

@@ -1,0 +1,200 @@
+.tabSet {
+    max-width: 100%;
+    margin: 1em auto;
+    overflow: hidden;
+    @extend %clearfix;
+    @include screen('mobile') {
+        width: auto;
+        height: auto !important;
+    }
+}
+.tabs {
+    position: relative;
+    &>.tabItem {
+        &.active {
+            background-color: $primaryColor;
+            color: #FFF;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+        }
+        float: left;
+        margin: 0;
+        padding: 0;
+        font-size:1em;
+        line-height: 1;
+        display: block;
+        padding: 16px 0 14px;
+        text-align: center;
+        background-color: #aaa;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: none;
+        border-radius:0;
+        @include text-overflow;
+        box-sizing: border-box;
+        border:none;
+        &:hover, &:focus {
+            background: $primaryColor;
+        }
+        @include screen('mobile') {
+            float: none;
+            width: 100% !important;
+            border-bottom: 1px solid #888;
+            &.active {
+                border-color: #bbb;
+            }
+        }
+    }
+    &.newstab {
+        &>.tabItem {
+            background-color: transparent;
+            color: $color-word;
+            padding: 16px 0 30px;
+            font-size: 1.313em;
+            letter-spacing: 0.05em;
+
+            @include screen('mobile'){
+                padding: 16px 0 ;
+            }
+            &.active {
+                color: $primaryColor;
+                background-image: url('../images/newstab_activebg.png');
+                background-position: center bottom;
+                background-repeat: no-repeat;
+                @include screen('mobile'){
+                    background-image:none;
+                     padding: 16px 0 ;
+                     background-color:$primaryColor;
+                     color:#fff;
+                }
+            }
+            &:hover, &:focus {
+                background-color: transparent;
+                @include screen('mobile'){
+                     background-color:$primaryColor;
+                }
+            }
+        }
+    }
+    &.frequentlyQA_tab {
+        &>.tabItem {
+            background-color: transparent;
+            color: $color-word;
+            padding: 20px 0px 16px;
+            font-size: 1.313em;
+            letter-spacing: 0.05em;
+
+            &.active {
+                background-color: #3597c1;
+                border-radius: 5px 5px 0 0;
+                color: #fff;
+            }
+        }
+    }
+}
+//多組 可設定差異
+.example-2 {
+    .tabItem:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active {
+        background: $secondaryColor;
+    }
+}
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+.tabContent {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 30px 20px;
+    display: none;
+    @include screen('mobile') {
+        position: static;
+    }
+    ul {
+       margin:0;
+       padding:0;
+    }
+    li {
+        margin: 0 0 1.3em 0;
+        padding: 0 0 5px;
+        line-height: 1.7em;
+        border-bottom: 1px #CCC dashed;
+        @include screen('mobile') {
+            @include text-overflow();
+        }
+        a {
+            @include aSetting_nocolor;
+        }
+        time {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            color: #666;
+        }
+    }
+}
+.newstab {
+    .tabContent {
+        ul {
+            margin: 0 0 30px;
+            list-style: none;
+            li {
+                padding: 5px 0;
+                margin: 0 0 1em 0;
+                position: relative;
+                border-bottom: 1px solid #fff;
+                a {
+                    @include text-overflow();
+                    display: block;
+                    padding: 0 150px 0 0;
+                    color: #000;
+                    &:hover{
+                        color:$aHover;
+                    }
+                }
+                time {
+                    position: absolute;
+                    width: 100px;
+                    right: 0;
+                    top: 5px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+.frequentlyQA_tab {
+   
+    .tabContent {
+        background-color: rgb(53, 151, 193);
+        background: linear-gradient(135deg, rgba(53, 151, 193, 1) 27%, rgba(0, 78, 162, 1) 100%);
+        z-index: 1;
+        // @include screen('tablet'){
+        //     position: static;
+        // }
+        &:before {
+            content: '';
+            background-image: url('../images/QA_tabContent_bg.png');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            @include screen('mobile'){
+                display: none;
+            }
+        }
+    }
+}
