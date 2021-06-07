@@ -646,7 +646,7 @@ $(function() {
     }
 
     // cptab
-    function tabSet() {
+    function tabSet3() {
         $('.cptab').each(function() {
             var _tab = $(this),
                 _tabItem = _tab.find('.tabItem'),
