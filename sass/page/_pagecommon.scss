@@ -723,6 +723,8 @@
             cursor: pointer;
             font-weight: bolder;
             color: #444;
+            box-sizing:border-box;
+            margin:0;
             &:after {
                 content: "";
                 border: 2px solid #333;
