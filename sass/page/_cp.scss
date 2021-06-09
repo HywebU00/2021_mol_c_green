@@ -6,6 +6,7 @@ h1.title, h2.title {
 }
 // .tt{ color: #222; }
 .cp {
+    
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -131,104 +132,7 @@ h1.title, h2.title {
                 }
             }
         }
-        $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other, rar;
-        @each $fileType in $fileType {
-            span.file_#{$fileType} {
-                a {
-                    color: #fff;
-                    font-weight: bold;
-                    padding: 1em .8em;
-                    border-radius: 3px;
-                    min-width: 50px;
-                    text-align: center;
-                    &:hover, &:focus {
-                        color: #fff;
-                    }
-                }
-            }
-        }
-        span {
-            &.file_doc, &.file_docx, &.file_odt {
-                a {
-                    background: #275cb7;
-                    &:hover, &:focus {
-                        background: darken(#275cb7, 5%);
-                    }
-                }
-            }
-            &.file_xls, &.file_xlsx, &.file_csv, &.file_ods {
-                a {
-                    background: #387947;
-                    &:hover, &:focus {
-                        background: darken(#387947, 5%);
-                    }
-                }
-            }
-            &.file_ppt, &.file_pptx, &.file_odp, &.file_pdf {
-                a {
-                    background: #c55a3b;
-                    &:hover, &:focus {
-                        background: darken(#c55a3b, 5%);
-                    }
-                }
-            }
-            &.file_pdf {
-                a {
-                    background: #c00;
-                    &:hover, &:focus {
-                        background: darken(#c00, 5%);
-                    }
-                }
-            }
-            &.file_zip, &.file_rar {
-                a {
-                    background: #eb712e;
-                    &:hover, &:focus {
-                        background: darken(#eb712e, 5%);
-                    }
-                }
-            }
-            &.file_txt, &.file_other {
-                a {
-                    background: #555;
-                    &:hover, &:focus {
-                        background: darken(#555, 5%);
-                    }
-                }
-            }
-            &.file_mov {
-                a {
-                    background: #009999;
-                    &:hover, &:focus {
-                        background: darken(#009999, 5%);
-                    }
-                }
-            }
-            &.file_mp3, &.file_mp4 {
-                a {
-                    background: #088ecc;
-                    &:hover, &:focus {
-                        background: darken(#088ecc, 5%);
-                    }
-                }
-            }
-            &.file_jpg {
-                a {
-                    background: #6c29a4;
-                    &:hover, &:focus {
-                        background: darken(#6c29a4, 5%);
-                    }
-                }
-            }
-            &.file_wmv {
-                a {
-                    background: #430a1f;
-                    &:hover, &:focus {
-                        background: darken(#430a1f, 5%);
-                    }
-                }
-            }
-        }
+        
     }
 }
 // 外部連結

@@ -1,64 +1,142 @@
 // scrollTop
 .scrollToTop {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
-  text-align: center;
-  color: #FFF;
-  line-height: 50px;
-  text-decoration: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  transition: .3s ease-out;
-  display: none;
-  z-index: 99999999;
-  text-indent: -999999px;
-  &:hover,&:focus{
-    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-    box-shadow:none;
-  }
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #FFF;
+    line-height: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .3s ease-out;
+    display: none;
+    z-index: 99999999;
+    text-indent: -999999px;
+    &:hover, &:focus {
+        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
+        box-shadow: none;
+    }
 }
-
 //元素對齊 align
-.align-left{
-  text-align: left;
+.align-left {
+    text-align: left;
 }
-.align-center{
-  text-align: center;
+.align-center {
+    text-align: center;
 }
-.align-right{
-  text-align: right;
+.align-right {
+    text-align: right;
 }
-.align-top{
-  vertical-align: top;
+.align-top {
+    vertical-align: top;
 }
-.align-middle{
-  vertical-align: middle;
+.align-middle {
+    vertical-align: middle;
 }
-.align-bottom{
-  vertical-align: bottom;
+.align-bottom {
+    vertical-align: bottom;
 }
-.align-baseline{
-  vertical-align: baseline;
+.align-baseline {
+    vertical-align: baseline;
 }
-
-// $fileTypePic: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other ;
-
-// @each $fileTypePic in $fileTypePic {
-//   a.file_#{$fileTypePic} {
-//     background: url(../images/basic/icon_#{$fileTypePic}.png) no-repeat center center;
-//     width: 26px;
-//     height: 28px;   
-//     font-size: 0;
-//     overflow: hidden;
-//     vertical-align: middle;
-//     background-size: contain;
-//   }
-// }
-
-
-
-
-
+$fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other, rar;
+@each $fileType in $fileType {
+    span.file_#{$fileType} {
+        a {
+            color: #fff;
+            font-weight: bold;
+            padding: 1em .8em;
+            border-radius: 3px;
+            min-width: 50px;
+            text-align: center;
+            &:hover, &:focus {
+                color: #fff;
+            }
+        }
+    }
+}
+span {
+    &.file_doc, &.file_docx, &.file_odt {
+        a {
+            background: #275cb7;
+            &:hover, &:focus {
+                background: darken(#275cb7, 5%);
+            }
+        }
+    }
+    &.file_xls, &.file_xlsx, &.file_csv, &.file_ods {
+        a {
+            background: #387947;
+            &:hover, &:focus {
+                background: darken(#387947, 5%);
+            }
+        }
+    }
+    &.file_ppt, &.file_pptx, &.file_odp, &.file_pdf {
+        a {
+            background: #c55a3b;
+            &:hover, &:focus {
+                background: darken(#c55a3b, 5%);
+            }
+        }
+    }
+    &.file_pdf {
+        a {
+            background: #c00;
+            &:hover, &:focus {
+                background: darken(#c00, 5%);
+            }
+        }
+    }
+    &.file_zip, &.file_rar {
+        a {
+            background: #eb712e;
+            &:hover, &:focus {
+                background: darken(#eb712e, 5%);
+            }
+        }
+    }
+    &.file_txt, &.file_other {
+        a {
+            background: #555;
+            &:hover, &:focus {
+                background: darken(#555, 5%);
+            }
+        }
+    }
+    &.file_mov {
+        a {
+            background: #009999;
+            &:hover, &:focus {
+                background: darken(#009999, 5%);
+            }
+        }
+    }
+    &.file_mp3, &.file_mp4 {
+        a {
+            background: #088ecc;
+            &:hover, &:focus {
+                background: darken(#088ecc, 5%);
+            }
+        }
+    }
+    &.file_jpg {
+        a {
+            background: #6c29a4;
+            &:hover, &:focus {
+                background: darken(#6c29a4, 5%);
+            }
+        }
+    }
+    &.file_wmv {
+        a {
+            background: #430a1f;
+            &:hover, &:focus {
+                background: darken(#430a1f, 5%);
+            }
+        }
+    }
+}

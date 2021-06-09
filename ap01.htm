@@ -12,6 +12,8 @@
     <![endif]-->
     <!-- wow -->
     <link rel="stylesheet" href="css/animate.css">
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -424,91 +426,65 @@
                             <li>節點</li>
                         </ul>
                     </div>
-                    <!-- h2節點 -->
-                    <h2 class="title">條件查詢</h2>
-                    <!-- function功能區塊 -->
-                    <!-- <div class="function">
-                        <ul>
-                            <li><a href="#">回上一頁</a></li>
-                            <li><a href="#">友善列印</a></li>
-                            <li><a href="#">轉寄友人</a></li>
+                    <h2 class="title">要套文章標題</h2>
+                    <!-- AP Start -->
+                    <section class="ap">
+                        <ul class="publish_info_top">
+                            <li>瀏覽人次：6923</li>
+                            <li>最後更新時間：2020-02-22</li>
                         </ul>
-                    </div> -->
-                    <!-- QP Start -->
-                    <section class="qp">
-                        <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
-                        <form action="">
-                            <div class="form_grid flex-form">
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>標題：</label>
-                                    <div class="form_content">
-                                        <input type="text" id="" value="">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>內文：</label>
-                                    <div class="form_content">
-                                        <input type="text" id="" value="">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">性別：</label>
-                                    <div class="form_content">
-                                        <div class="radio_grp form_inline">
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="" checked="">男</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">女</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">網址：</label>
-                                    <div class="form_content">
-                                        <input name="" id="" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">張貼日期</div>
-                                    <div class="form_content">
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                        </div>
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">關鍵字詞：</label>
-                                    <div class="form_content">
-                                        <input name="" id="" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample" class="form_title">單位</label>
-                                    <div class="form_content">
-                                        <select id="selectSample" name="">
-                                            <option value="">請選擇</option>
-                                            <option value="">單位一</option>
-                                            <option value="">單位二</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>內容：</label>
-                                    <div class="form_content">
-                                        <textarea name="" id="" cols="30" rows="70"></textarea>
-                                    </div>
-                                </div>
-                                <div class="btn_grp form_inline">
-                                    <input name="" type="reset" value="清除" class="btn btn-reset">
-                                    <input name="Search" type="submit" value="送出" class="btn btn-submit">
+                        <!-- 我要發問 start -->
+                        <div class="ask_questions">
+                            <button class="btn btn-orange">
+                                <i class="i_man2"></i>我要發問</button>
+                            <div class="questions_block">
+                                <div class="close"><a href="#"><img src="images/icon/icon_add2.svg"></a></div>
+                                <ul>
+                                    <li><a href="#">至常見問答查詢</a></li>
+                                    <li><a href="#">我要繼續寫信</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 我要發問 end -->
+                        <div class="explain_block">週休二日新制實施後，各界仍有希望給予調整延長工時限制、例假安排及特別休假規定之修法建議，為使相關法令能更符勞雇實務需求，勞動部擬具《勞動基準法》部分條文修正案，並經總統於107年1月31日公布。</div>
+                        <!--Accordion  start-->
+                        <div class="accordion_grounp">
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <div class="Q"><a href="javascript:;">雇主可否解僱欲申請復職之育嬰留停受僱者? <span class="word">收合</span></a></div>
+                                <div class="answer">
+                                    <p>說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字。</p>
                                 </div>
                             </div>
-                        </form>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <div class="Q"><a href="javascript:;">雇主可否解僱欲申請復職之育嬰留停受僱者雇主可否解僱欲申僱者?<span class="file_doc">doc</span><span class="file_pdf">pdf</span><span class="word">收合</span></a></div>
+                                <div class="answer">
+                                    <p>說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字。</p>
+                                    <ul>
+                                        <li><a href="#">退休要件<span class="file_doc">doc</span><span class="file_pdf">pdf</span></a></li>
+                                        <li><a href="#">退休金給付標準</a></li>
+                                        <li><a href="#">勞工退休準備金制度</a></li>
+                                        <li><a href="#">勞工退休準備金提撥率參考試算軟體</a></li>
+                                        <li><a href="#">勞工適用勞動基準法退休金制度年資之退休金試算表</a></li>
+                                        <li><a href="#">退休解釋令</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <div class="Q"><a href="javascript:;">雇主可否解僱欲申請復職之育嬰留停受僱者?<span class="word">收合</span></a></div>
+                                <div class="answer">
+                                    <p>說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字說明文字。</p>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                        </div>
+                        <!--Accordion  end-->
                     </section>
-                    <!-- QP End -->
+                    <!-- AP End -->
                     <div class="function">
                         <ul>
                             <li class="icon_back"><a href="#">回上一頁</a></li>
@@ -625,10 +601,10 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
 </body>
-
-</html>

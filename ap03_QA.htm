@@ -12,6 +12,8 @@
     <![endif]-->
     <!-- wow -->
     <link rel="stylesheet" href="css/animate.css">
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -424,91 +426,102 @@
                             <li>節點</li>
                         </ul>
                     </div>
-                    <!-- h2節點 -->
-                    <h2 class="title">條件查詢</h2>
-                    <!-- function功能區塊 -->
-                    <!-- <div class="function">
-                        <ul>
-                            <li><a href="#">回上一頁</a></li>
-                            <li><a href="#">友善列印</a></li>
-                            <li><a href="#">轉寄友人</a></li>
-                        </ul>
-                    </div> -->
-                    <!-- QP Start -->
-                    <section class="qp">
-                        <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
-                        <form action="">
-                            <div class="form_grid flex-form">
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>標題：</label>
-                                    <div class="form_content">
-                                        <input type="text" id="" value="">
+                    <h2 class="title">要套文章標題</h2>
+                    <!-- AP Start -->
+                    <section class="ap">
+                        <div class="explain_block">週休二日新制實施後，各界仍有希望給予調整延長工時限制、例假安排及特別休假規定之修法建議，為使相關法令能更符勞雇實務需求，勞動部擬具《勞動基準法》部分條文修正案，並經總統於107年1月31日公布。</div>
+                        <!--Accordionqa  start-->
+                        <div class="accordionqa">
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>雇主可否解僱欲申請復職之育嬰留停受僱者?</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>受僱者於育嬰留職停薪期滿後，申請復職時，除有下列情形之一，並經主管機關同意者外，雇主不得拒絕：</p>
+                                        <ol>
+                                            <li> 歇業、<em>23</em>虧損或業務緊縮者。</li>
+                                            <li> 雇主依法變更組織、<a href="javascript:;">解散或轉讓者</a>。</li>
+                                            <li> 不可抗力暫停工作在一個月以上者。</li>
+                                            <li> 業務性質變更，有減少受僱者之必要，又無適當工作可供安置者。</li>
+                                        </ol>
+                                        <p>雇主因前項各款原因未能使受僱者復職時，應於三十日前通知之，並應依法定標準發給資遣費或退休金。</p>
                                     </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>內文：</label>
-                                    <div class="form_content">
-                                        <input type="text" id="" value="">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">性別：</label>
-                                    <div class="form_content">
-                                        <div class="radio_grp form_inline">
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="" checked="">男</label>
-                                            <label>
-                                                <input type="radio" name="sampleRadio5" value="">女</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">網址：</label>
-                                    <div class="form_content">
-                                        <input name="" id="" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="form_title">張貼日期</div>
-                                    <div class="form_content">
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="開始日期">
-                                        </div>
-                                        <div class="datepick">
-                                            <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title">關鍵字詞：</label>
-                                    <div class="form_content">
-                                        <input name="" id="" type="text">
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="selectSample" class="form_title">單位</label>
-                                    <div class="form_content">
-                                        <select id="selectSample" name="">
-                                            <option value="">請選擇</option>
-                                            <option value="">單位一</option>
-                                            <option value="">單位二</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>內容：</label>
-                                    <div class="form_content">
-                                        <textarea name="" id="" cols="30" rows="70"></textarea>
-                                    </div>
-                                </div>
-                                <div class="btn_grp form_inline">
-                                    <input name="" type="reset" value="清除" class="btn btn-reset">
-                                    <input name="Search" type="submit" value="送出" class="btn btn-submit">
                                 </div>
                             </div>
-                        </form>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>雇主可否解僱懷孕婦女、分娩婦女或育嬰留停受僱者?</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>性別工作平等法第11條第2項規定：「工作規則、勞動契約或團體協約，不得規定或事先約定受僱者有結婚、懷孕、分娩或育兒之情事時，應行離職或留職停薪；亦不得以其為解僱之理由。」倘雇主違反上開規定，依該法第11條第3項規定，其規定或約定無效；勞動契約之終止不生效力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>勞工職業災害醫療期間，不得終止契約，又雇主在何種情況下可以合法與勞工終止契約？</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>勞工於職業災害醫療期間雇主不能與勞工終止勞動契約，法律之禁止規定，旨為保護勞工權益，但勞工若有惡意行為則不在保護範圍之內，諸如無正當理由之曠職等。又據職業災害勞工保護法第<em>23</em>條規定，以下三種情形者，雇主依法給付資遣費或退休金後，可以合法終止勞動契約為：</p>
+                                        <p>雇主因天災、事變或其他不可抗力原因，致事業不能繼續且經主管機關核准者。</p>
+                                        <p>雇主歇業或重大虧損經主管機關核准者。</p>
+                                        <p>職業災害勞工治療終止，經公立醫院診斷確定心神喪失或身體殘廢不堪勝任工作者。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>雇主可否解僱欲申請復職之育嬰留停受僱者?</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>受僱者於育嬰留職停薪期滿後，申請復職時，除有下列情形之一，並經主管機關同意者外，雇主不得拒絕：</p>
+                                        <ol>
+                                            <li> 歇業、<em>23</em>虧損或業務緊縮者。</li>
+                                            <li> 雇主依法變更組織、解散或轉讓者。</li>
+                                            <li> 不可抗力暫停工作在一個月以上者。</li>
+                                            <li> 業務性質變更，有減少受僱者之必要，又無適當工作可供安置者。</li>
+                                        </ol>
+                                        <p>雇主因前項各款原因未能使受僱者復職時，應於三十日前通知之，並應依法定標準發給資遣費或退休金。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>雇主可否解僱懷孕婦女、分娩婦女或育嬰留停受僱者?</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>性別工作平等法第11條第2項規定：「工作規則、勞動契約或團體協約，不得規定或事先約定受僱者有結婚、懷孕、分娩或育兒之情事時，應行離職或留職停薪；亦不得以其為解僱之理由。」倘雇主違反上開規定，依該法第11條第3項規定，其規定或約定無效；勞動契約之終止不生效力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                            <!-- accordionblock  start-->
+                            <div class="accordionblock">
+                                <button type="button" class="Q"><span>Q：</span>勞工職業災害醫療期間，不得終止契約，又雇主在何種情況下可以合法與勞工終止契約？</button>
+                                <div class="A">
+                                    <span>A：</span>
+                                    <div class="Ablock">
+                                        <p>勞工於職業災害醫療期間雇主不能與勞工終止勞動契約，法律之禁止規定，旨為保護勞工權益，但勞工若有惡意行為則不在保護範圍之內，諸如無正當理由之曠職等。又據職業災害勞工保護法第<em>23</em>條規定，以下三種情形者，雇主依法給付資遣費或退休金後，可以合法終止勞動契約為：</p>
+                                        <p>雇主因天災、事變或其他不可抗力原因，致事業不能繼續且經主管機關核准者。</p>
+                                        <p>雇主歇業或重大虧損經主管機關核准者。</p>
+                                        <p>職業災害勞工治療終止，經公立醫院診斷確定心神喪失或身體殘廢不堪勝任工作者。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordionblock  end-->
+                        </div>
+                        <!--Accordionqa  end-->
                     </section>
-                    <!-- QP End -->
+                    <!-- AP End -->
                     <div class="function">
                         <ul>
                             <li class="icon_back"><a href="#">回上一頁</a></li>
@@ -625,10 +638,10 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
 </body>
-
-</html>

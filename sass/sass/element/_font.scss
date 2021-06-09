@@ -30,6 +30,7 @@ body {
 }
 a {
     @include aSetting();
+    transition: .5s;
 }
 // kbd
 kbd{

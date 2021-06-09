@@ -331,10 +331,58 @@ $(function() {
             }
         }]
     });
-
     // 條件查詢
-
-    $('.condition_searchbtn').click(function(){
+    $('.condition_searchbtn').click(function() {
         $('.condition_searchblock').stop().slideToggle();
     })
+    // QA
+    $(".accordionqa .accordionblock").each(function() {
+        var _accordionItem2 = $(this).children(".Q");
+        _accordionItem2.each(function() {
+            function accordion2(e) {
+                $(this).next(".A").slideToggle();
+                $(this).parent().siblings().children(".A").slideUp();
+                $(this).parent().siblings().children(".Q").removeClass("turnicon");
+                $(this).toggleClass("turnicon");
+                e.preventDefault();
+            }
+            $(this).click(accordion2);
+            $(this).keyup(accordion2);
+        });
+    });
+    // 收合
+    $(".accordion_grounp .accordionblock").each(function() {
+        var _accordionItem3 = $(this).children(".Q").children('a');
+        var _word = _accordionItem3.children('.word');
+        var _ullist = $(this).children('.answer').find('ul');
+        if (_ullist.length == 0) {
+            _word.hide();
+        } else {
+            function accordion3(e) {
+                if (_ullist.is(':visible')) {
+                    _ullist.slideUp();
+                    _word.text('展開').addClass('close');
+                } else {
+                    _ullist.slideDown();
+                    _word.text('收合').removeClass('close');
+                }
+            }
+            _accordionItem3.click(accordion3);
+            // _accordionItem3.keyup(accordion3);
+        }
+    });
+    // 我要發問
+    var _ask_questions = $('.ask_questions').children('button');
+    _ask_questions.click(function() {
+        _ask_questions.siblings('.questions_block').stop().slideToggle();
+    })
+    _ask_questions.siblings('.questions_block').find('.close').click(function() {
+        _ask_questions.siblings('.questions_block').stop().slideUp();
+    })
+    _ask_questions.keyup(function() {
+        _ask_questions.siblings('.questions_block').slideDown();
+    })
+    $('.questions_block').find('li:last>a').focusout(function() {
+        $('.questions_block').stop().slideUp();
+    });
 });

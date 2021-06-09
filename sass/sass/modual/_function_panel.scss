@@ -93,26 +93,35 @@ div.function {
             &.icon_back {
                 a {
                     padding: 8px 16px 8px 33px;
-                }
-                a:before {
-                    content: "";
-                    border: 8px solid #222;
-                    border-top-color: transparent;
-                    border-bottom-color: transparent;
-                    border-left-color: transparent;
-                    position: absolute;
-                    left: 5px;
-                    top: 12px;
-                    // @extend %function_before;
-                    // background: url(../images/basic/icon_back.svg) no-repeat center center;
-                    // background-size: 16px;
-                }
-                &:hover, &:focus {
-                    a:before {
-                        border: 8px solid #fff;
+                    &:before {
+                        content: "";
+                        border: 8px solid #222;
                         border-top-color: transparent;
                         border-bottom-color: transparent;
                         border-left-color: transparent;
+                        position: absolute;
+                        left: 5px;
+                        top: 12px;
+                        // @extend %function_before;
+                        // background: url(../images/basic/icon_back.svg) no-repeat center center;
+                        // background-size: 16px;
+                    }
+                    &:hover {
+                        &:before {
+                            border: 8px solid #fff;
+                            border-top-color: transparent;
+                            border-bottom-color: transparent;
+                            border-left-color: transparent;
+                        }
+                    }
+                    &:focus {
+                        &:before {
+                            border-color: #fff;
+                            border: 8px solid #fff;
+                            border-top-color: transparent;
+                            border-bottom-color: transparent;
+                            border-left-color: transparent;
+                        }
                     }
                 }
             }
@@ -313,10 +322,10 @@ div.function {
         }
     }
 }
-.function_panel_block{
+.function_panel_block {
     display: flex;
     justify-content: space-between;
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         display: block;
     }
 }

@@ -790,9 +790,9 @@ $(function() {
     });
     // 點外面關閉
     $(document).on('touchend click', function(e) {
-        var container = $(".function_panel .share, .header .functionbtn_block .search, .header .functionbtn_block .search_btn, .functionbtn_block .customer_service_btn, .functionbtn_block .customer_service_block");
+        var container = $(".function_panel .share, .header .functionbtn_block .search, .header .functionbtn_block .search_btn, .functionbtn_block .customer_service_btn, .functionbtn_block .customer_service_block, .ask_questions .btn, .ask_questions .questions_block");
         if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.function_panel .share ul, .header .functionbtn_block .search, .functionbtn_block .customer_service_block').slideUp();
+            $('.function_panel .share ul, .header .functionbtn_block .search, .functionbtn_block .customer_service_block, .ask_questions .questions_block').slideUp();
         }
     });
     /*------------------------------------*/

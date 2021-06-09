@@ -88,7 +88,7 @@ $btn-radius:5px;
 }
 .btn-orange {
     // @extend %btn;
-    @include btn_setting(lighten($color-orange, 10), #FFF);
+    @include btn_setting($color-orange, #FFF);
 }
 .btn-red {
     // @extend %btn;

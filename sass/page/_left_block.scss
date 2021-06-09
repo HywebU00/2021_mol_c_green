@@ -85,15 +85,13 @@
         }
     }
 }
-
-
 // 左欄
 //內頁左欄
 .leftmenu {
     position: relative;
     margin: 0px 0 25px 0;
     padding: 0;
-    h2 {
+    .title {
         font-size: 1.125em;
         background: rgb(53, 151, 193);
         background: linear-gradient(135deg, rgba(53, 151, 193, 1) 0%, rgba(7, 75, 155, 1) 37%);
@@ -104,10 +102,11 @@
         text-align: left;
         border-radius: 10px;
         position: relative;
+        font-weight: bolder;
         &:before {
             content: '';
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border: 2px solid #fff;
             border-top: none;
             border-left: none;
@@ -140,8 +139,7 @@
                 &:hover,
                 &:focus {
                     text-decoration: none;
-                    background-color:rgba(255, 255, 255, 0.5);
-                   
+                    background-color: rgba(255, 255, 255, 0.5);
                 }
             }
             &:last-child a {
@@ -154,16 +152,17 @@
 .agency_inblock {
     margin: 0;
     padding: 0;
-    h2 {
+    .title {
         font-size: 1.125em;
-        background: rgb(248, 133, 40);
-        background: linear-gradient(135deg, rgba(248, 133, 40, 1) 0%, rgba(228, 101, 40, 1) 67%);
+        background: rgb(207, 75, 12);
+        background: linear-gradient(135deg, rgba(207, 75, 12, 1) 49%, rgba(162, 58, 7, 1) 100%);
         color: #fff;
         padding: 12px 25px 10px;
         position: relative;
         margin: 0 0 0px 0;
         text-align: center;
         border-radius: 10px;
+        font-weight: bolder;
     }
     ul {
         margin: 15px 0;
