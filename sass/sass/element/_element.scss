@@ -42,6 +42,10 @@
 .align-baseline {
     vertical-align: baseline;
 }
+.word_nowrap{
+    white-space: nowrap;
+}
+// 
 $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other, rar;
 @each $fileType in $fileType {
     span.file_#{$fileType} {

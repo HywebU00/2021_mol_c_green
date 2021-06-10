@@ -542,9 +542,9 @@ $(function() {
             tabSet();
             tabSet2();
             tabSet3();
+            tabSet4();
         }, 50);
     });
-
     // 最新消息
     function tabSet() {
         $('.newstab').each(function() {
@@ -594,7 +594,6 @@ $(function() {
             }
         });
     }
-
     // 常見問答
     function tabSet2() {
         $('.frequentlyQA_tab').each(function() {
@@ -644,7 +643,6 @@ $(function() {
             }
         });
     }
-
     // cptab
     function tabSet3() {
         $('.cptab').each(function() {
@@ -656,15 +654,73 @@ $(function() {
                 tabItemHeight = _tabItem.outerHeight(),
                 tabContentHeight = _tab.find('.active').next().innerHeight(),
                 tiGap = 8,
-                tabItemLength = _tabItem.length,//有幾個頁籤
-                tabItemRows = parseInt(tabItemLength / 3) + 1, //頁籤有幾行
-                 tabItemHeight = _tabItem.outerHeight(true) * tabItemRows, //頁籤的總高度
+                tabItemLength = _tabItem.length, //有幾個頁籤
+                tabItemRows = parseInt(tabItemLength / 3); //頁籤有幾行
+            if (tabItemLength % 3 != 0) {
+                tabItemRows = tabItemRows + 1;
+            };//判斷頁籤一行３個的時後有沒有整除，若不等於０，tabItemRows 就要加＋１
+            
+            var tabItemHeight = _tabItem.outerHeight(true) * tabItemRows, //頁籤的總高度
                 tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-               tabItemWidth = parseInt((tabwidth - 3 * tiGap) / 3); //每個頁籤的寬度
+                tabItemWidth = parseInt((tabwidth - 3 * tiGap) / 3); //每個頁籤的寬度
+                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+                // _tabItem.first().css('margin-left', 0);
+                // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
+            } else {
+                _tab.css('height', 'auto');
+                _tabItem.width(tabwidth);
+                _tabItem.css('margin-left', 0);
+            }
+            _tabItem.focus(tabs); //改button後，前面改_tabItem
+            _tabItem.click(tabs); //改button後，前面改_tabItem
+            function tabs(e) {
+                var _tabItemNow = $(this), //改button後，原來$(this).parent(),改$(this)
+                    tvp = _tab.offset().top,
+                    tabIndex = _tabItemNow.index() / 2,
+                    scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
+                _tabItem.removeClass('active');
+                _tabItemNow.addClass('active');
+                if (ww <= wwSmall) {
+                    _tabItem.not('.active').next().slideUp();
+                    _tabItemNow.next().slideDown();
+                    $("html,body").stop(true, false).animate({ scrollTop: scollDistance });
+                } else {
+                    _tabItem.not('.active').next().hide();
+                    _tabItemNow.next().show();
+                    tabContentHeight = _tabItemNow.next().innerHeight();
+                    _tab.height(tabContentHeight + tabItemHeight);
+                }
+                e.preventDefault();
+            }
+        });
+    }
+    // themetab
+    function tabSet4() {
+        $('.themetab').each(function() {
+            var _tab = $(this),
+                _tabItem = _tab.find('.tabItem'),
+                // _tabItemA = _tabItem.children('a'), //改button後，這行沒有
+                _tabContent = _tab.find('.tabContent'),
+                tabwidth = _tab.width(),
+                tabItemHeight = _tabItem.outerHeight(),
+                tabContentHeight = _tab.find('.active').next().innerHeight(),
+                tiGap = 8,
+                tabItemLength = _tabItem.length, //有幾個頁籤
+                tabItemRows = parseInt(tabItemLength / 3); //頁籤有幾行
+            if (tabItemLength % 3 != 0) { 
+                tabItemRows = tabItemRows + 1; 
+            };//判斷頁籤一行３個的時後有沒有整除，若不等於０，tabItemRows 就要加＋１
+            var tabItemHeight = _tabItem.outerHeight(true) * tabItemRows, //頁籤的總高度
+                tabItemWidth;
+            _tab.find('.active').next('.tabContent').show();
+            if (ww >= wwSmall) {
+                _tabContent.css('top', tabItemHeight);
+                _tab.height(tabContentHeight + tabItemHeight);
+                tabItemWidth = parseInt((tabwidth - 3 * tiGap) / 3); //每個頁籤的寬度
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 // _tabItem.first().css('margin-left', 0);
                 // _tabItem.last().css({ 'position': 'absolute', 'top': 0, 'right': 0 }).width(tabItemWidth);
@@ -700,9 +756,10 @@ $(function() {
     tabSet();
     $('.frequentlyQA_tab>.tabItem:first-child>a').trigger('click');
     tabSet2();
-
     $('.cptab>.tabItem:first-child>a').trigger('click');
     tabSet3();
+    $('.themetab>.tabItem:first-child>a').trigger('click');
+    tabSet4();
     /*-----------------------------------*/
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
@@ -956,7 +1013,7 @@ $(function() {
     // /*------------------------------------*/
     $('table').each(function(index, el) {
         //判斷沒有table_list
-        if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
+        if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0 && $(this).parents('.epaperTb').length == 0) {
             $(this).scroltable();
         }
     });

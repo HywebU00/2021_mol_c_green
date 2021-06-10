@@ -91,6 +91,46 @@ table {
         }
     }
 }
+// 
+.epaperTb {
+    padding: 0 0 1em;
+    @include screen('xs_mobile') {
+        background-color: transparent !important; //Force table to not be like tables anymore
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px; // background-color: #333;
+        }
+        td {
+            // Behave  like a "row"
+            border: none !important;
+            border-bottom: 1px solid #eee !important;
+            position: relative;
+            white-space: normal;
+            text-align: left;
+            &:before {
+                content: attr(data-title) "";
+                display: inline-block;
+                padding-right:0;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: $primaryColor;
+            }
+        }
+    }
+}
 // fix_th_table
 .fix_th_table {
     margin: 1em 0;
