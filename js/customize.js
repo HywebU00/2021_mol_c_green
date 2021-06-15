@@ -197,22 +197,16 @@ $(function() {
             breakpoint: 1200,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
             }
         }, {
             breakpoint: 992,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
-            }
-        }, {
-            breakpoint: 720,
-            settings: {
-                slidesToShow: 1,
                 slidesToScroll: 1,
             }
         }, {
-            breakpoint: 575,
+            breakpoint: 610,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -229,6 +223,9 @@ $(function() {
         $(this).next('.Answer').show();
         $(this).addClass('active');
     })
+    $('.QAblock .Question').keyup(function(){
+        $(this).next('.Answer').show();
+    })
     // 社群連結
     $('.communitylink_group').find('.content').first().show();
     $('.communitylink_group .title>a').first().addClass('open');
@@ -238,6 +235,7 @@ $(function() {
         $(this).parent('.title').siblings('.content').stop().slideToggle();
         $(this).toggleClass('open');
     })
+   
     //勞動部所屬機關
     $('.organization_slider').slick({
         // dots: true,
@@ -384,5 +382,11 @@ $(function() {
     })
     $('.questions_block').find('li:last>a').focusout(function() {
         $('.questions_block').stop().slideUp();
+    });
+
+    // 紓困頁籤內的收合
+    $('.precaution_list .title>a').click(function() {
+        $(this).parents('.precaution_list').siblings('.precaution_list').find('.precaution_content').slideUp();
+        $(this).parent('.title').siblings('.precaution_content').stop().slideToggle();
     });
 });

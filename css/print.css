@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-image: none;
+    background-color: #FFF
+}
+.wrapper {
+    background-image: none;
+}
+.wrapper:after {
+    background-image: none;
+    height: auto;
+}
+.header, .accesskey, .fatfooter, footer, .function_panel .font_size, .function_panel .function, .function_panel .share, .innerpage .left_block {
+    display: none
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px !important;
+}
+.main {
+    padding: 0px;
+    background-color: #fff;
+    background-image: none;
+}
+.innerpage {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.innerpage .content {
+    width: 100%;
+    float: none;
+}
+
+.innerpage .left_block+.center_block {
+    width: 100%;
+     max-width: 100%;
+}
+.cp table {
+    width: 100% !important;
+}
+.cp table th {
+    white-space: normal;
+}
+.cp table th p, .cp table td p {
+    font-size: 1em;
+    line-height: 1.45em;
+    margin-top: 0em;
+    margin-bottom: 0;
+    padding: 0px
+}
+.cp .pic {
+    float: none;
+}

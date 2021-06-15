@@ -207,8 +207,8 @@ a.more {
                     margin-right: 5px;
                     border: 1px solid #ddd;
                     padding-left: 16px;
-                    &:focus{
-                        background-color:lighten($color-yellow, 40);
+                    &:focus {
+                        background-color: lighten($color-yellow, 40);
                     }
                 }
                 button {
@@ -219,8 +219,8 @@ a.more {
                     background-color: $primaryColor;
                     color: #fff;
                     border: 1px solid $primaryColor;
-                    &:hover, &:focus{
-                        background-color:darken( $primaryColor, 15);
+                    &:hover, &:focus {
+                        background-color: darken($primaryColor, 15);
                     }
                 }
             }
@@ -357,6 +357,9 @@ a.more {
                             left: 0;
                             background-color: #fff;
                         }
+                        &:hover, &:focus {
+                            color: $lightColor;
+                        }
                     }
                 }
             }
@@ -373,22 +376,34 @@ a.more {
         padding: 0;
     }
     .statistics_slider {
-        padding: 0 60px 30px;
+        padding: 0 40px 30px;
     }
     .statistics_group {
         text-align: right;
         margin: 0 0px;
         padding: 20px 50px;
-        // outline: 1px solid red;
+        position: relative;
         @include box-sizing;
         position: relative;
-        @media(max-width: 575px) {
-            padding: 20px 0px;
+        @media(max-width: 1100px){
+            padding: 20px 30px;
+        }
+        @media(max-width: 991px){
+            padding: 20px 50px;
+        }
+         @media(max-width: 767px){
+            padding: 20px 30px;
+        }
+        @media(max-width: 610px) {
+            padding: 20px 50px;
+        }
+        @media(max-width: 440px) {
+            padding: 20px 20px;
         }
         a {
             display: block;
             position: relative;
-            @media(max-width: 575px) {
+            @media(max-width: 440px) {
                 text-align: center;
             }
             .image {
@@ -399,7 +414,7 @@ a.more {
                 display: block;
                 overflow: hidden;
                 margin-bottom: 30px;
-                @media(max-width: 575px) {
+                @media(max-width: 440px) {
                     float: none;
                     margin: 0 auto 30px;
                 }
@@ -432,7 +447,7 @@ a.more {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 height: 90px;
-                @media(max-width: 575px) {
+                @media(max-width: 440px) {
                     float: none;
                     position: relative;
                     text-align: center;
@@ -445,17 +460,17 @@ a.more {
                 position: absolute;
                 bottom: 20px;
                 left: 0px;
-                @media(max-width: 1200px)and(min-width: 992px) {
+                @media(max-width: 767px)and(min-width:611px) {
                     position: relative;
                     left: 50%;
                     margin-left: -35px;
                 }
-                @media(max-width: 991px)and(min-width:720px) {
-                    position: relative;
-                    left: 50%;
-                    margin-left: -35px;
+                @media(max-width:610px)and(min-width:500px) {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 0px;
                 }
-                @media(max-width:575px) {
+                @media(max-width:440px) {
                     position: relative;
                     left: 50%;
                     margin-left: -35px;
@@ -472,7 +487,8 @@ a.more {
                 text-align: right;
                 clear: both;
                 line-height: .8em;
-                @media(max-width: 575px) {
+                transition: .5s;
+                @media(max-width: 440px) {
                     text-align: center;
                 }
                 em {
@@ -494,22 +510,9 @@ a.more {
                 }
             }
             &:hover {
-                // .updown {
-                //     animation-name: arrowmove;
-                //     animation-duration: 1s;
-                //     animation-iteration-count: infinite;
-                //     @keyframes arrowmove {
-                //         0% {
-                //             bottom: 20px;
-                //         }
-                //         50% {
-                //             bottom: 10px;
-                //         }
-                //         100% {
-                //             bottom: 20px;
-                //         }
-                //     }
-                // }
+                .rate {
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -603,7 +606,7 @@ a.more {
                     @include screen('tablet') {
                         width: 100%;
                     }
-                    &:hover {
+                    &:hover, &:focus {
                         color: $lightColor;
                     }
                     &.active {
@@ -721,6 +724,9 @@ a.more {
                             &:hover, &:focus {
                                 color: #fff;
                             }
+                             &:focus{
+                                
+                             }
                         }
                     }
                 }

@@ -89,6 +89,10 @@
                     color: #fff;
                     &:hover {
                         box-shadow: none;
+                        color: $lightColor;
+                    }
+                    &:focus {
+                        color: $lightColor;
                     }
                 }
                 ul {

@@ -74,6 +74,9 @@
                     background-color: $primaryColor;
                 }
             }
+            &:focus {
+                box-shadow: 0px 0px 0px 2px #fed969 inset;
+            }
         }
     }
     &.frequentlyQA_tab {
@@ -130,6 +133,45 @@
         }
     }
     &.themetab {
+        &>.tabItem {
+            background-color: lighten($secondaryColor, 30);
+            border-radius: 5px;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+            color: $color-word;
+            padding: 0;
+            font-size: 1.125em;
+            height: 68px;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            line-height: 1.75em;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            @include screen('mobile') {
+                padding: 16px 0;
+                border-bottom: none;
+                height: auto;
+            }
+            &.active {
+                color: #FFF;
+                background: $primaryColor;
+                @include screen('mobile') {
+                    padding: 16px 0px;
+                }
+            }
+            &:hover, &:focus {
+                color: #FFF;
+                background: $primaryColor;
+                @include screen('mobile') {
+                    background-color: $primaryColor;
+                }
+            }
+        }
+    }
+    &.plantab {
         &>.tabItem {
             background-color: lighten($secondaryColor, 30);
             border-radius: 5px;
@@ -339,6 +381,116 @@
                     &:hover {
                         color: $aHover;
                         text-decoration: none
+                    }
+                }
+            }
+        }
+    }
+}
+.plantab {
+    .tabContent {
+        border-radius: 5px;
+        background-color: #eee;
+        margin: 0;
+        padding: 40px 30px;
+        p {
+            line-height: 1.7em;
+            margin: 0 0 20px;
+        }
+        h3 {
+            color: #333;
+            position: relative;
+            padding: 12px 0px 10px 0px;
+            margin: 0.2em 0px 1em;
+            &:before {
+                display: none;
+            }
+        }
+        ul {
+            margin-left: 30px;
+            li {
+                border-bottom: none;
+                ol {
+                    margin: 1em 0 0;
+                    li {
+                        margin-bottom: 1em;
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .file_download {
+            ul {
+                margin-left: 0;
+                li {
+                    margin: 0;
+                    border-bottom: solid 1px #ccc;
+                }
+            }
+        }
+        .web_link {
+            ol,
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    position: relative;
+                    padding: .5em 0;
+                    padding-left: 1.5em;
+                    margin: 0;
+                    border-bottom: solid 1px #ccc;
+                    a {
+                        padding: .2em 0px;
+                        display: block;
+                        @include aSetting_nocolor;
+                    }
+                }
+            }
+        }
+        .publish_info_down {
+            padding: 0.6em 0.5em 0.3em;
+            li {
+                margin-bottom: 5px;
+                border: none;
+            }
+        }
+        // 收合
+        .precaution_listgroup {
+            .precaution_list {
+                .title {
+                    a {
+                        padding: 20px 30px 15px 40px;
+                        background: rgb(34, 119, 199);
+                        background: linear-gradient(180deg, rgba(34, 119, 199, 1) 0%, rgba(29, 99, 166, 1) 100%);
+                        color: #fff;
+                        font-size: 1.125em;
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                        position: relative;
+                        display: block;
+                        &:before {
+                            content: '';
+                            border: 2px solid #fff;
+                            width: 8px;
+                            height: 8px;
+                            border-bottom: none;
+                            border-left: none;
+                            position: absolute;
+                            left: 15px;
+                            top: 26px;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+                .precaution_content {
+                    display: none;
+                    .pic {
+                        img {
+                            max-width: 650px;
+                        }
                     }
                 }
             }
