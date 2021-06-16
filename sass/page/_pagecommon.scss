@@ -1396,17 +1396,38 @@
             width:100%;
             box-sizing: border-box;
             color:#333;
+            position:relative;
             @media(max-width: 480px) {
                 white-space: normal;
             }
             @media(max-width: 500px) {
                 height: auto;
             }
+            .hot{
+                background-color:red;
+                color:#fff;
+                width:70px;
+                padding:3px;
+                text-align: center;
+                font-size: 1em;
+                letter-spacing: 0.05em;
+                // font-weight: bolder;
+                font-weight: 900;
+                position:absolute;
+                left:0;
+                top:75px;
+                border-radius:0;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                transform: skewY(-8deg);
+            }
             .image {
-                width: 150px;
+                width: 140px;
                 margin: 0 15px 0 0;
                 display: flex;
                 align-items: flex-start;
+                @include screen('mobile'){
+                     width: 120px;
+                }
                 img {
                     display: block;
                     width: 100%;
@@ -1420,7 +1441,10 @@
             .content {
                 overflow: hidden;
                 padding: 0;
-                width: calc(100% - 150px);
+                width: calc(100% - 140px);
+                @include screen('mobile'){
+                    width: calc(100% - 120px);
+                }
                 .title {
                     line-height: 1.4em;
                     display: block;
