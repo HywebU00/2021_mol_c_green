@@ -762,7 +762,7 @@
             color: #000;
             padding: 15px 15px 15px 25px;
             display: none;
-            span {
+            .title {
                 float: left;
                 margin-right: 10px;
                 font-size: 2em;
@@ -776,6 +776,11 @@
                     line-height: 1.7em;
                     a {
                         color: #333;
+                    }
+                    span{
+                        color:$color-orange;
+                        font-weight: bolder;
+                        padding:0 3px;
                     }
                 }
                 em {
