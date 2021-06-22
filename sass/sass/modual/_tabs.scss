@@ -316,6 +316,7 @@
     }
 }
 .cptab {
+    outline: 1px solid red;
     .tabContent {
         border-radius: 5px;
         background-color: #eee;
@@ -351,6 +352,36 @@
                     right: 0;
                     top: 5px;
                     text-align: center;
+                }
+            }
+        }
+        .file_download {
+            ul {
+                list-style-type: none;
+        padding: 0;
+        margin: 0;
+                li {
+                    padding: .5em 0 .5em 1.5em;
+                    border-bottom: solid 1px #ccc;
+                    &:before {
+                        content: '·';
+                        font-size: 2em;
+                        font-weight: bold;
+                        width: 1em;
+                        height: 1em;
+                        position: absolute;
+                        top: .32em;
+                        left: .1em;
+                        color: #666;
+                    }
+                }
+            }
+        }
+        .web_link {
+            ol {
+                li {
+                    margin: 0;
+                    border-bottom: solid 1px #ccc;
                 }
             }
         }
