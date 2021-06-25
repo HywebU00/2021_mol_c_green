@@ -303,11 +303,12 @@
     .list_photo {
         flex: none;
         flex-basis: 31%;
+        width:31%;
         margin: 0 1.16% 20px;
         padding: 10px;
-        border: 1px solid #ccc;
+        
         border-radius: 5px;
-        box-sizing: border-box;
+        @include box-sizing(border-box);
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         @include screen('mobile') {
             flex-basis: 48%;

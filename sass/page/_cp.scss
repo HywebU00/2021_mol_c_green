@@ -6,7 +6,6 @@ h1.title, h2.title {
 }
 // .tt{ color: #222; }
 .cp {
-    
     .pic {
         float: left;
         margin: 0px 1em 1em 0;
@@ -132,7 +131,6 @@ h1.title, h2.title {
                 }
             }
         }
-        
     }
 }
 // 外部連結
@@ -194,9 +192,8 @@ h1.title, h2.title {
             flex-basis: 23%;
             margin: 0 1% 20px;
             padding: 10px;
-            border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
+            @include box-sizing(border-box);
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             @include screen('mobile') {
                 flex-basis: 48%;
@@ -303,7 +300,7 @@ h1.title, h2.title {
 }
 // 
 .video {
-    padding:10px 10px 5px;
+    padding: 10px 10px 5px;
     box-sizing: border-box;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 5px;
