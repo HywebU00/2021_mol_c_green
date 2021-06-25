@@ -207,6 +207,8 @@ a.more {
                     margin-right: 5px;
                     border: 1px solid #ddd;
                     padding: 0.6em 0.5em 0.6em 1em;
+                    box-sizing:border-box;
+                    line-height: 1.35em;
                     &:focus {
                         background-color: lighten($color-yellow, 40);
                     }
