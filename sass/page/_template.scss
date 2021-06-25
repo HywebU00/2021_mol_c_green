@@ -91,23 +91,28 @@ body {
         }
     }
     .left_block {
-        flex: 0 0 220px;
+        flex: none;
+        flex-basis: 220px;
         max-width: 220px;
-        // float: left;
-        // width: 260px;
         margin-right: 40px;
         padding-bottom: 3em;
         &.hidden {
             +.center_block {
+                flex: none;
+                flex-basis: 100%;
                 max-width: 100%;
             }
         }
         +.center_block {
+            flex: auto;
+            flex-basis: calc(100% - 260px);
             max-width: calc(100% - 260px);
         }
         @include screen('tablet') {
             display: none;
             +.center_block {
+                flex: none;
+                flex-basis: 100%;
                 max-width: 100%;
             }
         }
