@@ -206,7 +206,7 @@ a.more {
                     width: calc(100% - 95px);
                     margin-right: 5px;
                     border: 1px solid #ddd;
-                    padding-left: 16px;
+                    padding: 0.6em 0.5em 0.6em 1em;
                     &:focus {
                         background-color: lighten($color-yellow, 40);
                     }
@@ -385,13 +385,13 @@ a.more {
         position: relative;
         @include box-sizing;
         position: relative;
-        @media(max-width: 1100px){
+        @media(max-width: 1100px) {
             padding: 20px 30px;
         }
-        @media(max-width: 991px){
+        @media(max-width: 991px) {
             padding: 20px 50px;
         }
-         @media(max-width: 767px){
+        @media(max-width: 767px) {
             padding: 20px 30px;
         }
         @media(max-width: 610px) {
@@ -724,9 +724,7 @@ a.more {
                             &:hover, &:focus {
                                 color: #fff;
                             }
-                             &:focus{
-                                
-                             }
+                            &:focus {}
                         }
                     }
                 }

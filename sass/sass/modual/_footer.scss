@@ -31,12 +31,14 @@ footer {
         .footer_logo {
             flex: none;
             flex-basis: 220px;
+            max-width: 220px;
             margin-bottom: 30px;
             img {
                 width: 180px;
             }
             @include screen('xs_mobile'){
                 flex-basis: 100%;
+                max-width:100%;
                 text-align: center;
                 
             }
@@ -44,9 +46,11 @@ footer {
         .footer_data {
             flex: none;
             flex-basis: calc(100% - 220px);
+            max-width: calc(100% - 220px);
             margin-bottom: 30px;
             @include screen('xs_mobile'){
                 flex-basis: 100%;
+                max-width:100%;
                 text-align: center;
             }
             p {
@@ -64,6 +68,7 @@ footer {
         .footer_info {
             flex: 1 1 auto;
             flex-basis: 100%;
+            max-width:100%;
             @include screen('xs_mobile'){
                 text-align: center;
             }
@@ -72,8 +77,10 @@ footer {
     .footer_icon {
         flex: 0 1 300px;
         flex-basis: 300px;
+        max-width:300px;
         @include screen('tablet') {
             flex: 1 1 100%;
+            max-width:100%;
             text-align: right;
         }
     }
