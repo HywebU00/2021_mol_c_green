@@ -178,6 +178,153 @@ a.more {
         }
     }
 }
+.mpbanner_slider {
+    .container {
+        padding: 0;
+    }
+}
+.mpSyncing_slider {
+    margin: 0 auto;
+    @include clearfix();
+    position: relative;
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 10px 0px;
+        margin: 0.2em 0px 1em;
+        border-bottom: 3px solid #434242;
+    }
+    .slick-slide {
+        position: relative;
+    }
+    .controls {
+        text-align: center;
+        font-weight: bold;
+        max-width: 100px;
+        color: #FFF;
+        padding: .2em .5em;
+        margin: 0px auto;
+        background: #666;
+        border-radius: 20px;
+        text-shadow: 1px 1px 2px RGBA(0, 0, 0, .8);
+    }
+    p {
+        text-align: center;
+        color: #FFF;
+        padding: .5em;
+        box-sizing: border-box;
+        width: 100%;
+        // height: 2.5em;
+        // line-height: 1.5em;
+        margin: 0px;
+        z-index: 2;
+    }
+    .slick-next {
+        background: url('../images/slick/icon_arrow_right.svg') center center no-repeat;
+        background-size: 30px 30px;
+        right: -50px;
+       @include screen('xs_mobile'){
+        right: -35px;
+       }
+        
+    }
+    .slick-prev {
+        background: url('../images/slick/icon_arrow_left.svg') center center no-repeat;
+        background-size: 30px 30px;
+        left: -50px;
+        @include screen('xs_mobile') {
+             left: -40px;
+        }
+        
+    }
+    .Slider-for {
+        width: 100%;
+        // min-width: 260px;
+        // max-width: 800px;
+        // height: 500px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+        .img-container {
+            // @include aspect-ratio(16, 9);
+            height: 660px;
+            width: 100%;
+            @include screen('tablet') {
+                height: 400px;
+            }
+            @include screen('mobile') {
+                height: 300px;
+            }
+            img {
+                // width: 100%;
+                // height: 100%;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+            }
+        }
+    }
+    .Slider-nav {
+        width: 100%;
+        min-width: 260px;
+        max-width: 900px;
+        margin: -3em auto 3em;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1.125em;
+        @include screen('tablet') {
+            max-width: 700px;
+        }
+        @include screen('mobile'){
+            max-width: none;
+              width: 80%;
+        }
+        @include screen('xs_mobile'){
+            margin: 1em auto ;
+        }
+        @media (max-width: 480px){
+
+        }
+        a {
+            &:hover, &:focus {
+                .img-container {
+                    background: rgb(207, 75, 12);
+                    background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+                }
+            }
+        }
+        .img-container {
+            // @include aspect-ratio(16, 9);
+            height: 118px;
+            width: 96%;
+            background: rgb(7, 75, 155);
+            background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
+            border-radius: 5px;
+            display: flex;
+            align-items: flex-end;
+            transition: .5s;
+            img {
+                width: 50px !important;
+                height: 50px !important;
+                margin: 10px auto;
+            }
+        }
+        /*正在動作的縮圖*/
+        .slick-slide.slick-current {
+            opacity: 1;
+        }
+        position: relative;
+    }
+    .slick-dots {
+        display: none !important;
+    }
+}
 // 新聞稿區塊
 .news_block {
     background-image: url('../images/news_bg.jpg');
@@ -207,7 +354,7 @@ a.more {
                     margin-right: 5px;
                     border: 1px solid #ddd;
                     padding: 0.6em 24px 0.6em 1em;
-                    box-sizing:border-box;
+                    box-sizing: border-box;
                     line-height: 1.35em;
                     &:focus {
                         background-color: lighten($color-yellow, 40);

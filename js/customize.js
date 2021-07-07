@@ -141,11 +141,11 @@ $(function() {
         }]
     });
     // cp_photo
-    $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+    $('.cp .Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
     });
-    $('.Slider-for').slick({
+    $('.cp .Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -156,7 +156,7 @@ $(function() {
         asNavFor: '.Slider-nav',
         infinite: true
     });
-    $('.Slider-nav').slick({
+    $('.cp .Slider-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
@@ -166,6 +166,66 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
+
+    // mp_photo
+    $('.mpSyncing_slider .Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $('.controls').html(i + '/' + slick.slideCount);
+    });
+    $('.mpSyncing_slider .Slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        swipe: false,
+        swipeToSlide: false,
+        lazyLoad: 'ondemand',
+        asNavFor: '.Slider-nav',
+        infinite: true
+    });
+    $('.mpSyncing_slider .Slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.Slider-for',
+        dots: false,
+        arrows: true,
+        lazyLoad: 'ondemand',
+        focusOnSelect: true,
+        infinite: false,
+        responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                
+                
+            }
+        }, {
+            breakpoint: 767,
+            settings: {
+               
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+               
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                
+            }
+        }]
+        
+    });
+
     // Search
     $('.search .important_link').find('div:last-of-type>a').focusout(function() {
         $('.search').slideUp();
