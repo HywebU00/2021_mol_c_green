@@ -245,15 +245,19 @@ a.more {
         position: relative;
         padding: 0;
         box-sizing: border-box;
+        overflow: hidden;
         .img-container {
             // @include aspect-ratio(16, 9);
-            height: 660px;
+            height: 500px;
             width: 100%;
             @include screen('tablet') {
                 height: 400px;
             }
             @include screen('mobile') {
                 height: 300px;
+            }
+            @include screen('xs_mobile'){
+                height: 200px;
             }
             img {
                 // width: 100%;
@@ -273,7 +277,7 @@ a.more {
         width: 100%;
         min-width: 260px;
         max-width: 900px;
-        margin: -3em auto 3em;
+        margin: -3em auto 1.5em;
         position: relative;
         padding: 0;
         box-sizing: border-box;
