@@ -266,6 +266,9 @@ a.more {
             @include screen('xs_mobile') {
                 height: 200px;
             }
+            @media(max-width: 400px){
+                height: 180px;
+            }
             img {
                 // width: 100%;
                 // height: 100%;
