@@ -145,6 +145,7 @@ a.more {
         background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
         background-size: 80%;
         left: -15px;
+        
     }
     .slick-next {
         background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
@@ -222,19 +223,25 @@ a.more {
         background: url('../images/slick/icon_arrow_right.svg') center center no-repeat;
         background-size: 30px 30px;
         right: -50px;
-       @include screen('xs_mobile'){
-        right: -35px;
-       }
-        
+        &:hover, &:focus {
+            background-color: #ccc;
+            right: -40px;
+        }
+        @include screen('xs_mobile') {
+            right: -35px;
+        }
     }
     .slick-prev {
         background: url('../images/slick/icon_arrow_left.svg') center center no-repeat;
         background-size: 30px 30px;
         left: -50px;
-        @include screen('xs_mobile') {
-             left: -40px;
+        &:hover, &:focus {
+            background-color: #ccc;
+            left: -40px;
         }
-        
+        @include screen('xs_mobile') {
+            left: -40px;
+        }
     }
     .Slider-for {
         width: 100%;
@@ -256,7 +263,7 @@ a.more {
             @include screen('mobile') {
                 height: 300px;
             }
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 height: 200px;
             }
             img {
@@ -285,21 +292,32 @@ a.more {
         @include screen('tablet') {
             max-width: 700px;
         }
-        @include screen('mobile'){
+        @media(max-width: 800px) {
             max-width: none;
-              width: 80%;
+            width: 80%;
         }
-        @include screen('xs_mobile'){
-            margin: 1em auto ;
+        @include screen('xs_mobile') {
+            margin: 1em auto;
         }
-        @media (max-width: 480px){
-
+        @media (max-width: 480px) {}
+        .slick-current {
+            a {
+                .img-container {
+                    background: rgb(207, 75, 12);
+                    background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+                }
+            }
         }
         a {
             &:hover, &:focus {
                 .img-container {
                     background: rgb(207, 75, 12);
                     background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+                }
+            }
+            &:focus {
+                .img-container {
+                    box-shadow: 0 0 0 3px $color-yellow;
                 }
             }
         }
@@ -313,6 +331,7 @@ a.more {
             display: flex;
             align-items: flex-end;
             transition: .5s;
+            margin: 3px;
             img {
                 width: 50px !important;
                 height: 50px !important;
@@ -1299,15 +1318,21 @@ a.more {
         }
         // 箭頭
         .slick-prev {
-            left: -35px;
-            top: -5px;
+            left: -55px;
+            top: 0px;
+            &:hover, &:focus {
+                left: -45px;
+            }
             @include screen('mobile') {
                 left: -15px;
             }
         }
         .slick-next {
-            right: -35px;
-            top: -5px;
+            right: -55px;
+            top: 0;
+            &:hover, &:focus {
+                right: -45px;
+            }
             @include screen('mobile') {
                 right: -15px;
             }
@@ -1364,15 +1389,21 @@ a.more {
         }
         // 箭頭
         .slick-prev {
-            left: -35px;
-            top: -5px;
+            left: -55px;
+            top: 0px;
+            &:hover, &:focus {
+                left: -45px;
+            }
             @include screen('mobile') {
                 left: -15px;
             }
         }
         .slick-next {
-            right: -35px;
-            top: -5px;
+            right: -55px;
+            top: 0;
+            &:hover, &:focus {
+                right: -45px;
+            }
             @include screen('mobile') {
                 right: -15px;
             }

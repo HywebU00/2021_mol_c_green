@@ -166,7 +166,6 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
-
     // mp_photo
     $('.mpSyncing_slider .Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
@@ -175,13 +174,14 @@ $(function() {
     $('.mpSyncing_slider .Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
+        autoplay: true,
         fade: true,
-        swipe: false,
-        swipeToSlide: false,
+        swipe: true,
+        swipeToSlide: true,
         lazyLoad: 'ondemand',
         asNavFor: '.Slider-nav',
-        infinite: true
+        infinite: true,
     });
     $('.mpSyncing_slider .Slider-nav').slick({
         slidesToShow: 5,
@@ -191,41 +191,33 @@ $(function() {
         arrows: true,
         lazyLoad: 'ondemand',
         focusOnSelect: true,
-        infinite: false,
+        infinite: true,
         responsive: [{
             breakpoint: 992,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                
-                
             }
         }, {
-            breakpoint: 767,
+            breakpoint: 800,
             settings: {
-               
                 slidesToShow: 3,
                 slidesToScroll: 1,
             }
         }, {
             breakpoint: 575,
             settings: {
-               
                 slidesToShow: 2,
                 slidesToScroll: 1,
             }
         }, {
             breakpoint: 480,
             settings: {
-                
                 slidesToShow: 2,
                 slidesToScroll: 1,
-                
             }
         }]
-        
     });
-
     // Search
     $('.search .important_link').find('div:last-of-type>a').focusout(function() {
         $('.search').slideUp();
@@ -283,7 +275,7 @@ $(function() {
         $(this).next('.Answer').show();
         $(this).addClass('active');
     })
-    $('.QAblock .Question').keyup(function(){
+    $('.QAblock .Question').keyup(function() {
         $(this).next('.Answer').show();
     })
     // 社群連結
@@ -295,7 +287,6 @@ $(function() {
         $(this).parent('.title').siblings('.content').stop().slideToggle();
         $(this).toggleClass('open');
     })
-   
     //勞動部所屬機關
     $('.organization_slider').slick({
         // dots: true,
@@ -443,7 +434,6 @@ $(function() {
     $('.questions_block').find('li:last>a').focusout(function() {
         $('.questions_block').stop().slideUp();
     });
-
     // 紓困頁籤內的收合
     $('.precaution_list .title>a').click(function() {
         $(this).parents('.precaution_list').siblings('.precaution_list').find('.precaution_content').slideUp();
