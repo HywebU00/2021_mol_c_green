@@ -3,7 +3,7 @@ $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
-        dots: true,
+        dots:false,
         arrow: true,
         infinite: true,
         speed: 500,
@@ -175,7 +175,7 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        autoplay: true,
+        autoplay: false,
         fade: true,
         swipe: true,
         swipeToSlide: true,
