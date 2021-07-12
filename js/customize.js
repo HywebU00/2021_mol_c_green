@@ -3,7 +3,7 @@ $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
-        dots:false,
+        dots: false,
         arrow: true,
         infinite: true,
         speed: 500,
@@ -175,7 +175,7 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         fade: true,
         swipe: true,
         swipeToSlide: true,
@@ -218,10 +218,16 @@ $(function() {
             }
         }]
     });
-    // Search
-    $('.search .important_link').find('div:last-of-type>a').focusout(function() {
-        $('.search').slideUp();
-    });
+    // Search 無障礙
+    if ($('.functionbtn_block .search .keywordHot').length == 0 && $('.functionbtn_block .search .important_link').length == 0) {
+        $('.btn_grp input').focusout(function() {
+            $('.functionbtn_block .search').hide();
+        });
+    } else {
+        $('.functionbtn_block .search .important_link').find('div:last-of-type>a').focusout(function() {
+            $('.functionbtn_block .search').hide();
+        });
+    }
     // 客服
     $('.customer_service_block').find('button').focusout(function() {
         $('.customer_service_block').slideUp();
@@ -403,7 +409,7 @@ $(function() {
     $(".accordion_grounp .accordionblock").each(function() {
         var _accordionItem3 = $(this).children(".Q").children('a');
         var _word = _accordionItem3.children('.word');
-        var _ullist = $(this).children('.answer').find('ul');
+        var _ullist = $(this).children('.answer').find('.answer_list');
         if (_ullist.length == 0) {
             _word.hide();
         } else {

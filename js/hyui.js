@@ -71,7 +71,7 @@ $(function() {
         });
         _body.removeClass('noscroll');
         _overlay.fadeOut();
-        liHasChild.children('ul').hide();
+        // liHasChild.children('ul').hide();
     }
     // 打開選單動作
     _sidebarCtrl.click(function(e) {
@@ -85,18 +85,19 @@ $(function() {
     _overlay.off("mouseenter");
     // 無障礙tab設定
     // menu
-    liHasChild.children('a').keyup(function() {
-        $(this).siblings("ul").fadeIn();
-        $(this).parent("li").siblings().focus(function() {
-            $(this).hide();
-        });
-    });
-    _menu.find('li').keyup(function() {
-        $(this).siblings().children('ul').hide();
-    });
-    _menu.find('li:last>a').focusout(function() {
-        _menu.find('li ul').hide();
-    });
+    // liHasChild.children('a').keyup(function() {
+    //     $(this).siblings("ul").fadeIn();
+    //     $(this).parent("li").siblings().focus(function() {
+    //         $(this).hide();
+    //     });
+    // });
+    // _menu.find('li').keyup(function() {
+    //     $(this).siblings().children('ul').hide();
+    // });
+    // _menu.find('li:last>a').focusout(function() {
+    //     _menu.find('li ul').hide();
+    // });
+
     // megamenu
     liHasChild2.children('a').keyup(function() {
         $(this).siblings('ul').fadeIn();
@@ -223,17 +224,25 @@ $(function() {
             search_mode = false;
             $('.language').find('ul').hide();
             // 副選單滑出
-            liHasChild.on({
-                mouseenter: function() {
-                    $(this).children('ul').stop(true, false).fadeIn();
-                },
-                mouseleave: function() {
-                    $(this).parent().siblings('ul').hide();
-                    $(this).children('ul').stop(true, false).fadeOut();
-                }
-            });
-            liHasChild.off('click');
+            // liHasChild.on({
+            //     mouseenter: function() {
+            //         $(this).children('ul').stop(true, false).fadeIn();
+            //     },
+            //     mouseleave: function() {
+            //         $(this).parent().siblings('ul').hide();
+            //         $(this).children('ul').stop(true, false).fadeOut();
+            //     }
+            // });
+            // liHasChild.off('click');
             // megamenu
+            $('.hamburger_menu').click(function() {
+                $('.menu').fadeIn();
+                _body.addClass('noscroll');
+            })
+            $('.menu .menu_close').click(function() {
+                $('.menu').fadeOut();
+                _body.removeClass('noscroll');
+            })
             // 副選單滑出
             liHasChild2.on({
                 mouseenter: function() {
@@ -247,17 +256,17 @@ $(function() {
             liHasChild2.off('click');
             $('.megamenu').children('ul').children('li').children('ul').hide();
             // 傳統menu
-            if (_menu.lenght > 0) {
-                liHasChild.on({
-                    mouseenter: function() {
-                        $(this).children('ul').stop(true, false).fadeIn();
-                    },
-                    mouseleave: function() {
-                        $(this).parent().siblings('ul').hide();
-                        $(this).children('ul').stop(true, false).fadeOut();
-                    }
-                });
-            }
+            // if (_menu.lenght > 0) {
+            //     liHasChild.on({
+            //         mouseenter: function() {
+            //             $(this).children('ul').stop(true, false).fadeIn();
+            //         },
+            //         mouseleave: function() {
+            //             $(this).parent().siblings('ul').hide();
+            //             $(this).children('ul').stop(true, false).fadeOut();
+            //         }
+            //     });
+            // }
             // megamenu
             if (_megamenu.lenght > 0) {
                 liHasChild2.on({
@@ -340,6 +349,25 @@ $(function() {
             search_mode = false;
         }
     });
+    // 電腦版menu
+    var _menuPc = $('.header .functionbtn_block .hamburger_menu');
+    _menuPc.off().on('click', function(e) {
+        if (search_mode == false) {
+            // $('.menu').stop().fadeIn();
+            $(this).siblings('.search').slideUp();
+            $('body').keydown(function(e) {
+                if (e.keyCode == 27) {
+                    $('.menu').stop().fadeOut();
+                }
+           
+            });
+            _window.off('resize');
+            search_mode = true;
+        } else {
+            $('.menu').stop().fadeOut();
+            search_mode = false;
+        }
+    });
     // 如果點在外面
     $('.main').off().on('click touchend', function(e) {
         $('.m_search').hide();
@@ -348,25 +376,25 @@ $(function() {
     // 固定版頭
     var headerHeight = Math.floor($('.header').outerHeight(true)),
         customHeight = 166 - 45; // header高度 - menu高度，每個專案不同，請另外填寫。
-    if ($('header .menu').length > 0) {
-        var stickyMenuTop = Math.floor($('header .menu').offset().top);
-        // console.log(stickyMenuTop);
-        headerHeight = Math.floor($('.header').outerHeight(true));
-        menuH = Math.floor(_menu.outerHeight(true));
-        $(window).bind("load scroll resize", function(e) {
-            ww = _window.outerWidth();
-            if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
-                $('.header').addClass('fixed');
-                $('.header').css('margin-top', -1 * customHeight);
-                // $('.main').css('margin-top', headerHeight);
-                // $('.main').css('margin-top', 0);
-            } else {
-                $('.header').removeClass('fixed');
-                $('.header').css('margin-top', 0);
-                $('.main').css('margin-top', 0);
-            }
-        });
-    }
+    // if ($('header .menu').length > 0) {
+    //     var stickyMenuTop = Math.floor($('header .menu').offset().top);
+    //     // console.log(stickyMenuTop);
+    //     headerHeight = Math.floor($('.header').outerHeight(true));
+    //     menuH = Math.floor(_menu.outerHeight(true));
+    //     $(window).bind("load scroll resize", function(e) {
+    //         ww = _window.outerWidth();
+    //         if (ww >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
+    //             $('.header').addClass('fixed');
+    //             $('.header').css('margin-top', -1 * customHeight);
+    //             // $('.main').css('margin-top', headerHeight);
+    //             // $('.main').css('margin-top', 0);
+    //         } else {
+    //             $('.header').removeClass('fixed');
+    //             $('.header').css('margin-top', 0);
+    //             $('.main').css('margin-top', 0);
+    //         }
+    //     });
+    // }
     if ($('header .megamenu').length > 0) {
         var stickyMenuTop2 = Math.floor($('header .megamenu').offset().top);
         // console.log(stickyMenuTop);

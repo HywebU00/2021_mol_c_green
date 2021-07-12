@@ -254,12 +254,14 @@
         }
     }
     .slick-prev {
+        top: 45%;
         @include screen('mobile') {
             top: 35%;
             left: 2%;
         }
     }
     .slick-next {
+        top: 45%;
         @include screen('mobile') {
             top: 35%;
             right: 2%;

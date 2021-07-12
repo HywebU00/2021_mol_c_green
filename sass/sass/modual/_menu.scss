@@ -4,6 +4,18 @@
     z-index: 99;
     // 預設選單 ul
     clear: both;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4em 0;
+    display: none;
+    overflow-y: scroll;
     @include screen('mobile') {
         display: none;
     }
@@ -13,16 +25,25 @@
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         // 第一層選單樣式
         >li {
-            flex: 0 1 16%;
+            flex: 0 1 18%;
+            flex-basis: 18%;
+            margin: 0 1%;
+            @include screen('tablet') {
+                flex: 0 1 19%;
+                flex-basis: 19%;
+            }
             >a {
                 display: block;
-                padding: 0 1em;
+                padding: 0 1em 5px;
                 min-height: 2.5em;
                 font-weight: bold;
-                line-height: 2.5em;
-                color: $color-word;
+                line-height: 1.5em;
+                color: $secondaryColor;
+                font-size: 1.25em;
+                border-bottom: 2px solid #fff;
             }
             &.hasChild {
                 >a {
@@ -30,22 +51,24 @@
                         content: '';
                         width: 4px;
                         height: 4px;
-                        display: inline-block;
-                        margin-left: .5em;
-                        vertical-align: middle;
-                        border: 2px solid lighten($color-word, 40);
+                        position: absolute;
+                        top: 10px;
+                        right: 0;
+                        border: 2px solid $secondaryColor;
                         transform: rotate(135deg);
                         border-bottom: none;
                         border-left: none;
-                        margin-bottom: .2em;
                     }
                 }
             }
             &:hover {
                 >a {
-                    color: $aHover;
+                    color: lighten($secondaryColor, 10);
+                    border-bottom: 2px solid lighten($secondaryColor, 10);
                     &:after {
-                        border: 2px solid $aHover;
+                        border: lighten($secondaryColor, 10);
+                        border: 2px solid $secondaryColor;
+                        transform: rotate(135deg);
                         border-bottom: none;
                         border-left: none;
                     }
@@ -62,19 +85,18 @@
                 text-decoration: none;
             }
             ul {
-                display: none;
+                // display: none;
                 overflow: visible;
                 width: 99%;
-                background: rgba(0, 0, 0, .8);
-                padding: 0;
+                padding: 1em 0 0 0;
                 z-index: 999999;
                 position: absolute;
                 top: auto;
                 left: 0;
                 list-style: none;
                 text-align: left;
-                animation: showMenu .3s ease-out;
-                font-size: .875em;
+                // animation: showMenu .3s ease-out;
+                font-size: 0.875em;
                 // 第二層選單樣式
                 li {
                     float: none;
@@ -137,6 +159,15 @@
     box-sizing: border-box;
     .menu {
         display: block;
+        position: relative;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        padding: 0;
+        overflow-y: auto;
     }
     >.menu_overlay {
         background: RGBA(0, 0, 0, .5);
@@ -234,6 +265,7 @@
                         width: 100%;
                         background-color: transparent;
                         font-size: 1em;
+                        padding: 0;
                         li {
                             a {
                                 display: block;
@@ -252,9 +284,8 @@
                                     background: #eee;
                                 }
                             }
-                            ul{
-                                left:0;
-
+                            ul {
+                                left: 0;
                                 li {
                                     a {
                                         background: rgba(0, 0, 0, .15) !important;
@@ -267,7 +298,6 @@
                                         &:after {
                                             display: none !important;
                                         }
-
                                     }
                                 }
                             }
