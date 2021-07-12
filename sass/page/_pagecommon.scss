@@ -699,25 +699,23 @@
                             padding: 0;
                         }
                         a {
-                            text-decoration:underline;
+                            text-decoration: underline;
                             color: $primaryColor;
                             &:hover {
                                 color: $color-red;
-                                text-decoration:none;
+                                text-decoration: none;
                             }
                         }
-                        
                     }
                 }
             }
             .answer_list {
-                margin: 10px 0 ;
+                margin: 10px 0;
                 padding: 0;
                 li {
                     list-style-type: none;
                     border-bottom: 1px solid #ccc;
                     position: relative;
-                   
                     &:before {
                         content: '';
                         width: 5px;
@@ -728,10 +726,9 @@
                         left: 0;
                         top: 19px;
                     }
-                    
                     a {
                         display: block;
-                         padding: 10px 10px 8px 15px;
+                        padding: 10px 10px 8px 15px;
                         text-decoration: none;
                         color: $primaryColor;
                         &:hover {
