@@ -74,6 +74,9 @@ body {
     >.container {
         @include gutter(); //gutter 代表左右要留白
         display: flex;
+        @include screen('mobile') {
+            padding: 0 30px;
+        }
     }
     .center_block {
         flex: auto;

@@ -194,12 +194,18 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     padding: .5em;
+    @include screen('xs_mobile') {
+        display: block;
+    }
 }
 // lp  listbtn
 .listbtn {
     flex: auto;
     display: flex;
     justify-content: flex-start;
+    @include screen('xs_mobile') {
+        margin-bottom: 5px;
+    }
     button {
         margin: 0 5px 0 0;
         &.btn {
@@ -211,15 +217,33 @@
         }
     }
 }
-// 條件查詢
-.condition_searchbtn {
+.condition_rightblock {
     flex: auto;
     display: flex;
     justify-content: flex-end;
-    button {
-        margin: 0;
-        &.btn {
-            padding: 0.3em 1em;
+    // RSS
+    .RSSbtn {
+        flex: none;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 0;
+            &.btn {
+                padding: 0.3em 1em;
+            }
+        }
+    }
+    // 條件查詢
+    .condition_searchbtn {
+        flex: none;
+        margin-left: 5px;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin: 0;
+            &.btn {
+                padding: 0.3em 1em;
+            }
         }
     }
 }
@@ -894,12 +918,21 @@
     position: absolute;
     top: -5px;
     right: 0;
+    @include screen('mobile') {
+        position: relative;
+        top: 0;
+        text-align: right;
+    }
     .btn {
         padding: 4px 14px;
-        display: block;
+        display: inline-block;
+        margin: 0;
         .i_man2:before {
             background-size: 12px;
             margin-right: 3px
+        }
+        @include screen('mobile') {
+            margin: 0 0 10px;
         }
     }
     .questions_block {
@@ -907,7 +940,7 @@
         clear: both;
         position: absolute;
         right: 0;
-        width: 260px;
+        width: 230px;
         padding: 15px 10px 10px;
         border-radius: 5px;
         box-sizing: border-box;
@@ -944,11 +977,12 @@
                 a {
                     display: block;
                     padding: 5px 8px;
-                    text-align: center;
+                    text-align: left;
                     background-color: #fff;
                     color: #333;
                     border-radius: 5px;
                     position: relative;
+                    line-height: 1.5em;
                     // &:before {
                     //     content: '';
                     //     width: 6px;

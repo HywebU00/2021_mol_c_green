@@ -127,6 +127,7 @@
         select {
             margin: 0px .5em;
             line-height: 1.7em;
+            padding: 0em 24px 0em .5em;
             @include screen('mobile') {
                 margin: 0px;
             }

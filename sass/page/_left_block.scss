@@ -186,3 +186,49 @@
         }
     }
 }
+// inbannerlink
+.inbannerlink_list {
+    .bannerlink {
+        margin-bottom: 10px;
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            background: rgb(43, 122, 169);
+            background: linear-gradient(158deg, rgba(43, 122, 169, 1) 0%, rgba(28, 80, 157, 1) 43%, rgba(34, 89, 160, 1) 100%);
+            border-radius: 10px;
+            padding: 15px 60px 15px 20px;
+            min-height: 100px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            font-family: Georgia;
+            font-size: 1.375em;
+            @media(max-width: 380px) {
+                padding: 50px 10px 15px 10px;
+                font-size: 1.25em;
+            }
+            span {
+                color: #fff;
+            }
+            .img {
+                position: absolute;
+                right: 0;
+                top: -3px;
+                text-align: right;
+                img {
+                    width: auto;
+                    height: auto;
+                    @media(max-width: 480px) {
+                        width: 80%;
+                    }
+                }
+            }
+            &:hover {
+                background: rgb(200, 65, 21);
+                background: linear-gradient(158deg, rgba(200, 65, 21, 1) 0%, rgba(171, 59, 24, 1) 43%, rgba(191, 75, 38, 1) 100%);
+            }
+        }
+    }
+}

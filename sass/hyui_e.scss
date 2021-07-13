@@ -35,7 +35,7 @@
 @import "sass/modual/_form";					//表單
 @import "sass/modual/_table";					//表格
 @import "sass/modual/_list";					//表單樣式
-@import "sass/modual/_link";					//連結樣式
+@import "sass/modual/_link_e";					//連結樣式
 @import "sass/modual/_tabs";					//頁籤
 @import "sass/modual/_thumbnail";				//縮圖
 @import "sass/modual/_modal";					//pop視窗
@@ -50,7 +50,7 @@
 
 // 頁面
 @import "page/_template_e";						//版型初始設定
-@import "page/_mp_e";								//首頁
+@import "page/_mp_e";							//首頁
 @import "page/_cp";								//CP
 @import "page/_sitemap";						//Sitemap
 @import "page/_left_block";						//左欄left_block
