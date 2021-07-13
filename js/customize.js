@@ -174,7 +174,7 @@ $(function() {
     $('.mpSyncing_slider .Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         autoplay: true,
         fade: true,
         swipe: true,
@@ -445,4 +445,20 @@ $(function() {
         $(this).parents('.precaution_list').siblings('.precaution_list').find('.precaution_content').slideUp();
         $(this).parent('.title').siblings('.precaution_content').stop().slideToggle();
     });
+    // 快捷列
+    $(function() {
+        $('.fixed_sidebar_group .sidebar_list a').each(function(index, el) {
+            $(this).bind('click', function() {
+                var num = $(this).parent('.sidebar_list').index() + 1;
+                //先抓每一個li的序列，index從0開始，所以要+1
+                $('body,html').stop(true, true).animate({
+                    scrollTop: $('.s_' + num).offset().top
+                }, 0, 'easeOutExpo');
+                //移動body scrollTop，做動畫，去取對應的section序列設定為offset=0，把該section推到最頂端
+                return false;
+                $('section').find('first:a').focus();//可以這樣加
+            });
+        });
+    });
+    // 
 });
