@@ -455,8 +455,10 @@ $(function() {
                     scrollTop: $('.s_' + num).offset().top
                 }, 0, 'easeOutExpo');
                 //移動body scrollTop，做動畫，去取對應的section序列設定為offset=0，把該section推到最頂端
+                // $('.s_' + num).find('a:first').focus();//可以這樣加
+                $('.s_' + num).find('.firstlink') .focus();//可以這樣加
                 return false;
-                $('section').find('first:a').focus();//可以這樣加
+
             });
         });
     });
