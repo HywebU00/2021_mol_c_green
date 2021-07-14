@@ -9,6 +9,7 @@
         flex-basis: 31%;
         margin: 0 1.16% 25px;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        border-radius: 5px;
         @include screen('mobile') {
             flex-basis: 48%;
             margin: 0 1% 25px;
@@ -20,6 +21,7 @@
         a {
             display: block;
             position: relative;
+            border-radius:5px;
             &:before {
                 content: '';
                 position: absolute;
@@ -36,6 +38,7 @@
                 background-color: #fff;
                 position: relative;
                 line-height: 0;
+                border-radius: 5px;
                 @include aspect-ratio(4, 3);
                 img {
                     width: 100%;
@@ -91,6 +94,7 @@
         flex-basis: 23%;
         margin: 0 1% 25px;
         position: relative;
+        border-radius:5px;
         @media(max-width: 800px) {
             flex-basis: 31%;
             margin: 0 1.16% 25px;
@@ -109,6 +113,7 @@
             background-color: #fff;
             position: relative;
             line-height: 0;
+            border-radius:5px;
             @include aspect-ratio(4, 3);
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             img {
