@@ -422,7 +422,7 @@
             justify-content: space-between;
             flex-wrap: wrap;
             span {
-                flex:none;
+                flex: none;
                 flex-basis: 50%;
                 max-width: 50%;
                 margin: 0 0 10px 0;
@@ -434,7 +434,7 @@
             }
             .detailed {
                 text-align: center;
-                flex:auto;
+                flex: auto;
                 flex-basis: 100%;
                 max-width: 100%;
                 a {
@@ -1589,5 +1589,63 @@
                 // }
             }
         }
+    }
+}
+//大字修改
+.main {
+    &.large_size {
+        // 首頁業務專區
+        .business_block {
+            .business_group {
+                .title {
+                    padding: 10px 30px;
+                    @media(max-width: 1200px) {
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+        // 首頁勞動統計
+        .statistics_block {
+            .statistics_group {
+                a {
+                    h3 {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+        // 首頁常見問答
+        .frequentlyQA_block {
+            .tabSet {
+                .tabContent {
+                    .QAblock {
+                        .Answer {
+                            .title {
+                                margin: 16px 0 20px;
+                                height: 94px;
+                            }
+                            .content {
+                                height: 185px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 英文版Highlights of
+        .highlightsof_block {
+            .highlightsof_list {
+                ul {
+                    li {
+                        span {
+                            flex-basis: 170px;
+                            max-width: 170px;
+                        }
+                    }
+                }
+            }
+        }
+        // 
     }
 }

@@ -531,6 +531,9 @@ a.more {
             display: flex;
             align-items: center;
             justify-content: center;
+            @media(max-width: 1200px){
+                 padding: 10px 10px;
+            }
         }
         .business_list {
             position: absolute;

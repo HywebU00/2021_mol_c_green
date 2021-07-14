@@ -189,7 +189,7 @@ a.more {
 .bannerlink_block {
     .bannerlink_list {
         display: flex;
-        @include screen('mobile') {
+         @include screen('tablet') {
             flex-wrap: wrap;
         }
         .bannerlink {
@@ -197,7 +197,7 @@ a.more {
             flex-basis: 23%;
             max-width: 23%;
             margin: 0 1%;
-            @include screen('mobile') {
+            @include screen('tablet') {
                 flex-basis: 48%;
                 max-width: 48%;
                 margin: 0 1% 15px;
@@ -408,6 +408,7 @@ a.more {
                     p {
                         padding: 0;
                         margin: 0;
+                        flex:auto;
                         @include text-line(2, 23px);
                     }
                 }
