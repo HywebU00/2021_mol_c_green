@@ -28,7 +28,7 @@
                 color: $color-word;
                 font-size: 1.125em;
                 letter-spacing: 0.05em; 
-               
+                border-radius:5px 5px 0 0;
                 @include screen('tablet'){
                     padding: 0 .8em;
                 }
@@ -92,6 +92,7 @@
                 text-align: left;
                 align-items: flex-start;
                 flex-wrap: wrap;
+                border-radius:5px;
                 li {
                     flex: none;
                     flex-basis: 23%;
