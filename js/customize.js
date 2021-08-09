@@ -18,38 +18,73 @@ $(function() {
         }
     });
     // 廣告輪播
-    $('.adSlider').slick({
-        mobileFirst: true,
-        dots: false,
-        infinite: true,
+    // $('.adSlider').slick({
+    //     mobileFirst: true,
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     arrow: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     responsive: [{
+    //         breakpoint: 1200,
+    //         settings: {
+    //             slidesToShow: 4,
+    //             slidesToScroll: 1,
+                
+    //         }
+    //     }, {
+    //         breakpoint: 992,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             slidesToScroll: 1,
+               
+    //         }
+    //     },{
+    //         breakpoint: 768,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             slidesToScroll: 1,
+                
+    //         }
+    //     }, {
+    //         breakpoint: 575,
+    //         settings: {
+    //             slidesToShow: 2,
+    //             slidesToScroll: 1,
+                
+    //         }
+    //     }]
+    // });
+     $('.adSlider').slick({
+        // dots: true,
+        infinite: false,
         speed: 300,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
         responsive: [{
             breakpoint: 1200,
             settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                arrows: true
+                slidesToShow: 3,
+                slidesToScroll: 3,
             }
         }, {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: true
+                slidesToShow: 2,
+                slidesToScroll: 2,
             }
         }, {
             breakpoint: 575,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: true
             }
         }]
     });
@@ -456,9 +491,8 @@ $(function() {
                 }, 0, 'easeOutExpo');
                 //移動body scrollTop，做動畫，去取對應的section序列設定為offset=0，把該section推到最頂端
                 // $('.s_' + num).find('a:first').focus();//可以這樣加
-                $('.s_' + num).find('.firstlink') .focus();//可以這樣加
+                $('.s_' + num).find('.firstlink').focus(); //可以這樣加
                 return false;
-
             });
         });
     });

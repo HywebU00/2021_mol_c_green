@@ -72,13 +72,20 @@
         box-sizing: border-box;
         ul {
             display: flex;
+            @include screen('tablet') {
+                flex-wrap: wrap;
+            }
             @include li-reset;
             li {
-                flex: auto;
+                flex: none;
                 flex-basis: 13%;
                 margin: 0 0.6%;
                 box-sizing: border-box;
                 font-size: 1.125em;
+                @include screen('tablet') {
+                    flex-basis: 23%;
+                    margin: 0 1%;
+                }
                 a {
                     line-height: 1.5;
                     display: block;
