@@ -14,6 +14,66 @@
         width: 100%;
         box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
     }
+    // 中國年
+    &.chinesenewyear {
+        background-image: url('../images/header_chinesenewyear.png');
+        background-size: auto;
+        background-position: center top;
+        @include screen('mobile') {
+            background-position: center -15px;
+        }
+    }
+    // 元旦
+    &.newyear {
+        background-image: url('../images/header_newyear.png');
+        background-size: auto;
+        background-position: center top;
+        @include screen('notebook') {
+            background-position: left top;
+        }
+        @include screen('mobile') {
+            background-position: 100%;
+        }
+    }
+    // 勞工節
+    &.laborday {
+        background-image: url('../images/header_laborday.png');
+        background-size: auto;
+        background-position: center top;
+        @media(max-width: 1200px) {
+            background-position: 60px top;
+        }
+        @include screen('mobile') {
+            background-position: center;
+            background-size: 100%;
+        }
+    }
+    // 端午節
+    &.dragon_boat{
+        background-image: url('../images/header_dragon_boat.png');
+        background-size: auto;
+        background-position: center top;
+        @media(max-width: 1200px) {
+            background-position: right top;
+        }
+        @include screen('mobile') {
+            background-position: center ;
+            background-size: 100%;
+        }
+    }
+    // 中秋節
+    &.mid_autumn{
+        background-image: url('../images/header_mid_autumn.png');
+        background-size: auto;
+        background-position: center top;
+        @media(max-width: 1200px) {
+            background-position: right top;
+        }
+        @include screen('mobile') {
+            background-position: right center ;
+            background-size: 100%;
+        }
+    }
     // 虛擬底色 - navigation bg
     // &:before {
     //     content: "";
@@ -45,6 +105,7 @@
         box-sizing: border-box;
         @include screen('mobile') {
             display: block !important;
+            background: rgba(255, 255, 255, .8);
         }
     }
     >.container {
