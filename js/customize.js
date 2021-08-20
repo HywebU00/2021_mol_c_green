@@ -35,32 +35,28 @@ $(function() {
     //         settings: {
     //             slidesToShow: 4,
     //             slidesToScroll: 1,
-                
     //         }
     //     }, {
     //         breakpoint: 992,
     //         settings: {
     //             slidesToShow: 3,
     //             slidesToScroll: 1,
-               
     //         }
     //     },{
     //         breakpoint: 768,
     //         settings: {
     //             slidesToShow: 3,
     //             slidesToScroll: 1,
-                
     //         }
     //     }, {
     //         breakpoint: 575,
     //         settings: {
     //             slidesToShow: 2,
     //             slidesToScroll: 1,
-                
     //         }
     //     }]
     // });
-     $('.adSlider').slick({
+    $('.adSlider').slick({
         // dots: true,
         infinite: false,
         speed: 300,
@@ -210,9 +206,9 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: true,
+        // autoplay: true,
         fade: true,
-        swipe: true,
+        swipe: false,
         swipeToSlide: true,
         lazyLoad: 'ondemand',
         asNavFor: '.Slider-nav',
@@ -227,6 +223,7 @@ $(function() {
         lazyLoad: 'ondemand',
         focusOnSelect: true,
         infinite: true,
+        // centerMode: true,
         responsive: [{
             breakpoint: 992,
             settings: {
@@ -236,7 +233,7 @@ $(function() {
         }, {
             breakpoint: 800,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 5,
                 slidesToScroll: 1,
             }
         }, {
@@ -253,6 +250,7 @@ $(function() {
             }
         }]
     });
+    // 
     // Search 無障礙
     if ($('.functionbtn_block .search .keywordHot').length == 0 && $('.functionbtn_block .search .important_link').length == 0) {
         $('.btn_grp input').focusout(function() {

@@ -1112,17 +1112,19 @@ a.more {
                     margin: 0 0 15px;
                 }
                 a {
-                    background-repeat: repeat-x;
-                    background-position: left center;
                     width: 446px;
                     height: 188px;
                     display: block;
-                    padding: 30px;
+                    padding: 0px;
                     box-sizing: border-box;
                     border-radius: 5px;
                     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
                     position: relative;
                     overflow: hidden;
+                    text-align: right;
+                    display: flex;
+                    align-items:flex-end;
+                    justify-content:flex-end; 
                     @include screen('tablet') {
                         width: 100%;
                     }
@@ -1168,57 +1170,29 @@ a.more {
                         line-height: 1.5em;
                         position: relative;
                         z-index: 9;
+                        position: absolute;
+                        left: 30px;
+                        top: 30px;
+                        text-align: left;
                         @include screen('tablet') {
-                            text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff;
+                            text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 10px #fff;
                         }
                     }
-                    img {
-                        z-index: 8;
-                    }
+                    
                 }
-                &.service01 {
+                &:nth-of-type(1) {
                     a {
                         background-image: url('../images/service_bg01.jpg');
-                        img {
-                            width: 295px;
-                            height: 188px;
-                            position: absolute;
-                            right: -17px;
-                            top: 10px;
-                            @include screen('tablet') {
-                                right: -87px;
-                            }
-                        }
                     }
                 }
-                &.service02 {
+                &:nth-of-type(2) {
                     a {
                         background-image: url('../images/service_bg02.jpg');
-                        img {
-                            width: 265px;
-                            height: 276px;
-                            position: absolute;
-                            right: 4px;
-                            top: -58px;
-                            @include screen('tablet') {
-                                right: -67px;
-                            }
-                        }
                     }
                 }
-                &.service03 {
+                &:nth-of-type(3) {
                     a {
                         background-image: url('../images/service_bg03.jpg');
-                        img {
-                            width: 209px;
-                            height: 285px;
-                            position: absolute;
-                            right: 36px;
-                            top: 17px;
-                            @include screen('tablet') {
-                                right: -35px;
-                            }
-                        }
                     }
                 }
             }
@@ -1276,8 +1250,6 @@ a.more {
             background-color: #fff;
             height: 70px;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 18px 10px -12px;
-
-            
             img {
                 margin: 0 auto;
             }
@@ -1310,7 +1282,7 @@ a.more {
     }
     .slick-next {
         right: -55px;
-        top:10px;
+        top: 10px;
         &:hover, &:focus {
             right: -45px;
         }
