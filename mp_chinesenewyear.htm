@@ -12,6 +12,8 @@
     <![endif]-->
     <!-- wow -->
     <link rel="stylesheet" href="css/animate.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" type="text/css" href="vendor/swiper/swiper-bundle.min.css" />
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -429,8 +431,8 @@
                 </div>
             </div>
             <!-- 快捷鍵 end -->
-            <!-- mpbanner輪播 start -->
-            <section class="mpbanner_slider col-12 full">
+            <!-- mpbanner輪播 start  刪除不用-->
+            <section class="mpbanner_slider col-12 full hidden">
                 <div class="container">
                     <div class="col">
                         <!-- 圖片輪播 start -->
@@ -447,31 +449,26 @@
                                     <div class="img-container">
                                         <img src="images/demo/07.jpg" alt="">
                                     </div>
-                                    <!-- <p>第三張圖說</p> -->
                                 </div>
                                 <div>
                                     <div class="img-container">
                                         <img src="images/demo/08.jpg" alt="">
                                     </div>
-                                    <!--  <p>第四張圖說</p> -->
                                 </div>
                                 <div>
                                     <div class="img-container">
                                         <img src="images/demo/09.jpg" alt="">
                                     </div>
-                                    <!--  <p>第四張圖說</p> -->
                                 </div>
                                 <div>
                                     <div class="img-container">
                                         <img src="images/demo/10.jpg" alt="">
                                     </div>
-                                    <!--  <p>第五張圖說</p> -->
                                 </div>
                                 <div>
                                     <div class="img-container">
                                         <img src="images/demo/06.jpg" alt="">
                                     </div>
-                                    <!--  <p>第六張圖說</p> -->
                                 </div>
                             </div>
                             <!-- slider-for end-->
@@ -531,6 +528,96 @@
                         </div>
                         <!-- 圖片輪播 end -->
                     </div>
+                </div>
+            </section>
+            <!-- mpbanner輪播 end 刪除不用-->
+            <!-- mpbanner輪播 start -->
+            <section class="mpbanner_slider col-12 full">
+                <div class="container">
+                    <div class="col">
+                        <!-- 圖片輪播 start -->
+                        <div class="swiper-container SwiperMain">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/mpslider_img01.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/demo/07.jpg" alt="">
+                                </div>
+                                <!-- <div class="swiper-slide">
+                                    <img src="images/demo/08.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/demo/09.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/demo/10.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/demo/06.jpg" alt="">
+                                </div> -->
+                            </div>
+                        </div>
+                        <!-- 圖片輪播 end -->
+                    </div>
+                </div>
+            </section>
+            <section class="mpbanner_slider_thumb col-12">
+                <div class="container">
+                    <div thumbsSlider="" class="swiper-container SwiperThumb">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon01.png" alt="">
+                                        <p>勞工職業災害保險及保護法草案</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon02.png" alt="">
+                                        <p>攜手守護權益</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon03.png" alt="">
+                                        <p>應屆畢業七年就業措施</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon04.png" alt="">
+                                        <p>防疫相關勞動權益</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon05.png" alt="">
+                                        <p>因應疫情咨詢措施</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-container">
+                                        <img src="images/mpSyncing_icon05.png" alt="">
+                                        <p>第六張圖</p>
+                                    </div>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </section>
             <!-- mpbanner輪播 end -->
@@ -1973,6 +2060,7 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script><!-- swiper js -->
     <!-- wow js -->
     <script src="js/wow.min.js"></script>
     <script>

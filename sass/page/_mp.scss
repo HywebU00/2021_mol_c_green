@@ -308,6 +308,156 @@ a.more {
         display: none !important;
     }
 }
+// 大圖輪播
+.SwiperMain .swiper-slide {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    @include screen('tablet') {
+        height: 400px;
+    }
+    @include screen('mobile') {
+        height: 300px;
+    }
+    @include screen('xs_mobile') {
+        height: 200px;
+    }
+    @media(max-width: 400px) {
+        height: 180px;
+    }
+}
+.SwiperMain .swiper-slide img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.mpbanner_slider_thumb {
+    width: 100%;
+    min-width: 260px;
+    max-width: 990px;
+    margin: -3em auto 1.5em;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.125em;
+   @media(max-width: 1200px){
+        max-width: 900px;
+    }
+    @include screen('tablet'){
+        max-width: 800px;
+    }
+    @media(max-width: 800px) {
+        max-width: none;
+        width: 95%;
+    }
+    @include screen('xs_mobile') {
+        margin: 1em auto;
+    }
+    .container{
+        @include screen('mobile'){
+            padding:0 60px;
+        }
+        @media screen and (max-width:640px){
+            padding:0;
+        }
+    }
+}
+.SwiperThumb {
+    height: 100%;
+    width: 100%;
+}
+.SwiperThumb .swiper-slide .img-container:before {
+    display: block;
+    padding-top: 0;
+}
+.SwiperThumb .swiper-slide a .img-container {
+    height: 118px;
+    width: 96%;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    transition: .5s;
+    margin: 3px;
+    // padding: 0 1.5em;
+    background: rgb(7, 75, 155);
+    background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
+}
+.SwiperThumb .swiper-slide img {
+    display: block;
+    // position: relative;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 10px auto;
+}
+.SwiperThumb .swiper-slide p {
+    text-align: center;
+    margin-top: 0;
+    // margin-bottom: 10px;
+    color: #FFF;
+    padding: .5em;
+    box-sizing: border-box;
+    width: 100%;
+    // height: 2.5em;
+    // line-height: 1.5em;
+    margin: 0px;
+    z-index: 2;
+}
+.SwiperThumb .swiper-slide.swiper-slide-thumb-active a {
+    .img-container {
+        background: rgb(207, 75, 12);
+        background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+    }
+    &:hover, &:focus {
+        .img-container {
+            background: rgb(207, 75, 12);
+            background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+        }
+    }
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #666;
+    top: 50%;
+}
+@media screen and (max-width:640px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}
+// 箭頭
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+    border-radius: 50%;
+    &:hover, &:focus {
+        right: 10px;
+        background-color: #ddd;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0px;
+    right: auto;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+    border-radius: 50%;
+    &:hover, &:focus {
+        left: 10px;
+        background-color: #ddd;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
 // 新聞稿區塊
 .news_block {
     background-image: url('../images/news_bg.jpg');
@@ -1123,8 +1273,8 @@ a.more {
                     overflow: hidden;
                     text-align: right;
                     display: flex;
-                    align-items:flex-end;
-                    justify-content:flex-end; 
+                    align-items: flex-end;
+                    justify-content: flex-end;
                     @include screen('tablet') {
                         width: 100%;
                     }
@@ -1178,7 +1328,6 @@ a.more {
                             text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 10px #fff, 0 0 10px #fff;
                         }
                     }
-                    
                 }
                 &:nth-of-type(1) {
                     a {
