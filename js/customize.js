@@ -505,7 +505,7 @@ $(document).ready(function() {
         SwiperMain.autoplay.run();
     });
     // 從主要內容按下tab時，Slider要從第一張開始
-    $("#aC").on('keydown', function(e) {
+    $(".fixed_sidebar_group").find('.sidebar_list').last().find('a').on('keydown', function(e) {
         var keyCode = e.keyCode || e.which;
         if (keyCode == 9) {
             SwiperMain.slideTo(0, 0);
