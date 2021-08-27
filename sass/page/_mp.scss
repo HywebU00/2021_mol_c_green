@@ -309,6 +309,9 @@ a.more {
     }
 }
 // 大圖輪播
+.SwiperMain {
+    overflow: hidden;
+}
 .SwiperMain .swiper-slide {
     position: relative;
     height: 500px;
@@ -325,13 +328,35 @@ a.more {
     @media(max-width: 400px) {
         height: 180px;
     }
+    img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    a {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 4px $color-yellow inset;
+            }
+        }
+    }
 }
-.SwiperMain .swiper-slide img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+// 
 .mpbanner_slider_thumb {
     width: 100%;
     min-width: 260px;
@@ -341,10 +366,10 @@ a.more {
     padding: 0;
     box-sizing: border-box;
     font-size: 1.125em;
-   @media(max-width: 1200px){
+    @media(max-width: 1200px) {
         max-width: 900px;
     }
-    @include screen('tablet'){
+    @include screen('tablet') {
         max-width: 800px;
     }
     @media(max-width: 800px) {
@@ -354,18 +379,19 @@ a.more {
     @include screen('xs_mobile') {
         margin: 1em auto;
     }
-    .container{
-        @include screen('mobile'){
-            padding:0 60px;
+    .container {
+        @include screen('mobile') {
+            padding: 0 60px;
         }
-        @media screen and (max-width:640px){
-            padding:0;
+        @media screen and (max-width:640px) {
+            padding: 0;
         }
     }
 }
 .SwiperThumb {
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .SwiperThumb .swiper-slide .img-container:before {
     display: block;
@@ -373,7 +399,7 @@ a.more {
 }
 .SwiperThumb .swiper-slide a .img-container {
     height: 118px;
-    width: 96%;
+    width: 99%;
     color: white;
     border-radius: 5px;
     display: flex;
@@ -383,6 +409,16 @@ a.more {
     // padding: 0 1.5em;
     background: rgb(7, 75, 155);
     background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
+}
+.SwiperThumb .swiper-slide {
+    a {
+        &:focus {
+            box-shadow: 0px 0px 0px 2px $color-yellow inset;
+            .img-container {
+                box-shadow: 0px 0px 0px 2px #fed969 inset;
+            }
+        }
+    }
 }
 .SwiperThumb .swiper-slide img {
     display: block;
@@ -394,13 +430,10 @@ a.more {
 .SwiperThumb .swiper-slide p {
     text-align: center;
     margin-top: 0;
-    // margin-bottom: 10px;
     color: #FFF;
     padding: .5em;
     box-sizing: border-box;
     width: 100%;
-    // height: 2.5em;
-    // line-height: 1.5em;
     margin: 0px;
     z-index: 2;
 }

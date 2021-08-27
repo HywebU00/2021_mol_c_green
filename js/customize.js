@@ -17,7 +17,6 @@ $(function() {
             return $('<button type="button" aria-label="' + title + '"/>').text(title);
         }
     });
-    
     $('.adSlider').slick({
         // dots: true,
         infinite: false,
@@ -159,7 +158,6 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
-    
     // $(".mpSyncing_slider .Slider-for").on("init reInit afterChange", function(event, slick, currentSlide) {
     //     var i = (currentSlide ? currentSlide : 0) + 1;
     //     $(".controls").html(i + "/" + slick.slideCount);
@@ -178,7 +176,6 @@ $(function() {
     //         lazyLoad: "ondemand",
     //         asNavFor: ".Slider-nav",
     //         infinite: true,
-
     //     });
     //     $(".mpSyncing_slider .Slider-nav").slick({
     //         slidesToShow: Math.min(5, $(".Slider-nav .img-container").length - 1),
@@ -219,42 +216,6 @@ $(function() {
     // }
     // 
     // 
-        var swiperThumb = new Swiper(".SwiperThumb", {
-                spaceBetween: 0,
-                slidesPerView: 2,
-                freeMode: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                    },
-                    700: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                    },
-                    1200: {
-                        slidesPerView: 5,
-                    },
-                }
-            });
-
-        var SwiperMain = new Swiper(".SwiperMain", {
-            spaceBetween: 0,
-            autoplay: {
-                delay: 3000,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiperThumb,
-            }
-        });
-        
     // Search 無障礙
     if ($('.functionbtn_block .search .keywordHot').length == 0 && $('.functionbtn_block .search .important_link').length == 0) {
         $('.btn_grp input').focusout(function() {
@@ -499,4 +460,117 @@ $(function() {
         });
     });
     // 
+});
+$(document).ready(function() {
+    var swiperThumb = new Swiper(".SwiperThumb", {
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+            1200: {
+                slidesPerView: 5,
+            },
+        }
+    });
+    var SwiperMain = new Swiper(".SwiperMain", {
+        autoplay: {
+            delay: 2000, //輪播秒數
+            pauseOnMouseEnter: true, //滑鼠移至swiper上停止
+            disableOnInteraction: false, //移開後可以繼續autoPlay
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiperThumb, //同步至swiperThumb
+        }
+    });
+    swiperThumb.$el.on('mouseover', () => {
+        SwiperMain.autoplay.stop();
+    });
+    swiperThumb.$el.on('mouseleave', () => {
+        SwiperMain.autoplay.running = true;
+        SwiperMain.autoplay.run();
+    });
+    // 從主要內容按下tab時，Slider要從第一張開始
+    $("#aC").on('keydown', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == 9) {
+            SwiperMain.slideTo(0, 0);
+        }
+    })
+    // 從thumb next按下shift+tab時，Slider要從最後一張開始
+    $(".mpbanner_slider_thumb a.swiper-button-next").on('keydown', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == 9 && e.shiftKey) {
+            SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
+        }
+    })
+    // 從thumb perv按下tab時，Slider要從第一張開始
+    // 從thumb next按下shift+tab時，Slider要從最後一張開始
+    $(".mpbanner_slider_thumb a.swiper-button-prev").on('keydown', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == 9) {
+            SwiperMain.slideTo(0, 0);
+        }
+        if (keyCode == 9 && e.shiftKey) {
+            SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
+        }
+    })
+    $("section.mpbanner_slider").on('keydown', 'a.swiper-access-href', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == 9) {
+            SwiperMain.autoplay.stop(); //swiper 停止自動播放
+            if (e.shiftKey) {
+                //Focus previous input
+                // if is not slider end, move to previous slider
+                if (!SwiperMain.isBeginning) {
+                    SwiperMain.slidePrev(0);
+                }
+            } else {
+                // Focus next input
+                // if is not slider end, move to next slider,
+                // else move to thumb, slide to first,focus to prev
+                if (!SwiperMain.isEnd) {
+                    SwiperMain.slideNext(0);
+                } else {
+                    $(".mpbanner_slider_thumb a.swiper-button-prev").focus();
+                    SwiperMain.slideTo(0, 0)
+                }
+            }
+        }
+    });
+    $("section.mpbanner_slider_thumb").on('keydown', 'a.swiper-access-href', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode == 9) {
+            SwiperMain.autoplay.stop(); //swiper 停止自動播放
+            if (e.shiftKey) {
+                //Focus previous input
+                // if is not slider end, move to previous slider,else back to main, move to last slide
+                if (!SwiperMain.isBeginning) {
+                    SwiperMain.slidePrev(0);
+                } else {
+                    SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
+                }
+            } else {
+                // Focus next input
+                // if is not slider end, move to next slider
+                if (!SwiperMain.isEnd) {
+                    SwiperMain.slideNext(0);
+                }
+            }
+        }
+    });
 });
