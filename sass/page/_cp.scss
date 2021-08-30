@@ -197,6 +197,7 @@ h1.title, h2.title {
             border-radius: 5px;
             box-sizing: border-box;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            background-color: #fff;
             @include screen('mobile') {
                 flex-basis: 48%;
                 max-width: 48%;
