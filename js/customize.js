@@ -529,7 +529,7 @@ $(document).ready(function() {
             SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
         }
     })
-    $("section.mpbanner_slider").on('keydown', 'a.swiper-access-href', function(e) {
+    $(".mpbanner_slider").on('keydown', 'a.swiper-access-href', function(e) {
         var keyCode = e.keyCode || e.which;
         if (keyCode == 9) {
             SwiperMain.autoplay.stop(); //swiper 停止自動播放
@@ -552,7 +552,7 @@ $(document).ready(function() {
             }
         }
     });
-    $("section.mpbanner_slider_thumb").on('keydown', 'a.swiper-access-href', function(e) {
+    $(".mpbanner_slider_thumb").on('keydown', 'a.swiper-access-href', function(e) {
         var keyCode = e.keyCode || e.which;
         if (keyCode == 9) {
             SwiperMain.autoplay.stop(); //swiper 停止自動播放
