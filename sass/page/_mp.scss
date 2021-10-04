@@ -655,21 +655,24 @@ a.more {
             right: 0;
             left: 0;
             line-height: 1.45em;
+            overflow: hidden;
+            text-overflow: -o-ellipsis-lastline;
+            text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             text-align: left;
             padding: 10px 50px;
             margin: 0;
-            height: 80px;
+            height: 75px;
             color: #333;
             font-size: 1.313em;
             text-align: center;
             font-weight: bolder;
             box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
             @media(max-width: 1200px) {
                 padding: 10px 10px;
             }
