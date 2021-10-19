@@ -21,7 +21,7 @@
         a {
             display: block;
             position: relative;
-            border-radius:5px;
+            border-radius: 5px;
             &:before {
                 content: '';
                 position: absolute;
@@ -94,7 +94,7 @@
         flex-basis: 23%;
         margin: 0 1% 25px;
         position: relative;
-        border-radius:5px;
+        border-radius: 5px;
         @media(max-width: 800px) {
             flex-basis: 31%;
             margin: 0 1.16% 25px;
@@ -113,7 +113,7 @@
             background-color: #fff;
             position: relative;
             line-height: 0;
-            border-radius:5px;
+            border-radius: 5px;
             @include aspect-ratio(4, 3);
             box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
             img {
@@ -750,6 +750,7 @@
                         border-bottom: 1px solid #ccc;
                         position: relative;
                         padding: 10px 10px 8px 15px;
+                        line-height: 1.6em;
                         &:before {
                             content: '';
                             width: 5px;
@@ -817,7 +818,7 @@
         width: 100%;
         margin: 0 0 10px;
         button.Q {
-            padding: 15px 100px 15px 80px;
+            padding: 15px 100px 15px 90px;
             border-radius: 5px;
             font-size: 1.125em;
             position: relative;
@@ -830,6 +831,7 @@
             color: #444;
             box-sizing: border-box;
             margin: 0;
+            line-height: 1.6em;
             &:after {
                 content: "";
                 border: 2px solid #333;
@@ -857,7 +859,7 @@
                 float: left;
                 display: inline-block;
                 margin-right: 10px;
-                margin-left: -70px;
+                margin-left: -75px;
                 font-size: 2em;
                 color: $primaryColor;
                 font-weight: bolder;
@@ -1597,17 +1599,15 @@
     }
 }
 // 小字修改
-.main{
-    &.small_size{
+.main {
+    &.small_size {
         .business_block {
             .business_group {
                 .title {
                     padding: 5px 50px 20px;
                     bottom: 5px;
                     height: 65px;
-                    @media(max-width: 1200px) {
-                       
-                    }
+                    @media(max-width: 1200px) {}
                 }
             }
         }
@@ -1616,11 +1616,23 @@
 //大字修改
 .main {
     &.large_size {
+        $form_title_width: 200px;
+        .flex-form {
+            .form_title {
+                max-width: $form_title_width;
+                flex: 0 0 $form_title_width;
+            }
+            .form_content {
+                max-width: calc(100% - #{$form_title_width});
+                flex-basis: calc(100% - #{$form_title_width});
+            }
+        }
         // 首頁業務專區
         .business_block {
             .business_group {
                 .title {
                     padding: 5px 30px;
+                    height: 80px;
                     @media(max-width: 1200px) {
                         padding: 5px 20px;
                     }
@@ -1632,7 +1644,7 @@
             .statistics_group {
                 a {
                     h3 {
-                        height: 100px;
+                        height: 114px;
                     }
                 }
             }
@@ -1664,6 +1676,105 @@
                             flex-basis: 170px;
                             max-width: 170px;
                         }
+                    }
+                }
+            }
+        }
+        // 大圖輪播 字的高度
+        .SwiperThumb .swiper-slide a .img-container {
+            height: 147px;
+        }
+        // 新聞稿區塊日期
+        .newstab {
+            .tabContent {
+                .select {
+                    button {
+                        width: 70px !important;
+                    }
+                }
+                ul {
+                    li {
+                        time {
+                            width: 110px;
+                        }
+                    }
+                }
+            }
+        }
+        // 快捷鍵
+        .fixed_sidebar_group {
+            .sidebar_list {
+                a {
+                    width: auto;
+                    .list_img {
+                        margin: 10px 10px 10px 4px;
+                    }
+                    &:hover {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        // 熱門推薦
+        .recommend_group {
+            div {
+                a {
+                    height: 240px;
+                }
+            }
+        }
+        // 常見問答
+        .frequentlyQA_block {
+            .tabSet {
+                .tabContent {
+                    .select {
+                        button {
+                            width: 75px !important;
+                        }
+                    }
+                    .QAblock {
+                        .Answer {
+                            .title {
+                                height: 108px;
+                            }
+                            .content {
+                                height: 174px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 社群服務
+        .community_service_block {
+            .communitylink_block {
+                .communitylink_group {
+                    .content {
+                        padding: 15px;
+                        ul {
+                            li {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // cp
+        .tabs {
+            &.cptab {
+                &>.tabItem {
+                    line-height: 1.45em;
+                }
+            }
+        }
+        // QA
+        .accordionqa {
+            .accordionblock {
+                button.Q {
+                    padding: 15px 100px 15px 105px;
+                    span {
+                        margin-left: -91px;
                     }
                 }
             }

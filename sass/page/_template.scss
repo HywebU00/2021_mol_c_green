@@ -61,15 +61,15 @@ body {
         font-size: .938em;
     }
     &.large_size {
-        font-size: 1.125em;
+        font-size: 1.25em;
     }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     background-image: none;
-    background: rgb(240, 240, 240);
-    background: linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 40%);
+    // background: rgb(240, 240, 240);
+    // background: linear-gradient(180deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 40%);
     padding-top: 25px;
     >.container {
         @include gutter(); //gutter 代表左右要留白
