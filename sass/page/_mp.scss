@@ -691,7 +691,7 @@ a.more {
                 top: 0;
             }
             ul {
-                margin: 20px;
+                margin: 15px 20px;
                 padding: 0;
                 list-style: none;
                 li {
@@ -701,7 +701,7 @@ a.more {
                         color: #000;
                         display: block;
                         @include text-overflow;
-                        padding: 5px 5px 5px 15px;
+                        padding: 3px 5px 3px 15px;
                         position: relative;
                         &:before {
                             content: '';
@@ -717,6 +717,13 @@ a.more {
                             color: $primaryColor
                         }
                     }
+                }
+            }
+            .more{
+
+                a{
+                    padding: 5px 15px;
+                    min-width: 85px;
                 }
             }
         }

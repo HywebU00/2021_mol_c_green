@@ -49,7 +49,7 @@
         }
     }
     // 端午節
-    &.dragon_boat{
+    &.dragon_boat {
         background-image: url('../images/header_dragon_boat.png');
         background-size: auto;
         background-position: center top;
@@ -57,12 +57,12 @@
             background-position: right top;
         }
         @include screen('mobile') {
-            background-position: center ;
+            background-position: center;
             background-size: 100%;
         }
     }
     // 中秋節
-    &.mid_autumn{
+    &.mid_autumn {
         background-image: url('../images/header_mid_autumn.png');
         background-size: auto;
         background-position: center top;
@@ -70,7 +70,7 @@
             background-position: right top;
         }
         @include screen('mobile') {
-            background-position: right center ;
+            background-position: right center;
             background-size: 100%;
         }
     }
@@ -278,6 +278,56 @@
             padding: 0;
             color: #fff;
             background-color: transparent;
+            cursor: pointer;
+            display: block;
+        }
+        .searchname {
+            position: absolute;
+            width: 80px;
+            right: 100px;
+            top: 2px;
+            background-color: $primaryColor;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            border-radius: 5px;
+            font-size: 0.875em;
+            letter-spacing: 0.01em;
+            display: none;
+            &:after {
+                content: '';
+                border: 8px solid $primaryColor;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                right: -13px;
+                top: 4px;
+            }
+        }
+        .customername {
+            position: absolute;
+            width: 80px;
+            right: 0px;
+            top: -35px;
+            background-color: $primaryColor;
+            color: #fff;
+            text-align: center;
+            padding: 2px;
+            border-radius: 5px;
+            font-size: 0.875em;
+            letter-spacing: 0.01em;
+            display: none;
+            &:after {
+                content: '';
+                border: 8px solid $primaryColor;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                bottom: -13px;
+                left: 41%;
+            }
         }
         @include screen('mobile') {
             .search {
