@@ -594,6 +594,7 @@ a.more {
         @include screen('xs_mobile') {
             flex-basis: 100%;
             margin: 0 0 25px;
+            height: 240px;
         }
         &:hover {
             .business_list {
@@ -636,6 +637,9 @@ a.more {
             height: 140px;
             border-radius: 5px;
             box-shadow: 0 3px 3px #ccc;
+            @include screen('xs_mobile'){
+                height: 160px
+            }
             img {
                 position: absolute;
                 top: 0;
