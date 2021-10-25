@@ -240,6 +240,9 @@ $(function() {
         $(this).parents('.business_list').addClass('open');
         $(this).parents('.business_group').siblings().children('.business_list').removeClass('open');
     })
+    $(".business_list").mouseout(function() {
+        $(this).removeClass('open');
+    });
     //勞動統計
     $('.statistics_slider').slick({
         // dots: true,
@@ -574,7 +577,6 @@ $(document).ready(function() {
         }
     });
     // search
-   
     $(".functionbtn_block button.search_btn").hover(function() {
         $(".functionbtn_block .searchname").stop().fadeIn();
     }, function() {
