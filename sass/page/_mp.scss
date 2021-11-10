@@ -404,12 +404,17 @@ a.more {
     border-radius: 5px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
     transition: .5s;
     margin: 3px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     // padding: 0 1.5em;
     background-color: #fff;
     // background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
+    path {
+                fill: #337c80;
+            }
 }
 .SwiperThumb .swiper-slide {
     a {
@@ -443,19 +448,24 @@ a.more {
         color: #fff;
     }
     .img-container {
+
         background: rgb(40, 129, 125);
         background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
+        svg {
+            width: 50px;
+            height: 50px;
+            display: block;
+
+        }
          path {
-                fill: #337c80;
+                fill: #fff;
             }
     }
     &:hover, &:focus {
         .img-container {
             background: rgb(40, 129, 125);
             background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
-            path {
-                fill: #fff;
-            }
+           
         }
     }
 }

@@ -589,6 +589,9 @@ $(document).ready(function() {
         $(".functionbtn_block .customername").stop().fadeOut();
     });
     // 
+});
+// svg
+$(function() {
     jQuery('img.svg').each(function() {
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -615,7 +618,4 @@ $(document).ready(function() {
             $img.replaceWith($svg);
         }, 'xml');
     });
-});
-$(function() {
-    
 })
