@@ -361,7 +361,7 @@
     width: 80%;
     top: 30px;
     right: 50px;
-    background-color: #7ed5e0;
+    background-color: lighten($primaryColor, 30);
     padding: 30px 30px 20px;
     border-radius: 10px;
     z-index: 100;
@@ -602,8 +602,8 @@
     }
     .service_btn {
         padding: .3em 1.5em;
-        background-color: $primaryColor;
-        border: 1px solid $primaryColor;
+        background-color:darken($primaryColor, 10); 
+        border: 1px solid darken($primaryColor, 10);
         color: #fff;
     }
 }

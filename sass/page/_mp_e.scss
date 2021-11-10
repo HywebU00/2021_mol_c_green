@@ -189,7 +189,7 @@ a.more {
 .bannerlink_block {
     .bannerlink_list {
         display: flex;
-         @include screen('tablet') {
+        @include screen('tablet') {
             flex-wrap: wrap;
         }
         .bannerlink {
@@ -211,8 +211,8 @@ a.more {
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-end;
-                background: rgb(43, 122, 169);
-                background: linear-gradient(158deg, rgba(43, 122, 169, 1) 0%, rgba(28, 80, 157, 1) 43%, rgba(34, 89, 160, 1) 100%);
+                background: rgb(51, 124, 128);
+                background: linear-gradient(138deg, rgba(51, 124, 128, 1) 0%, rgba(34, 110, 115, 1) 100%, rgba(103, 172, 176, 1) 158%);
                 border-radius: 10px;
                 padding: 15px 60px 15px 20px;
                 min-height: 100px;
@@ -408,7 +408,7 @@ a.more {
                     p {
                         padding: 0;
                         margin: 0;
-                        flex:auto;
+                        flex: auto;
                         @include text-line(2, 23px);
                     }
                 }
@@ -418,15 +418,15 @@ a.more {
 }
 // Relaten links
 .relatenlinks_block {
-    background-image:url('../images/relatenlinks_bg.jpg');
-    background-repeat:no-repeat;
-    background-position:center bottom;
+    background-image: url('../images/relatenlinks_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
     .relatenlinks_group {
         display: flex;
         align-items: center;
         padding: 50px 0;
         justify-content: center;
-        align-items:stretch;
+        align-items: stretch;
         @media(max-width: 800px) {
             display: block;
         }
@@ -437,7 +437,7 @@ a.more {
             font-weight: normal;
             text-shadow: 0 0 3px #999;
             display: flex;
-            align-items:center;
+            align-items: center;
             justify-content: center;
             span {
                 color: #c74c05;
@@ -450,7 +450,6 @@ a.more {
         .relatenlinks_list {
             flex: auto;
             margin: 0 100px 0 70px;
-
             @include screen('tablet') {
                 margin: 0 0 0 30px;
             }
@@ -503,11 +502,11 @@ a.more {
                                 }
                             }
                         }
-                        &:hover{
+                        &:hover {
                             color: $primaryColor;
                         }
-                        &:focus{
-                            box-shadow: 0 0px 0px 2px #fec003 ;
+                        &:focus {
+                            box-shadow: 0 0px 0px 2px #fec003;
                         }
                     }
                 }

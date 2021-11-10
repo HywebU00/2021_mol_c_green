@@ -3,10 +3,10 @@
 
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #074b9b; //主色
-$secondaryColor: #3597C1; //輔色
+$primaryColor: #337c80; //主色
+$secondaryColor: #338049; //輔色
 $lightColor: #FFE926; //點綴
-$linkColor: #0066cc; //連結
+$linkColor: #337c80; //連結
 $importantColor: #eb0202; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #0066cc;
@@ -21,7 +21,7 @@ $color-hr: #666; //hr顏色
 $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #0066cc;
+$aColor: $linkColor;
 $aHover: $aColor;
 $aFocus:#fec003;
 // 表單focus顏色
@@ -50,7 +50,7 @@ $screen-xs: 576px !default; //極小尺寸
 
 //-------------------------------------------------------客製化------//
 
-$fatfooterBgColor: #004ea2; //fatFooter 底色
+$fatfooterBgColor: #0c6d73; //fatFooter 底色
 
 //--------------------------------------------------------客製化------//
 

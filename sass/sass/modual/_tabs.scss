@@ -47,20 +47,23 @@
         }
     }
     &.newstab {
+        
         &>.tabItem {
             background-color: transparent;
             color: $color-word;
-            padding: 16px 0 30px;
+            padding: 16px 0 16px;
             font-size: 1.313em;
             letter-spacing: 0.05em;
+                        display: inline-block;
             @include screen('mobile') {
                 padding: 16px 0;
             }
             &.active {
                 color: $primaryColor;
-                background-image: url('../images/newstab_activebg.png');
-                background-position: center bottom;
-                background-repeat: no-repeat;
+                // background-image: url('../images/newstab_activebg.png');
+                // background-position: center bottom;
+                // background-repeat: no-repeat;
+                border-bottom:3px solid $primaryColor;
                 @include screen('mobile') {
                     background-image: none;
                     padding: 16px 0;
@@ -87,7 +90,7 @@
             font-size: 1.313em;
             letter-spacing: 0.05em;
             &.active {
-                background-color: #3597c1;
+                background-color: #2e7b82;
                 border-radius: 5px 5px 0 0;
                 color: #fff;
             }
@@ -289,8 +292,8 @@
 }
 .frequentlyQA_tab {
     .tabContent {
-        background-color: rgb(53, 151, 193);
-        background: linear-gradient(135deg, rgba(53, 151, 193, 1) 27%, rgba(0, 78, 162, 1) 100%);
+        background: rgb(46,123,130);
+background: linear-gradient(138deg, rgba(46,123,130,1) 0%, rgba(38,131,130,1) 100%, rgba(103,172,176,1) 158%);
         z-index: 1;
         // @include screen('tablet'){
         //     position: static;

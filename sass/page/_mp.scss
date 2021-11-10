@@ -400,15 +400,16 @@ a.more {
 .SwiperThumb .swiper-slide a .img-container {
     height: 118px;
     width: 99%;
-    color: white;
+    color: $primaryColor;
     border-radius: 5px;
     display: flex;
     align-items: flex-end;
     transition: .5s;
     margin: 3px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     // padding: 0 1.5em;
-    background: rgb(7, 75, 155);
-    background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
+    background-color: #fff;
+    // background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
 }
 .SwiperThumb .swiper-slide {
     a {
@@ -430,7 +431,7 @@ a.more {
 .SwiperThumb .swiper-slide p {
     text-align: center;
     margin-top: 0;
-    color: #FFF;
+    color: $primaryColor;
     padding: .5em;
     box-sizing: border-box;
     width: 100%;
@@ -438,14 +439,23 @@ a.more {
     z-index: 2;
 }
 .SwiperThumb .swiper-slide.swiper-slide-thumb-active a {
+    p {
+        color: #fff;
+    }
     .img-container {
-        background: rgb(207, 75, 12);
-        background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+        background: rgb(40, 129, 125);
+        background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
+         path {
+                fill: #337c80;
+            }
     }
     &:hover, &:focus {
         .img-container {
-            background: rgb(207, 75, 12);
-            background: linear-gradient(0deg, rgba(207, 75, 12, 1) 0%, rgba(177, 64, 10, 0.9640231092436975) 100%);
+            background: rgb(40, 129, 125);
+            background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
+            path {
+                fill: #fff;
+            }
         }
     }
 }
@@ -583,11 +593,11 @@ a.more {
         background-color: #e9fcff;
         // background: rgb(0, 0, 0);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        @media(max-width: 1200px){
+        @media(max-width: 1200px) {
             flex-basis: 31%;
             margin: 0 1.16% 25px;
         }
-        @media(max-width: 900px){
+        @media(max-width: 900px) {
             flex-basis: 46%;
             margin: 0 2% 25px;
         }
@@ -641,7 +651,7 @@ a.more {
             height: 140px;
             border-radius: 5px;
             box-shadow: 0 3px 3px #ccc;
-            @include screen('xs_mobile'){
+            @include screen('xs_mobile') {
                 height: 160px
             }
             img {
@@ -727,9 +737,8 @@ a.more {
                     }
                 }
             }
-            .more{
-
-                a{
+            .more {
+                a {
                     padding: 5px 15px;
                     min-width: 85px;
                 }
