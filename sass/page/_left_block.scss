@@ -135,7 +135,6 @@
                 text-decoration: none;
                 font-weight: bolder;
                 transition: .5s;
-               
                 &:hover,
                 &:focus {
                     text-decoration: none;
@@ -207,8 +206,8 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-end;
-            background: rgb(43, 122, 169);
-            background: linear-gradient(158deg, rgba(43, 122, 169, 1) 0%, rgba(28, 80, 157, 1) 43%, rgba(34, 89, 160, 1) 100%);
+            background: rgb(32, 129, 121);
+            background: linear-gradient(135deg, rgba(32, 129, 121, 1) 0%, rgba(25, 90, 94, 1) 100%, rgba(103, 172, 176, 1) 158%);
             border-radius: 10px;
             padding: 15px 60px 15px 20px;
             min-height: 100px;
