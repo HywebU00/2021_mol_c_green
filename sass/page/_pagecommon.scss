@@ -550,11 +550,12 @@
     }
     // 
     .item_list2 {
-        padding: 5px 0 15px;
+        padding: 5px 0 10px;
         margin-bottom: 15px;
         border-bottom: 1px solid #ccc;
         .date {
-            font-size: 0.938em;
+            font-size: 1em;
+            margin-bottom: 8px;
             color: #666;
         }
         h3 {
@@ -571,17 +572,31 @@
             }
         }
         .data {
-            display: flex;
-            @media(max-width: 380px) {
-                display: block;
-            }
             span {
-                font-size: 0.938em;
+                font-size: 1em;
                 color: #666;
-                padding: 0;
-                margin-right: 30px;
-                border-radius: 5px;
+                padding: 0 15px 0 15px;
+                margin-bottom: 2px;
                 display: inline-block;
+                position: relative;
+                white-space: nowrap;
+                @media(max-width: 480px) {
+                    width: 100%;
+                }
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 15px;
+                    background-color: #bbb;
+                    position: absolute;
+                    left: 0px;
+                    top: 4px;
+                }
+                // &:empty{
+                //     &:after{
+                //        display: none; 
+                //     }
+                // }
             }
         }
     }
