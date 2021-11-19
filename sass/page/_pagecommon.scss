@@ -585,12 +585,13 @@
                 }
                 &:after {
                     content: '';
-                    width: 1px;
-                    height: 15px;
-                    background-color: #bbb;
+                    width: 5px;
+                    height: 5px;
+                    background-color: #777;
+                    border-radius:50%;
                     position: absolute;
                     left: 0px;
-                    top: 4px;
+                    top: 9px;
                 }
                 // &:empty{
                 //     &:after{
