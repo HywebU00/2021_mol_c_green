@@ -258,6 +258,11 @@
                             background: #FFF;
                             padding-right: 36px;
                             position: relative;
+                            &.open{
+                                &:after {
+                                    transform: rotate(45deg);
+                                }
+                            }
                             &:after {
                                 content: '';
                                 position: absolute;
@@ -267,11 +272,12 @@
                                 line-height: 1.25em;
                                 height: 5px;
                                 border: 2px solid #222;
-                                transform: rotate(45deg);
+                                transform: rotate(-45deg);
                                 border-top: none;
                                 border-left: none;
                                 transition: .3s;
                             }
+
                         }
                     }
                     ul {

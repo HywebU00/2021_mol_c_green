@@ -53,3 +53,17 @@ body {
 .cp .pic {
     float: none;
 }
+.cp .cppic_slider{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cp .cppic_slider .img-container{
+    flex: none;
+    flex-basis: 30%;
+    max-width: 30%;
+    margin:0 1.66% 10px ;
+}
+.lightbox_slider_block .img-container a .caption{
+    background-color: #fff!important;
+    color: #000;
+}

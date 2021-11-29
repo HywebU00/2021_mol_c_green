@@ -247,7 +247,7 @@
         line-height: 1.7em;
         border-bottom: 1px #CCC dashed;
         @include screen('mobile') {
-            @include text-overflow();
+            // @include text-overflow();
         }
         a {
             @include aSetting_nocolor;
@@ -259,6 +259,7 @@
         }
     }
 }
+// 
 .newstab {
     .tabContent {
         ul {
@@ -289,6 +290,7 @@
         }
     }
 }
+// 常見問答區塊
 .frequentlyQA_tab {
     .tabContent {
         background: rgb(46, 123, 130);
@@ -318,7 +320,6 @@
     }
 }
 .cptab {
-    outline: 1px solid red;
     .tabContent {
         border-radius: 5px;
         background-color: #eee;
