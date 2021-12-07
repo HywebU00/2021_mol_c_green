@@ -18,7 +18,7 @@
     &.chinesenewyear {
         background-image: url('../images/header_chinesenewyear_e.png');
         background-size: auto;
-        background-position: center;
+        background-position: center top;
         @include screen('mobile') {
             background-position: left -10px;
         }
@@ -144,7 +144,11 @@
         .searchCtrl {
             display: none;
             right: 0px;
-            font-size: 0em;
+            top:0px;
+            font-size: 0.562em;
+            width:50px;
+            padding:36px 0 0 0;
+            color:$primaryColor;
             @extend %mobileCtrlBtn;
             &:before {
                 width: 40px;
@@ -158,6 +162,9 @@
                 left: 10px;
                 display: block;
             }
+        }
+        .customerCtrl{
+             display: none;
         }
     }
     h1 {
@@ -283,20 +290,27 @@
         .search_btn {
             background-image: url('../images/icon_search.svg');
             background-repeat: no-repeat;
-            background-position: center;
-            width: 36px;
-            height: 36px;
-            font-size: 0;
+            background-position: center 5px;
+            background-size: 40px;
+            width: 50px;
+            // height: 36px;
+            font-size: 0.688em;
+            font-weight: bolder;
             border: none;
-            padding: 0;
-            color: #fff;
+            padding: 36px 0 0 0;
+            color: $primaryColor;
             background-color: transparent;
-        }
-        @include screen('mobile') {
-            .search {
-                display: none !important;
+            cursor: pointer;
+            display: block;
+            @include screen('mobile'){
+                display: none;
             }
         }
+        // @include screen('mobile') {
+        //     .search {
+        //         display: none !important;
+        //     }
+        // }
         .customer_service_btn {
             background-image: url('../images/icon_customer_service.svg');
             background-repeat: no-repeat;
@@ -322,8 +336,8 @@
     box-sizing: border-box;
     position: absolute;
     width: auto;
-    top: 30px;
-    right: 50px;
+    top: 45px;
+    right: 0;
     background-color: #7ed5e0;
     padding: 17px 20px 0px;
     border-radius: 10px;
