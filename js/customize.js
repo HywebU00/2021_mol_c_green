@@ -577,17 +577,17 @@ $(document).ready(function() {
     //     }
     // });
     // search
-    $(".functionbtn_block button.search_btn").hover(function() {
-        $(".functionbtn_block .searchname").stop().fadeIn();
-    }, function() {
-        $(".functionbtn_block .searchname").stop().fadeOut();
-    });
+    // $(".functionbtn_block button.search_btn").hover(function() {
+    //     $(".functionbtn_block .searchname").stop().fadeIn();
+    // }, function() {
+    //     $(".functionbtn_block .searchname").stop().fadeOut();
+    // });
     // 線上客服
-    $(".functionbtn_block button.customer_service_btn").hover(function() {
-        $(".functionbtn_block .customername").stop().fadeIn();
-    }, function() {
-        $(".functionbtn_block .customername").stop().fadeOut();
-    });
+    // $(".functionbtn_block button.customer_service_btn").hover(function() {
+    //     $(".functionbtn_block .customername").stop().fadeIn();
+    // }, function() {
+    //     $(".functionbtn_block .customername").stop().fadeOut();
+    // });
     // 
 });
 // svg

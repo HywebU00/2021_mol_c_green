@@ -42,7 +42,7 @@ $(function() {
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
     _body.prepend('<aside class="sidebar"><div class="m_area"><button type="button" class="sidebarClose">關閉</button></div><div class="menu_overlay"></div></aside>');
-    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="searchCtrl">查詢</button>');
+    $('header .container').prepend('<button type="button" class="sidebarCtrl">側欄選單</button><button type="button" class="customerCtrl">文字客服</button><button type="button" class="searchCtrl">搜尋功能</button>');
     var menu_status = false,
         _sidebar = $('.sidebar'),
         _search = $('.search'),
@@ -50,6 +50,7 @@ $(function() {
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
+        _customer = $('.customer_service_block')
     _mArea = $('.m_area');
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     var search_mode = false;
@@ -116,6 +117,7 @@ $(function() {
     _menu.clone().prependTo(_mArea);
     _megamenu.clone().prependTo(_mArea);
     _search.clone().prependTo(_body).addClass('m_search');
+    _customer.clone().prependTo(_body).addClass('m_customer');
     var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
         liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
@@ -135,6 +137,7 @@ $(function() {
             menu_status = false;
             _sidebar.hide();
             _overlay.hide();
+            _customer.hide();
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
@@ -209,6 +212,7 @@ $(function() {
             //
             _body.off('touchmove');
             $('.m_search').hide();
+            $('.m_customer').hide();
             $('.language').find('ul').hide();
         } else {
             /*-----------------------------------*/
@@ -221,8 +225,11 @@ $(function() {
             _menu.appendTo('.header .container');
             _megamenu.appendTo('.header .container');
             _search.removeClass('m_search');
+            _customer.removeClass('m_customer')
             $('.m_search').hide();
+            $('.m_customer').hide();
             _search.hide();
+            _customer.hide();
             search_mode = false;
             $('.language').find('ul').hide();
             // 副選單滑出
@@ -311,6 +318,20 @@ $(function() {
             search_mode = true;
         } else {
             $('.m_search').stop().slideUp();
+            search_mode = false;
+        }
+    });
+    // 
+    var _customerCtrl = $('.customerCtrl');
+    $('.m_customer').hide();
+    _customerCtrl.off().on('click', function(e) {
+        if (search_mode == false) {
+            $('.m_customer').stop(true, false).slideDown('400', 'easeOutQuint');
+            _window.off('resize');
+            // $('.m_search').find('input[type="text"]').focus();
+            search_mode = true;
+        } else {
+            $('.m_customer').stop().slideUp();
             search_mode = false;
         }
     });

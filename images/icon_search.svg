@@ -3,20 +3,20 @@
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <style type="text/css">
-	.st0{clip-path:url(#SVGID_00000010277646629751559820000013561500625506764958_);}
-	.st1{fill:#337C80;}
+	.st0{clip-path:url(#SVGID_00000117652608217701444620000011538388194668253624_);}
+	.st1{fill:none;stroke:#337C80;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#337C80;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g>
 	<defs>
-		<rect id="SVGID_1_" width="32" height="32"/>
+		<rect id="SVGID_1_" x="1" y="-3.1" width="32.7" height="32.7"/>
 	</defs>
-	<clipPath id="SVGID_00000069378786804931688480000014826129889747682448_">
+	<clipPath id="SVGID_00000039816619628065739170000008166725267727853715_">
 		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
 	</clipPath>
-	<g style="clip-path:url(#SVGID_00000069378786804931688480000014826129889747682448_);">
-		<path class="st1" d="M20.7,18.7h-1.1l-0.4-0.4c1.3-1.5,2.1-3.5,2.1-5.6c0-4.8-3.9-8.7-8.7-8.7C7.9,4,4,7.9,4,12.7
-			c0,4.8,3.9,8.7,8.7,8.7c2.1,0,4.1-0.8,5.6-2.1l0.4,0.4v1.1l6.7,6.7l2-2L20.7,18.7z M12.7,18.7c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6
-			c3.3,0,6,2.7,6,6C18.7,16,16,18.7,12.7,18.7z"/>
+	<g style="clip-path:url(#SVGID_00000039816619628065739170000008166725267727853715_);">
+		<ellipse class="st1" cx="14.2" cy="10.2" rx="8.3" ry="8.3"/>
+		<line class="st2" x1="21.2" y1="17.7" x2="26.8" y2="23.3"/>
 	</g>
 </g>
 </svg>

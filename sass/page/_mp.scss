@@ -1663,6 +1663,9 @@ a.more {
     right: calc(100% - 50px);
     top: 25%;
     z-index: 99;
+    @include screen('mobile'){
+        display: none;
+    }
     .sidebar_list {
         margin-bottom: 0px;
         display: block;
