@@ -155,7 +155,7 @@
     left: 0px;
     right: auto;
     background: url('../../images/slick/icon_arrow_left.svg') center center no-repeat;
-    background-size: 30px 30px;
+    background-size: 18px 30px;
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%;
@@ -167,7 +167,7 @@
     right: 0px;
     left: auto;
     background: url('../../images/slick/icon_arrow_right.svg') center center no-repeat;
-    background-size: 30px 30px;
+    background-size: 18px 30px;
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%;
