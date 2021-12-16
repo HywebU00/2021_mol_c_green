@@ -361,7 +361,7 @@ a.more {
     width: 100%;
     min-width: 260px;
     max-width: 990px;
-    margin: -3em auto 1.5em;
+    margin: -1.5em auto 1.5em;
     position: relative;
     padding: 0;
     box-sizing: border-box;
@@ -377,7 +377,7 @@ a.more {
         width: 95%;
     }
     @include screen('xs_mobile') {
-        margin: 1em auto;
+        margin: 1em auto -1em;
     }
     .container {
         @include screen('mobile') {
