@@ -413,14 +413,13 @@ a.more {
     background-color: #fff;
     // background: linear-gradient(0deg, rgba(7, 75, 155, 1) 0%, rgba(0, 78, 162, 0.9192051820728291) 100%);
     svg {
-            width: 50px;
-            height: 50px;
-            display: block;
-
-        }
+        width: 50px;
+        height: 50px;
+        display: block;
+    }
     path {
-                fill: #337c80;
-            }
+        fill: #337c80;
+    }
 }
 .SwiperThumb .swiper-slide {
     a {
@@ -454,24 +453,21 @@ a.more {
         color: #fff;
     }
     .img-container {
-
         background: rgb(40, 129, 125);
         background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
         svg {
             width: 50px;
             height: 50px;
             display: block;
-
         }
-         path {
-                fill: #fff;
-            }
+        path {
+            fill: #fff;
+        }
     }
     &:hover, &:focus {
         .img-container {
             background: rgb(40, 129, 125);
             background: linear-gradient(138deg, rgba(40, 129, 125, 1) 0%, rgba(31, 95, 99, 1) 100%, rgba(103, 172, 176, 1) 158%);
-           
         }
     }
 }
@@ -1663,7 +1659,7 @@ a.more {
     right: calc(100% - 50px);
     top: 25%;
     z-index: 99;
-    @include screen('mobile'){
+    @include screen('mobile') {
         display: none;
     }
     .sidebar_list {
