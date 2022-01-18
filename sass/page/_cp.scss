@@ -40,11 +40,7 @@ h1.title, h2.title {
     table {
         background: #FFF;
         margin-bottom: 1em;
-        // tr{
-        //   &:nth-child(even){
-        //     background-color:lighten($primaryColor, 65);
-        //   }
-        // }
+        
         &.noborder {
             border: none;
             th, td {
