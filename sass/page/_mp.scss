@@ -513,6 +513,19 @@ a.more {
         border-radius: 50%;
     }
 }
+// 臨時公佈欄
+.announced_block{
+    .announced_content{
+        padding:20px;
+        background-color: $color-red;
+        color:#fff;
+        font-size: 1.125em;
+        margin-bottom: 30px;
+        border-radius: 5px;
+    line-height: 1.5em;
+
+    }
+}
 // 新聞稿區塊
 .news_block {
     background-image: url('../images/news_bg.jpg');
