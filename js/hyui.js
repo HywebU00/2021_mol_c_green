@@ -50,7 +50,7 @@ $(function() {
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
-        _customer = $('.customer_service_block')
+    _customer = $('.customer_service_block')
     _mArea = $('.m_area');
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     var search_mode = false;
@@ -157,7 +157,6 @@ $(function() {
             });
             // 第一層選單
             liHasChild_level1.off().on('click', function(e) {
-                
                 $(this).siblings('li').find('ul').stop(true, true).slideUp('600', 'easeOutQuint');
                 $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
             });
@@ -1128,7 +1127,7 @@ $(function() {
     // /*------------------------------------*/
     $('table').each(function(index, el) {
         //判斷沒有table_list
-        if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0 && $(this).parents('.epaperTb').length == 0) {
+        if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0 && $(this).parents('.epaperTb').length == 0 && $(this).parents('.cp').length == 0) {
             $(this).scroltable();
         }
     });
@@ -1177,6 +1176,16 @@ $(function() {
             var $row = $(this).find('tr');
             rowCount = $row.length;
             for (var n = 1; n <= rowCount; n++) {
+                $(this).find('th').each(function(index) {
+                    var thText = $(this).text();
+                    $row.eq(n).find('td').eq(index).attr('data-title', thText);
+                });
+            }
+        });
+        $('.cp').find('table').each(function() {
+            var $row = $(this).find('tr');
+            rowCount = $row.length;
+            for (var n = 0; n <= rowCount; n++) {
                 $(this).find('th').each(function(index) {
                     var thText = $(this).text();
                     $row.eq(n).find('td').eq(index).attr('data-title', thText);
