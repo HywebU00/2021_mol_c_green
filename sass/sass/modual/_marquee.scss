@@ -1,9 +1,9 @@
 .marquee {
-    height: 45px;
+    height: 40px;
     display: block;
     overflow: hidden;
-    background: #FFF;
-    margin: 2em 4em;
+    // background: #eee;
+    margin: 2em 1em;
     text-align: left;
     padding: 0 3em 0 2em;
     position: relative;
@@ -81,11 +81,11 @@
         color: #000;
       text-decoration: none;
         span {
-            color:#7cb52f;
+            color:$primaryColor;
             margin-right: 15px;
         }
         &:hover {
-            color: #7cb52f;
+            color: $primaryColor;
         }
     }
 }

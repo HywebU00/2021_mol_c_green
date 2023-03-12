@@ -377,7 +377,7 @@ a.more {
         width: 95%;
     }
     @include screen('xs_mobile') {
-        margin: 1em auto -1em;
+        margin: 1em auto;
     }
     .container {
         @include screen('mobile') {
@@ -513,17 +513,25 @@ a.more {
         border-radius: 50%;
     }
 }
+// 跑馬燈
+.marquee_block {
+    margin-bottom: 2em;
+    .container {
+        padding: 0 30px;
+        max-width: 1100px;
+        background-color: #f6f6f6;
+    }
+}
 // 臨時公佈欄
-.announced_block{
-    .announced_content{
-        padding:20px;
+.announced_block {
+    .announced_content {
+        padding: 20px;
         background-color: $color-red;
-        color:#fff;
+        color: #fff;
         font-size: 1.125em;
         margin-bottom: 30px;
         border-radius: 5px;
-    line-height: 1.5em;
-
+        line-height: 1.5em;
     }
 }
 // 新聞稿區塊
