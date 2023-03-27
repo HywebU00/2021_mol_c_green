@@ -519,7 +519,34 @@ a.more {
     .container {
         padding: 0 30px;
         max-width: 1100px;
-        background-color: #f6f6f6;
+        background-color: #fff9bf;
+        border-radius:10px;
+        .marquee{  
+            ul{
+                margin:0;
+                padding:0;
+                li{
+                    padding:0;
+                    span{
+                        background-color: $color-orange;
+                        padding:5px 10px;
+                        border-radius: 5px;
+                        color:#fff;
+                        position: relative;
+                        &:after{
+                            content:'';
+                            border:7px solid $color-orange;
+                            border-top-color: transparent;
+                            border-right-color: transparent;
+                            border-bottom-color: transparent;
+                            position:absolute;
+                            right:-13px;
+                            top:9px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 // 臨時公佈欄
