@@ -85,14 +85,8 @@ $(function() {
             }
         }]
     });
-    $('.cp_slider').slickLightbox({
-        caption: 'caption',
-        lazyLoad: 'ondemand',
-        useHistoryApi: 'true',
-        ease: 'ease',
-        lazy: true
-    });
-    // 
+    
+    
     $('.cppic_slider').slick({
         dots: true,
         infinite: false,
