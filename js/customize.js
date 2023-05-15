@@ -464,7 +464,7 @@ if ($('.marquee').length > 0) {
         vertical: true,
         verticalSwiping: true,
         speed: 300,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 8000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,

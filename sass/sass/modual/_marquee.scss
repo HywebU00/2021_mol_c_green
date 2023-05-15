@@ -14,7 +14,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     // border-bottom: 1px solid #dadada;
-    @media(max-width:991px) {
+    @media(max-width: 991px) {
         margin: 1.5em 0em;
     }
     ul {
@@ -23,8 +23,6 @@
         list-style: none
     }
     .slick-prev {
-        width: 10px;
-        height: 10px;
         transform: rotate(90deg);
         right: 0px !important;
         top: 1px !important;
@@ -45,8 +43,6 @@
         }
     }
     .slick-next {
-        width: 10px;
-        height: 10px;
         transform: rotate(-90deg);
         right: 0px !important;
         top: 22px !important;
@@ -79,9 +75,9 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         color: #1f5f63;
-      text-decoration: none;
+        text-decoration: none;
         span {
-            color:$primaryColor;
+            color: $primaryColor;
             margin-right: 15px;
         }
         &:hover {
