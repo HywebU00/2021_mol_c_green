@@ -17,6 +17,10 @@
     @media(max-width: 991px) {
         margin: 1.5em 0em;
     }
+    @include screen('mobile') {
+        padding: 0 2em 0 1em;
+        height:auto;
+    }
     ul {
         margin: 0;
         padding: 0;
@@ -45,8 +49,9 @@
     .slick-next {
         transform: rotate(-90deg);
         right: 0px !important;
-        top: 22px !important;
+        top: auto !important;
         left: auto;
+        bottom:1px;
         opacity: .5;
         width: 20px !important;
         height: 20px !important;
@@ -66,22 +71,5 @@
         padding: 0;
         margin: 0
     }
-    a {
-        display: block;
-        line-height: 40px;
-        margin-right: 3em;
-        font-weight: bold;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        color: #1f5f63;
-        text-decoration: none;
-        span {
-            color: $primaryColor;
-            margin-right: 15px;
-        }
-        &:hover {
-            color: $primaryColor;
-        }
-    }
+   
 }

@@ -470,6 +470,8 @@ if ($('.marquee').length > 0) {
         autoplay: true,
         pauseOnHover: true, //滑鼠移過後暫停自動撥放
         focusOnSelect: true,
+        // centerMode: true,
+        // variableHigh: true
     });
 }
     // 
