@@ -1,75 +1,110 @@
+// .marquee {
+//     height: 40px;
+//     display: block;
+//     overflow: hidden;
+//     // background: #eee;
+//     margin: 1em 1em;
+//     text-align: left;
+//     padding: 0 3em 0 2em;
+//     position: relative;
+//     min-height: 1px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+//     -moz-box-sizing: border-box;
+//     -webkit-box-sizing: border-box;
+//     box-sizing: border-box;
+//     // border-bottom: 1px solid #dadada;
+//     @media(max-width: 991px) {
+//         margin: 1.5em 0em;
+//     }
+//     @include screen('mobile') {
+//         padding: 0 2em 0 1em;
+//         height: auto;
+//     }
+//     ul {
+//         margin: 0;
+//         padding: 0;
+//         list-style: none
+//     }
+//     .slick-prev {
+//         transform: rotate(90deg);
+//         right: 0px !important;
+//         top: 1px !important;
+//         left: auto;
+//         opacity: .5;
+//         background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+//         background-size: 16px;
+//         width: 20px !important;
+//         height: 20px !important;
+//         box-shadow: none;
+//         &:hover,
+//         &:focus {
+//             opacity: 1
+//         }
+//         &:before {
+//             width: 10px !important;
+//             height: 10px !important
+//         }
+//     }
+//     .slick-next {
+//         transform: rotate(-90deg);
+//         right: 0px !important;
+//         top: auto !important;
+//         left: auto;
+//         bottom: 1px;
+//         opacity: .5;
+//         width: 20px !important;
+//         height: 20px !important;
+//         background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
+//         background-size: 16px;
+//         box-shadow: none;
+//         &:hover,
+//         &:focus {
+//             opacity: 1
+//         }
+//         &:before {
+//             width: 10px !important;
+//             height: 10px !important
+//         }
+//     }
+//     >div {
+//         padding: 0;
+//         margin: 0
+//     }
+// }
+// 跑馬燈２
+.marquee_block {
+    padding:20px 0;
+   background-color: #fff9bf;
+    
+}
 .marquee {
-    height: 40px;
-    display: block;
     overflow: hidden;
-    // background: #eee;
-    margin: 1em 1em;
-    text-align: left;
-    padding: 0 3em 0 2em;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    // border-bottom: 1px solid #dadada;
-    @media(max-width: 991px) {
-        margin: 1.5em 0em;
-    }
-    @include screen('mobile') {
-        padding: 0 2em 0 1em;
-        height:auto;
-    }
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none
-    }
-    .slick-prev {
-        transform: rotate(90deg);
-        right: 0px !important;
-        top: 1px !important;
-        left: auto;
-        opacity: .5;
-        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
-        background-size: 16px;
-        width: 20px !important;
-        height: 20px !important;
-        box-shadow: none;
-        &:hover,
-        &:focus {
-            opacity: 1
+}
+.marqueeOuter {
+    display: flex;
+}
+.marqueeBox {
+    padding: 0 0 1px;
+    display: flex;
+}
+.marqueeItem {
+    margin: 0 30px 0 0;
+    white-space: nowrap;
+    font-size: 1.125em;
+    a {
+        color: #000;
+        &:hover {
+            color: $aHover;
         }
-        &:before {
-            width: 10px !important;
-            height: 10px !important
+        span {
+            background-color: $color-orange;
+            color: #fff;
+            padding: 5px 10px;
+            margin-right: .5em;
+            border-radius: 5px;
+            font-size: 0.813em;
+            display: inline-block;
         }
     }
-    .slick-next {
-        transform: rotate(-90deg);
-        right: 0px !important;
-        top: auto !important;
-        left: auto;
-        bottom:1px;
-        opacity: .5;
-        width: 20px !important;
-        height: 20px !important;
-        background: url('../vendor/slick/icon_arrow_up_s.png') no-repeat center center;
-        background-size: 16px;
-        box-shadow: none;
-        &:hover,
-        &:focus {
-            opacity: 1
-        }
-        &:before {
-            width: 10px !important;
-            height: 10px !important
-        }
-    }
-    >div {
-        padding: 0;
-        margin: 0
-    }
-   
 }

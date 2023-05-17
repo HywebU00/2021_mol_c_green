@@ -514,89 +514,90 @@ a.more {
     }
 }
 // 跑馬燈
-.marquee_block {
-    margin-bottom: 2em;
-    .container {
-        padding: 0;
-        max-width: 1100px;
-        background-color: #fff9bf;
-        border-radius: 10px;
-        @include screen('mobile') {
-            padding: 0 10px;
-            border-radius: 0px;
-        }
-        .marquee {
-            ul {
-                margin: 0;
-                padding: 0;
-                li {
-                    padding: 0;
-                    font-size: 1.125em;
-                    a {
-                        display: block;
-                        line-height: 40px;
-                        margin-right: 3em;
-                        font-weight: bold;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        color: #1f5f63;
-                        text-decoration: none;
-                        span {
-                            color: $primaryColor;
-                            margin-right: 15px;
-                        }
-                        span.important {
-                            background-color: $color-orange;
-                            padding: 5px 10px;
-                            border-radius: 5px;
-                            color: #fff;
-                            position: relative;
-                            &:after {
-                                content: '';
-                                border: 7px solid $color-orange;
-                                border-top-color: transparent;
-                                border-right-color: transparent;
-                                border-bottom-color: transparent;
-                                position: absolute;
-                                right: -13px;
-                                top: 11px;
-                            }
-                        }
-                        &:hover {
-                            color: $primaryColor;
-                        }
-                        @include screen('mobile') {
-                            overflow: visible;
-                            white-space: normal;
-                            text-overflow: inherit;
-                            // line-height: 25px;
-                            overflow: hidden;
-                            text-overflow: -o-ellipsis-lastline;
-                            text-overflow: ellipsis;
-                            display: -webkit-box;
-                            -webkit-line-clamp: 3;
-                            -webkit-box-orient: vertical;
-                            line-height: 1.3em; // X 填入行高 px 值
-                            height: calc(1.5em * 3);
-                            margin-right: 1.5em;
-                            span {
-                                display: block;
-                            }
-                            span.important {
-                                margin-bottom: 8px;
-                                padding: 3px 10px;
-                                &:after {
-                                    display: none;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// .marquee_block {
+//     margin-bottom: 2em;
+//     .container {
+//         padding: 0;
+//         max-width: 1100px;
+//         background-color: #fff9bf;
+//         border-radius: 10px;
+//         @include screen('mobile') {
+//             padding: 0 10px;
+//             border-radius: 0px;
+//         }
+//         .marquee {
+//             ul {
+//                 margin: 0;
+//                 padding: 0;
+//                 li {
+//                     padding: 0;
+//                     font-size: 1.125em;
+//                     a {
+//                         display: block;
+//                         line-height: 40px;
+//                         margin-right: 3em;
+//                         font-weight: bold;
+//                         overflow: hidden;
+//                         white-space: nowrap;
+//                         text-overflow: ellipsis;
+//                         color: #1f5f63;
+//                         text-decoration: none;
+//                         span {
+//                             color: $primaryColor;
+//                             margin-right: 15px;
+//                         }
+//                         span.important {
+//                             background-color: $color-orange;
+//                             padding: 5px 10px;
+//                             border-radius: 5px;
+//                             color: #fff;
+//                             position: relative;
+//                             &:after {
+//                                 content: '';
+//                                 border: 7px solid $color-orange;
+//                                 border-top-color: transparent;
+//                                 border-right-color: transparent;
+//                                 border-bottom-color: transparent;
+//                                 position: absolute;
+//                                 right: -13px;
+//                                 top: 11px;
+//                             }
+//                         }
+//                         &:hover {
+//                             color: $primaryColor;
+//                         }
+//                         @include screen('mobile') {
+//                             overflow: visible;
+//                             white-space: normal;
+//                             text-overflow: inherit;
+//                             // line-height: 25px;
+//                             overflow: hidden;
+//                             text-overflow: -o-ellipsis-lastline;
+//                             text-overflow: ellipsis;
+//                             display: -webkit-box;
+//                             -webkit-line-clamp: 3;
+//                             -webkit-box-orient: vertical;
+//                             line-height: 1.3em; // X 填入行高 px 值
+//                             height: calc(1.5em * 3);
+//                             margin-right: 1.5em;
+//                             span {
+//                                 display: block;
+//                             }
+//                             span.important {
+//                                 margin-bottom: 8px;
+//                                 padding: 3px 10px;
+//                                 &:after {
+//                                     display: none;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
 // 臨時公佈欄
 .announced_block {
     .announced_content {
