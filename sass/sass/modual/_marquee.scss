@@ -74,9 +74,8 @@
 // }
 // 跑馬燈２
 .marquee_block {
-    padding:20px 0;
-   background-color: #fff9bf;
-    
+    padding: 20px 0;
+    background-color: #fff9bf;
 }
 .marquee {
     overflow: hidden;
@@ -93,18 +92,30 @@
     white-space: nowrap;
     font-size: 1.125em;
     a {
-        color: #000;
+        color: #1f5f63;
+        font-weight: bolder;
         &:hover {
-            color: $aHover;
+            color: $primaryColor;
         }
         span {
             background-color: $color-orange;
             color: #fff;
             padding: 5px 10px;
-            margin-right: .5em;
+            margin-right:1em;
             border-radius: 5px;
-            font-size: 0.813em;
+            font-size: 0.938em;
             display: inline-block;
+            position: relative;
+            &:after {
+                content: '';
+                border: 7px solid $color-orange;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                right: -13px;
+                top: 11px;
+            }
         }
     }
 }
