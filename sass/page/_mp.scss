@@ -597,17 +597,22 @@ a.more {
 //         }
 //     }
 // }
-
 // 臨時公佈欄
 .announced_block {
+    // background-color: #fff9bf;
+    // margin-top: 5px;
+    margin:1em 0;
     .announced_content {
-        padding: 20px;
-        background-color: #ddd;
-        color: #000;
+        padding: 20px 20px;
+         background-color: #fff9bf;
+        color: #1f5f63;
         font-size: 1.125em;
-        margin-bottom: 30px;
-        border-radius: 5px;
         line-height: 1.5em;
+        font-weight: bolder;
+        border-radius:5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        text-align: center;
+        
     }
 }
 // 臨時公佈欄
@@ -623,7 +628,6 @@ a.more {
         border-radius: 0;
         line-height: 1.5em;
         position: relative;
-
         .close_btn {
             position: absolute;
             right: 0;
@@ -633,8 +637,7 @@ a.more {
                 width: 40px;
                 height: 40px;
                 justify-content: center;
-                align-items:center;
-
+                align-items: center;
                 img {
                     width: 20px;
                 }
