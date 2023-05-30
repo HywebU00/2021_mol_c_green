@@ -1,81 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
 
-    function marquee(state) {
-  let marquee = document.querySelector(".marquee");
-  let marqueeOuter = marquee.querySelector(".marqueeOuter");
-  let marqueeBox = marquee.querySelector(".marqueeBox");
-  let marqueeItem = marquee.querySelector(".marqueeItem");
-  let marqueeSpeed = state.speed;
-  let clone = marqueeBox.cloneNode(true);
-
-  const marqueeContent = () => {
-    let marqueeOuterWidth = marqueeOuter.offsetWidth;
-    let marqueeBoxWidth = marqueeBox.offsetWidth;
-    let outerWidth = marquee.offsetWidth;
-
-    if (marqueeOuterWidth >= outerWidth) {
-      marqueeOuter.appendChild(clone);
-      let cloneFocus = clone.querySelectorAll("a,input,button,select");
-      let marqueeBoxAll = marquee.querySelectorAll(".marqueeBox");
-      let sliderMovePx = 0;
-      let request;
-      let marqueeState;
-      let animationStartTime = 0;
-      let pause = 0;
-
-      cloneFocus.forEach((item, index) => {
-        item.setAttribute("tabindex", "-1");
-      });
-
-      cancelAnimationFrame(request);
-      const animation = () => {
-        sliderMovePx++;
-        if (sliderMovePx / marqueeSpeed < marqueeBoxWidth) {
-          marqueeBoxAll.forEach((item, index) => {
-            item.style = `transform:translateX(-${
-              sliderMovePx / marqueeSpeed
-            }px)`;
-          });
-        } else {
-          sliderMovePx = 0;
-        }
-        request = requestAnimationFrame(animation);
-      };
-
-      const marqueeStop = () => {
-        if (marqueeState === "stop") {
-          return;
-        }
-        if (request) {
-          cancelAnimationFrame(request);
-          // Stop point timestamp
-          pause = window.performance.now();
-          marqueeState = "stop";
-        }
-      };
-
-      const marqueeContinue = () => {
-        animationStartTime += window.performance.now() - pause;
-        request = requestAnimationFrame(animation);
-        marqueeState = "continue";
-      };
-
-      animation();
-      marquee.addEventListener("mouseenter", marqueeStop);
-      marquee.addEventListener("mouseleave", () => {
-        cancelAnimationFrame(request);
-        marqueeContinue();
-      });
-    }
-  };
-  window.addEventListener("load", marqueeContent);
-  window.addEventListener("resize", marqueeContent);
-}
-
-marquee({
-  speed: 1 //越低越快
-});
+    
 
     // 首頁輪播
     $('.mpSlider').slick({
@@ -550,6 +476,73 @@ marquee({
     //     });
     // }
     // 
+    function marquee(state) {
+     let marquee = document.querySelector(".marquee");
+     let marqueeOuter = marquee.querySelector(".marqueeOuter");
+     let marqueeBox = marquee.querySelector(".marqueeBox");
+     let marqueeItem = marquee.querySelector(".marqueeItem");
+     let marqueeSpeed = state.speed;
+     let clone = marqueeBox.cloneNode(true);
+     const marqueeContent = () => {
+         let marqueeOuterWidth = marqueeOuter.offsetWidth;
+         let marqueeBoxWidth = marqueeBox.offsetWidth;
+         let outerWidth = marquee.offsetWidth;
+         if (marqueeOuterWidth >= outerWidth) {
+             marqueeOuter.appendChild(clone);
+             let cloneFocus = clone.querySelectorAll("a,input,button,select");
+             let marqueeBoxAll = marquee.querySelectorAll(".marqueeBox");
+             let sliderMovePx = 0;
+             let request;
+             let marqueeState;
+             let animationStartTime = 0;
+             let pause = 0;
+             cloneFocus.forEach((item, index) => {
+                 item.setAttribute("tabindex", "-1");
+             });
+             cancelAnimationFrame(request);
+             const animation = () => {
+                 sliderMovePx++;
+                 if (sliderMovePx / marqueeSpeed < marqueeBoxWidth) {
+                     marqueeBoxAll.forEach((item, index) => {
+                         item.style = `transform:translateX(-${
+              sliderMovePx / marqueeSpeed
+            }px)`;
+                     });
+                 } else {
+                     sliderMovePx = 0;
+                 }
+                 request = requestAnimationFrame(animation);
+             };
+             const marqueeStop = () => {
+                 if (marqueeState === "stop") {
+                     return;
+                 }
+                 if (request) {
+                     cancelAnimationFrame(request);
+                     // Stop point timestamp
+                     pause = window.performance.now();
+                     marqueeState = "stop";
+                 }
+             };
+             const marqueeContinue = () => {
+                 animationStartTime += window.performance.now() - pause;
+                 request = requestAnimationFrame(animation);
+                 marqueeState = "continue";
+             };
+             animation();
+             marquee.addEventListener("mouseenter", marqueeStop);
+             marquee.addEventListener("mouseleave", () => {
+                 cancelAnimationFrame(request);
+                 marqueeContinue();
+             });
+         }
+     };
+     window.addEventListener("load", marqueeContent);
+     window.addEventListener("resize", marqueeContent);
+ }
+ marquee({
+     speed: 1 //越低越快
+ });
 });
 $(document).ready(function() {
     // var swiperThumb = new Swiper(".SwiperThumb", {
