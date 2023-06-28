@@ -129,10 +129,14 @@
   a {
     display: block;
     color: #1f5f63;
+     padding:3px;
     font-weight: bolder;
     &:hover {
       color: $primaryColor;
     }
+    &:focus {
+             box-shadow: 0 0px 0px 3px $color-orange   inset;       
+        }
     span {
       background-color: $color-orange;
       color: #fff;
