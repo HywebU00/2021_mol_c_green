@@ -1,13 +1,13 @@
 @media print {
-    %no-bg {
-        background: none;
-    }
+    // %no-bg {
+    //     background: none;
+    // }
     /* -------------------------------不需要列印的區塊，請放置於這----//*/
     header,
     .fatfooter,
     footer,
     .accesskey,
-    .submenu {
+    .submenu, .breadcrumb, .function {
         display: none;
     }
     /* -------------------------------各別顯示設定----//*/
@@ -16,7 +16,7 @@
         // font-size: 12pt;
         float: none;
         width: 100%;
-        @extend %no-bg;
+        // @extend %no-bg;
         -webkit-print-color-adjust: exact;
     }
     .container {
@@ -34,10 +34,11 @@
             display: block !important;
             .center_block {
                 overflow: hidden;
+                width: 100% !important;
+                max-width: 100% !important;
             }
             .left_block {
-                float: left !important;
-                width: 260px !important;
+                display: none;
             }
         }
     }
@@ -50,9 +51,11 @@
         float: none;
         // font-size: 12pt;
         @include clearfix;
-        @extend %no-bg;
+        // @extend %no-bg;
         padding-top: 0px !important;
         img {
+            // max-width:80%;
+            // width:80%;
             &.float_left {
                 float: right;
                 max-width: 50%;
@@ -67,7 +70,7 @@
         a:link,
         a:visited,
         a {
-            background: transparent;
+            background: #fff;
             color: #222;
             font-weight: bold;
             text-decoration: underline;
@@ -119,8 +122,8 @@
     div:first-line,
     blockquote:first-line,
     li:first-line {
-        background: transparent !important;
-        color: #000 !important;
+        // background: transparent !important;
+        // color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -158,6 +161,55 @@
                     max-height: 4cm;
                     display: inline-block;
                     vertical-align: middle;
+                }
+            }
+        }
+    }
+    // QA
+    .accordionqa {
+        .accordionblock {
+            .A {
+                display: block;
+            }
+        }
+    }
+    // tabSet
+    .tabSet {
+        .tabs {
+            height: auto !important;
+            position: relative;
+            &>.tabItem {
+                float: none !important;
+                width: 100% !important;
+                clear: both;
+                display: block;
+                overflow: visible;
+                position: relative;
+                height: 60px !important;
+                margin: 0 0 10px !important;
+                background-color: #000;
+                color: #fff;
+                &:last-of-type {
+                    position: relative;
+                    top: auto !important;
+                    right: auto !important;
+                    display: block;
+                    width: 100% !important;
+                    clear: both;
+                }
+                &.active {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+            .tabContent {
+                display: block;
+                position: relative;
+                margin: 0 0 20px !important;
+                padding: 20px 0 0 0 !important;
+                top: 0 !important;
+                .explain {
+                    margin-top: 20px;
                 }
             }
         }

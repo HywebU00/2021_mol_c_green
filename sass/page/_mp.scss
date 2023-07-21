@@ -694,9 +694,7 @@ a.more {
                 }
             }
             .explain {
-                // position: absolute;
-                // top: 0px;
-                // left: 30px;
+                display: block;
                 width: 60%;
                 background-color: $primaryColor;
                 padding: 8px 20px;
