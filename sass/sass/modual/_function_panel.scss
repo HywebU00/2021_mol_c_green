@@ -324,7 +324,12 @@ div.function {
 }
 .function_panel_block {
     display: flex;
-    justify-content: space-between;
+    .share{
+        flex:0 0 auto;
+    }
+    .function{
+        flex:1 1 auto;
+    }
     @include screen('xs_mobile') {
         display: block;
     }
