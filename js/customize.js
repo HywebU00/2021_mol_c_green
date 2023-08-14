@@ -519,9 +519,7 @@ $(function () {
   //     });
   // }
   //
-});
-
-function marquee(state) {
+  function marquee(state) {
   const marquee = document.querySelector('.marquee');
   const marqueeOuter = marquee.querySelector('.marqueeOuter');
   const marqueeBox = marquee.querySelector('.marqueeBox');
@@ -677,132 +675,10 @@ function marquee(state) {
 marquee({
   speed: 1, //越低越快
 });
-$(document).ready(function () {
-  // var swiperThumb = new Swiper(".SwiperThumb", {
-  //     spaceBetween: 10,
-  //     slidesPerView: 2,
-  //     freeMode: true,
-  //     watchSlidesVisibility: true,
-  //     watchSlidesProgress: true,
-  //     breakpoints: {
-  //         640: {
-  //             slidesPerView: 2,
-  //         },
-  //         768: {
-  //             slidesPerView: 3,
-  //         },
-  //         1024: {
-  //             slidesPerView: 4,
-  //         },
-  //         1200: {
-  //             slidesPerView: 5,
-  //         },
-  //     }
-  // });
-  // var SwiperMain = new Swiper(".SwiperMain", {
-  //     autoplay: {
-  //         delay: 2000, //輪播秒數
-  //         pauseOnMouseEnter: true, //滑鼠移至swiper上停止
-  //         disableOnInteraction: false, //移開後可以繼續autoPlay
-  //     },
-  //     navigation: {
-  //         nextEl: ".swiper-button-next",
-  //         prevEl: ".swiper-button-prev",
-  //     },
-  //     thumbs: {
-  //         swiper: swiperThumb, //同步至swiperThumb
-  //     }
-  // });
-  // swiperThumb.$el.on('mouseover', () => {
-  //     SwiperMain.autoplay.stop();
-  // });
-  // swiperThumb.$el.on('mouseleave', () => {
-  //     SwiperMain.autoplay.running = true;
-  //     SwiperMain.autoplay.run();
-  // });
-  // // 從主要內容按下tab時，Slider要從第一張開始
-  // $(".fixed_sidebar_group").find('.sidebar_list').last().find('a').on('keydown', function(e) {
-  //     var keyCode = e.keyCode || e.which;
-  //     if (keyCode == 9) {
-  //         SwiperMain.slideTo(0, 0);
-  //     }
-  // })
-  // // 從thumb next按下shift+tab時，Slider要從最後一張開始
-  // $(".mpbanner_slider_thumb a.swiper-button-next").on('keydown', function(e) {
-  //     var keyCode = e.keyCode || e.which;
-  //     if (keyCode == 9 && e.shiftKey) {
-  //         SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
-  //     }
-  // })
-  // // 從thumb perv按下tab時，Slider要從第一張開始
-  // // 從thumb next按下shift+tab時，Slider要從最後一張開始
-  // $(".mpbanner_slider_thumb a.swiper-button-prev").on('keydown', function(e) {
-  //     var keyCode = e.keyCode || e.which;
-  //     if (keyCode == 9) {
-  //         SwiperMain.slideTo(0, 0);
-  //     }
-  //     if (keyCode == 9 && e.shiftKey) {
-  //         SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
-  //     }
-  // })
-  // $(".mpbanner_slider").on('keydown', 'a.swiper-access-href', function(e) {
-  //     var keyCode = e.keyCode || e.which;
-  //     if (keyCode == 9) {
-  //         SwiperMain.autoplay.stop(); //swiper 停止自動播放
-  //         if (e.shiftKey) {
-  //             //Focus previous input
-  //             // if is not slider end, move to previous slider
-  //             if (!SwiperMain.isBeginning) {
-  //                 SwiperMain.slidePrev(0);
-  //             }
-  //         } else {
-  //             // Focus next input
-  //             // if is not slider end, move to next slider,
-  //             // else move to thumb, slide to first,focus to prev
-  //             if (!SwiperMain.isEnd) {
-  //                 SwiperMain.slideNext(0);
-  //             } else {
-  //                 $(".mpbanner_slider_thumb a.swiper-button-prev").focus();
-  //                 SwiperMain.slideTo(0, 0)
-  //             }
-  //         }
-  //     }
-  // });
-  // $(".mpbanner_slider_thumb").on('keydown', 'a.swiper-access-href', function(e) {
-  //     var keyCode = e.keyCode || e.which;
-  //     if (keyCode == 9) {
-  //         SwiperMain.autoplay.stop(); //swiper 停止自動播放
-  //         if (e.shiftKey) {
-  //             //Focus previous input
-  //             // if is not slider end, move to previous slider,else back to main, move to last slide
-  //             if (!SwiperMain.isBeginning) {
-  //                 SwiperMain.slidePrev(0);
-  //             } else {
-  //                 SwiperMain.slideTo(SwiperMain.slides.length - 1, 0);
-  //             }
-  //         } else {
-  //             // Focus next input
-  //             // if is not slider end, move to next slider
-  //             if (!SwiperMain.isEnd) {
-  //                 SwiperMain.slideNext(0);
-  //             }
-  //         }
-  //     }
-  // });
-  // search
-  // $(".functionbtn_block button.search_btn").hover(function() {
-  //     $(".functionbtn_block .searchname").stop().fadeIn();
-  // }, function() {
-  //     $(".functionbtn_block .searchname").stop().fadeOut();
-  // });
-  // 線上客服
-  // $(".functionbtn_block button.customer_service_btn").hover(function() {
-  //     $(".functionbtn_block .customername").stop().fadeIn();
-  // }, function() {
-  //     $(".functionbtn_block .customername").stop().fadeOut();
-  // });
-  //
 });
+
+
+
 // svg
 $(function () {
   jQuery('img.svg').each(function () {
