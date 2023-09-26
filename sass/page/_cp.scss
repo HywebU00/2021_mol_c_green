@@ -105,7 +105,7 @@ h1.title, h2.title {
                 white-space: normal;
                 text-align: left;
                 &:before {
-                    content: attr(data-title) "：";
+                    content: attr(data-title) "";
                     display: inline-block;
                     padding-right: 10px;
                     white-space: nowrap;
