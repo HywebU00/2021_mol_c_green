@@ -14,69 +14,82 @@
     <link rel="stylesheet" href="css/hyui.css">
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <style>
-    .demo_wrap {
-        max-width: 1000px;
-        margin: 0em auto 1em;
-        padding: 15px 15px 3em;
-        clear: both;
-        background: #FFF
-    }
-    .demo_wrap h1 {
-        display: block;
-        margin: 0px auto;
-        max-width: 300px;
-        float: left;
-        margin-right: 1em
-    }
-    @media screen and (max-width:545px) {
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+
         .demo_wrap h1 {
-            max-width: 100%;
-            float: none;
-            text-align: center
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em
         }
-    }
-    .demo_wrap h1 img {
-        width: 300px
-    }
-    .num {
-        width: 12%
-    }
-    body {
-        counter-reset: num
-    }
-    table {
-        margin-bottom: 1em
-    }
-    table caption {
-        text-align: left;
-        font-weight: bold;
-        font-size: 1.25em;
-        padding: .5em 0;
-        color: #ff5050
-    }
-    tbody tr td:first-child:before {
-        counter-increment: num;
-        display: block;
-        text-align: center;
-        content: counters(num, ".") " "
-    }
-    tbody tr td:nth-child(2) {
-        width: 35%
-    }
-    tbody tr.interval {
-        border-top: 3px solid #ccc;
-    }
-    tbody tr.ebg {
-        background-color: #fdf8e0;
-    }
-    .btn_grp {
-        text-align: right;
-    }
-    @media screen and (max-width:545px) {
-        .btn_grp {
+
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+
+        .demo_wrap h1 img {
+            width: 300px
+        }
+
+        .num {
+            width: 12%
+        }
+
+        body {
+            counter-reset: num
+        }
+
+        table {
+            margin-bottom: 1em
+        }
+
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
             text-align: center;
+            content: counters(num, ".") " "
         }
-    }
+
+        tbody tr td:nth-child(2) {
+            width: 35%
+        }
+
+        tbody tr.interval {
+            border-top: 3px solid #ccc;
+        }
+
+        tbody tr.ebg {
+            background-color: #fdf8e0;
+        }
+
+        .btn_grp {
+            text-align: right;
+        }
+
+        @media screen and (max-width:545px) {
+            .btn_grp {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -104,8 +117,8 @@
                         <!-- 連結放到a裡面就好 -->
                         <td><a href="mp.htm"></a></td>
                     </tr>
-                    
-                     <tr>
+
+                    <tr>
                         <td></td>
                         <td>首頁-舊曆年</td>
                         <!-- 連結放到a裡面就好 -->
@@ -129,7 +142,7 @@
                         <!-- 連結放到a裡面就好 -->
                         <td><a href="mp_dragon_boat.htm"></a></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>首頁-中秋節</td>
                         <!-- 連結放到a裡面就好 -->
@@ -164,7 +177,7 @@
                         <!-- 連結放到a裡面就好 -->
                         <td><a href="mp_e_dragon_boat.htm"></a></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>首頁_英文版-中秋節</td>
                         <!-- 連結放到a裡面就好 -->
@@ -194,6 +207,11 @@
                         <td></td>
                         <td>節點頁new</td>
                         <td><a href="np_new.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>節點頁new2-勞動統計專網</td>
+                        <td><a href="np_new2.htm"></a></td>
                     </tr>
                     <tr class="interval">
                         <td></td>
@@ -275,7 +293,7 @@
                         <td>AP03-QA</td>
                         <td><a href="ap03_QA.htm"></a></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <td></td>
                         <td>AP04-訂閱電子報</td>
                         <td><a href="ap04_epaper.htm"></a></td>
@@ -320,7 +338,7 @@
                         <td>列印頁</td>
                         <td><a href="print.htm"></a></td>
                     </tr>
-                    
+
                     <tr>
                         <td></td>
                         <td>404 網站錯誤</td>
@@ -328,7 +346,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+
         </div>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
@@ -337,12 +355,12 @@
     <script src="js/hyui.js"></script>
     <script src="js/customize.js"></script>
     <script>
-    $(function() {
-        $('tbody').find('a').each(function(index, el) {
-            var Link = $(this).attr('href');
-            $(this).text(Link);
-        });
-    })
+        $(function () {
+            $('tbody').find('a').each(function (index, el) {
+                var Link = $(this).attr('href');
+                $(this).text(Link);
+            });
+        })
     </script>
 </body>
 
