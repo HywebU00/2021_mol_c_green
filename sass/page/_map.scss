@@ -177,7 +177,11 @@
 
     svg {
       width: 100%;
-
+      overflow: visible;
+      .location01 {
+        position: absolute;
+        top: 500px;
+      }
       a:hover,
       .active,
       .clickActive,
@@ -200,12 +204,16 @@
         .cls4 {
           fill: #d4c200;
         }
+        .cls5 {
+          fill: #fff;
+        }
       }
 
       .cls1,
       .cls2,
       .cls3,
-      .cls4 {
+      .cls4,
+      .cls5 {
         stroke: #fff;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -226,6 +234,9 @@
 
       .cls4 {
         fill: #d1d09c;
+      }
+      .cls5 {
+        fill: #fff;
       }
     }
 

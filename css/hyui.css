@@ -16933,6 +16933,11 @@ h2.title {
 }
 .mapBox .mainIsland svg {
   width: 100%;
+  overflow: visible;
+}
+.mapBox .mainIsland svg .location01 {
+  position: absolute;
+  top: 500px;
 }
 .mapBox .mainIsland svg a:hover,
 .mapBox .mainIsland svg .active,
@@ -16965,10 +16970,17 @@ h2.title {
 .mapBox .mainIsland svg a:focus-visible .cls4 {
   fill: #d4c200;
 }
+.mapBox .mainIsland svg a:hover .cls5,
+.mapBox .mainIsland svg .active .cls5,
+.mapBox .mainIsland svg .clickActive .cls5,
+.mapBox .mainIsland svg a:focus-visible .cls5 {
+  fill: #fff;
+}
 .mapBox .mainIsland svg .cls1,
 .mapBox .mainIsland svg .cls2,
 .mapBox .mainIsland svg .cls3,
-.mapBox .mainIsland svg .cls4 {
+.mapBox .mainIsland svg .cls4,
+.mapBox .mainIsland svg .cls5 {
   stroke: #fff;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -16985,6 +16997,9 @@ h2.title {
 }
 .mapBox .mainIsland svg .cls4 {
   fill: #d1d09c;
+}
+.mapBox .mainIsland svg .cls5 {
+  fill: #fff;
 }
 .mapBox .mainIsland .mapInfo {
   position: absolute;
