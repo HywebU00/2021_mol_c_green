@@ -17165,7 +17165,7 @@ h2.title {
   margin-bottom: 2em;
   background-color: #efefef;
   border-radius: 10px;
-  padding: 1em 2em;
+  padding: 1em;
 }
 @media (max-width: 730px) {
   .mapBox_list_block {
@@ -17183,6 +17183,8 @@ h2.title {
   flex: 0 0 auto;
   flex-basis: 23%;
   margin: 0 1% 15px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 @media (max-width: 1200px) {
   .mapBox_list_block .mapBox_list_group ul li {
@@ -17196,21 +17198,41 @@ h2.title {
     margin: 0 1.5% 15px;
   }
 }
+.mapBox_list_block .mapBox_list_group ul li:hover {
+  background-color: #337c80;
+}
+.mapBox_list_block .mapBox_list_group ul li:hover a {
+  color: #fff;
+}
+.mapBox_list_block .mapBox_list_group ul li:hover a:before {
+  background-color: #fff;
+}
 .mapBox_list_block .mapBox_list_group ul li a {
   display: block;
-  padding-left: 1em;
   position: relative;
   line-height: 1.5em;
+  padding: 0.5em 0.5em 0.5em 1.6em;
 }
 .mapBox_list_block .mapBox_list_group ul li a:before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background-color: #337c80;
   border-radius: 50%;
   position: absolute;
-  left: 0;
-  top: 10px;
+  left: 0.8em;
+  top: 18px;
+}
+.mapBox_list_block .mapBox_list_group ul li a:hover {
+  text-decoration: none;
+}
+.mapBox_list_block .mapBox_list_group ul li a:focus {
+  background-color: #337c80;
+  color: #fff;
+  border-radius: 8px;
+}
+.mapBox_list_block .mapBox_list_group ul li a:focus:before {
+  background-color: #fff;
 }
 
 @media print {

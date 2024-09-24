@@ -440,7 +440,7 @@
   margin-bottom: 2em;
   background-color: #efefef;
   border-radius: 10px;
-  padding: 1em 2em;
+  padding: 1em;
   @media (max-width: 730px) {
     padding: 1em;
   }
@@ -455,6 +455,8 @@
         flex: 0 0 auto;
         flex-basis: 23%;
         margin: 0 1% 15px;
+        background-color: #fff;
+        border-radius: 8px;
         @media (max-width: 1200px) {
           flex-basis: 31%;
           margin: 0 1.16% 15px;
@@ -463,21 +465,40 @@
           flex-basis: 47%;
           margin: 0 1.5% 15px;
         }
-
+        &:hover {
+          background-color: $primaryColor;
+          a {
+            color: #fff;
+            &:before {
+              background-color: #fff;
+            }
+          }
+        }
         a {
           display: block;
-          padding-left: 1em;
           position: relative;
           line-height: 1.5em;
+          padding: 0.5em 0.5em 0.5em 1.6em;
           &:before {
             content: '';
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             background-color: $primaryColor;
             border-radius: 50%;
             position: absolute;
-            left: 0;
-            top: 10px;
+            left: 0.8em;
+            top: 18px;
+          }
+          &:hover {
+            text-decoration: none;
+          }
+          &:focus {
+            background-color: $primaryColor;
+            color: #fff;
+            border-radius: 8px;
+            &:before {
+              background-color: #fff;
+            }
           }
         }
       }
