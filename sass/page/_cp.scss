@@ -75,6 +75,9 @@ h2.title {
   }
   a {
     @include aSetting;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   table {
     @include screen('xs_mobile') {

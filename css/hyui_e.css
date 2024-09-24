@@ -12928,6 +12928,9 @@ h2.title {
   color: #337c80;
   cursor: pointer;
 }
+.cp a:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 575px) {
   .cp table {
     width: 100%;

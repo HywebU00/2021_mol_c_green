@@ -1,4 +1,8 @@
 .mapBox {
+  margin: 2em 0;
+  @include screen('mobile') {
+    margin: 0;
+  }
   .content {
     display: flex;
     gap: 30px;
@@ -428,6 +432,54 @@
       [data-class='hwalien'] {
         top: 40%;
         right: 27%;
+      }
+    }
+  }
+}
+.mapBox_list_block {
+  margin-bottom: 2em;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 1em 2em;
+  @media (max-width: 730px) {
+    padding: 1em;
+  }
+  .mapBox_list_group {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 auto;
+        flex-basis: 23%;
+        margin: 0 1% 15px;
+        @media (max-width: 1200px) {
+          flex-basis: 31%;
+          margin: 0 1.16% 15px;
+        }
+        @media (max-width: 730px) {
+          flex-basis: 47%;
+          margin: 0 1.5% 15px;
+        }
+
+        a {
+          display: block;
+          padding-left: 1em;
+          position: relative;
+          line-height: 1.5em;
+          &:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 10px;
+          }
+        }
       }
     }
   }
