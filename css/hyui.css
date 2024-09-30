@@ -16869,7 +16869,7 @@ h2.title {
 .mapBox .islands .item.clickActive .pic .cls5, .mapBox .islands .item.active .pic .cls5, .mapBox .islands .item:hover .pic .cls5 {
   fill: #c28deb;
 }
-.mapBox .islands button {
+.mapBox .islands a {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -16882,20 +16882,21 @@ h2.title {
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
+  display: block;
 }
-.mapBox .islands button:hover .title {
+.mapBox .islands a:hover .title {
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
-.mapBox .islands button:focus-visible .title {
+.mapBox .islands a:focus-visible .title {
   display: block;
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
 }
-.mapBox .islands button:focus-visible .pic .cls5 {
+.mapBox .islands a:focus-visible .pic .cls5 {
   fill: #a87bca;
 }
-.mapBox .islands button::before {
+.mapBox .islands a::before {
   content: "";
   position: absolute;
   inset: 0;
