@@ -15510,7 +15510,8 @@ h2.title {
   top: 9px;
 }
 
-.qp, .fp {
+.qp,
+.fp {
   padding: 20px 30px;
   margin: 1.5em 0;
   border-radius: 5px;
@@ -16018,6 +16019,13 @@ h2.title {
 .accordionqa .accordionblock .A ul li:hover,
 .accordionqa .accordionblock .A ol li:hover {
   text-decoration: none;
+}
+
+.explain {
+  margin: 0.5em 0.7em;
+  font-size: 1.063em;
+  font-weight: bold;
+  color: #a42700;
 }
 
 .select_block {
