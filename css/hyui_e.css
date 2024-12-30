@@ -8051,10 +8051,10 @@ footer .footer_icon img {
 }
 .fatfooter nav ul li a:hover {
   box-shadow: none;
-  color: #FFE926;
+  color: #ffe926;
 }
 .fatfooter nav ul li a:focus {
-  color: #FFE926;
+  color: #ffe926;
 }
 .fatfooter nav ul li ul {
   display: block;
@@ -12931,6 +12931,49 @@ h2.title {
 .cp a:hover {
   text-decoration: underline;
 }
+.cp table.sirTb td {
+  vertical-align: top;
+  padding: 0;
+}
+.cp table.sirTb td:before {
+  display: none;
+}
+.cp table.sirTb td img {
+  width: 90%;
+  margin: 10px 10px 0 10px;
+}
+.cp table.sirTb td .name {
+  font-size: 1.625em;
+  font-weight: bolder;
+  color: #cf4b0c;
+  margin: 1em;
+  text-align: center;
+}
+.cp table.sirTb td .title {
+  background-color: #337c80;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 575px) {
+  .cp table.sirTb td {
+    width: 100%;
+    border-bottom: none !important;
+  }
+  .cp table.sirTb td img {
+    width: 100%;
+    margin: 0;
+  }
+}
+.cp table.sirTb td h3 {
+  margin: 0 0 20px;
+  padding: 10px;
+  background-color: #337c80;
+  color: #fff;
+  text-align: center;
+}
 .cp table.sirTb2 {
   margin-top: 1em;
 }
@@ -12996,16 +13039,21 @@ h2.title {
 }
 .cp table.sirTb2 tbody tr td ul,
 .cp table.sirTb2 tbody tr td ol {
+  margin-top: 0;
   margin-left: 0;
   margin-bottom: 3em;
   list-style-type: none;
 }
 .cp table.sirTb2 tbody tr td ul li,
 .cp table.sirTb2 tbody tr td ol li {
-  margin-bottom: 0.8em;
+  margin-bottom: 0;
   position: relative;
-  padding-bottom: 0.5em;
+  padding: 0.5em 0.5em 0.5em 1.5em;
   border-bottom: 1px solid #ddd;
+}
+.cp table.sirTb2 tbody tr td ul li:nth-child(2n),
+.cp table.sirTb2 tbody tr td ol li:nth-child(2n) {
+  background-color: #efefef;
 }
 .cp table.sirTb2 tbody tr td ul li:before,
 .cp table.sirTb2 tbody tr td ol li:before {
@@ -13013,8 +13061,8 @@ h2.title {
   border: 8px solid #fec003;
   border-color: transparent transparent transparent #fec003;
   position: absolute;
-  left: -15px;
-  top: 7px;
+  left: 10px;
+  top: 15px;
 }
 @media screen and (max-width: 767px) {
   .cp table.sirTb2 {
@@ -13051,7 +13099,7 @@ h2.title {
   background-color: #cf4b0c;
   margin: 0 0 1em;
   padding: 0.4em 1em;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 .cp table.sirTb3 tbody tr td .title {
   font-size: 1.313em;
@@ -13142,39 +13190,11 @@ h2.title {
     font-weight: bold;
     color: #337c80;
   }
-}
-.cp table.sirTb td {
-  vertical-align: top;
-  padding: 0;
-}
-.cp table.sirTb td:before {
-  display: none;
-}
-.cp table.sirTb td img {
-  width: 90%;
-  margin: 10px 10px 0 10px;
-}
-@media screen and (max-width: 575px) {
-  .cp table.sirTb td {
-    width: 100%;
-    border-bottom: none !important;
+  .cp table.sirTb2 td,
+  .cp table.sirTb2 tr, .cp table.sirTb3 td,
+  .cp table.sirTb3 tr {
+    border: none !important;
   }
-  .cp table.sirTb td img {
-    width: 100%;
-    margin: 0;
-  }
-}
-.cp table.sirTb td h3 {
-  margin: 0 0 20px;
-  padding: 10px;
-  background-color: #337c80;
-  color: #fff;
-  text-align: center;
-}
-.cp table.sirTb2 td,
-.cp table.sirTb2 tr, .cp table.sirTb3 td,
-.cp table.sirTb3 tr {
-  border: none !important;
 }
 
 .file_download {
