@@ -87,9 +87,15 @@ h2.title {
         &:before {
           display: none;
         }
-        img {
-          width: 90%;
-          margin: 10px 10px 0 10px;
+        &.sirblock {
+          width: 320px;
+        }
+        .picsir {
+          max-width: 250px;
+          margin: 1.5em auto;
+          img {
+            max-width: 250px;
+          }
         }
         .name {
           font-size: 1.625em;
@@ -106,20 +112,19 @@ h2.title {
           font-size: 1.25em;
           margin-bottom: 1em;
         }
-        @include screen('xs_mobile') {
-          width: 100%;
-          border-bottom: none !important;
-          img {
-            width: 100%;
-            margin: 0;
-          }
-        }
+
         h3 {
           margin: 0 0 20px;
           padding: 10px;
           background-color: $primaryColor;
           color: #fff;
           text-align: center;
+        }
+        @include screen('mobile') {
+          display: block;
+          &.sirblock {
+            width: 100%;
+          }
         }
       }
     }
@@ -135,10 +140,10 @@ h2.title {
               width: 320px;
             }
             .picsir {
-              width: 250px;
+              max-width: 250px;
               margin: 0 auto;
               img {
-                width: 250px;
+                max-width: 250px;
               }
             }
             .name {
@@ -240,10 +245,10 @@ h2.title {
               width: 320px;
             }
             .picsir {
-              width: 250px;
+              max-width: 250px;
               margin: 0 auto;
               img {
-                width: 250px;
+                max-width: 250px;
               }
             }
             .name {
@@ -310,6 +315,103 @@ h2.title {
         }
       }
     }
+    &.sirTb2_e {
+      margin-top: 1em;
+      tbody {
+        tr {
+          td {
+            border: none;
+            vertical-align: top;
+            display: block;
+
+            &.sirblock {
+              width: 100%;
+            }
+            .picsir {
+              max-width: 250px;
+              margin: 0 auto;
+              img {
+                max-width: 250px;
+              }
+            }
+            .name {
+              font-size: 1.75em;
+              font-weight: bolder;
+              color: $color-orange;
+              margin: 0 0 1em;
+              padding: 0 0 10px;
+              border-bottom: 4px solid $color-orange;
+            }
+            .title {
+              font-size: 1.375em;
+              font-weight: bold;
+              margin-bottom: 0.5em;
+              margin-left: 0.7em;
+              color: $primaryColor;
+              position: relative;
+              padding: 0 1em;
+              display: inline-block;
+              &:before {
+                content: '';
+                border: 3px solid $primaryColor;
+                width: 16px;
+                height: 16px;
+                border-top: none;
+                border-right: none;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                transform: rotate(45deg);
+              }
+              &:after {
+                content: '';
+                border: 3px solid $primaryColor;
+                width: 16px;
+                height: 16px;
+                border-top: none;
+                border-right: none;
+                position: absolute;
+                right: 0;
+                top: 6px;
+                transform: rotate(-135deg);
+              }
+            }
+            p {
+              margin-left: 1em;
+              margin-bottom: 1.5em;
+            }
+            ul,
+            ol {
+              margin-top: 0;
+              margin-left: 0;
+              margin-bottom: 3em;
+              list-style-type: none;
+              li {
+                margin-bottom: 0;
+                position: relative;
+                padding: 0.5em 0.5em 0.5em 1.5em;
+                border-bottom: 1px solid #ddd;
+                overflow-wrap: break-word !important;
+                &:nth-child(2n) {
+                  background-color: #efefef;
+                }
+                &:before {
+                  content: '';
+                  border: 8px solid $color-yellow;
+                  border-color: transparent transparent transparent $color-yellow;
+                  position: absolute;
+                  left: 10px;
+                  top: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include screen('mobile') {
+        margin: 0;
+      }
+    }
     @include screen('xs_mobile') {
       width: 100%;
       background-color: transparent !important; //Force table to not be like tables anymore
@@ -350,7 +452,8 @@ h2.title {
         }
       }
       &.sirTb2,
-      &.sirTb3 {
+      &.sirTb3,
+      &.sirTb2_e {
         td,
         tr {
           border: none !important;

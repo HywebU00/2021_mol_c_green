@@ -9544,7 +9544,7 @@ table td {
 }
 table td {
   border: #ddd 1px solid;
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 table td a {
   word-break: break-all;
@@ -14175,9 +14175,15 @@ h2.title {
 .cp table.sirTb td:before {
   display: none;
 }
-.cp table.sirTb td img {
-  width: 90%;
-  margin: 10px 10px 0 10px;
+.cp table.sirTb td.sirblock {
+  width: 320px;
+}
+.cp table.sirTb td .picsir {
+  max-width: 250px;
+  margin: 1.5em auto;
+}
+.cp table.sirTb td .picsir img {
+  max-width: 250px;
 }
 .cp table.sirTb td .name {
   font-size: 1.625em;
@@ -14194,22 +14200,20 @@ h2.title {
   font-size: 1.25em;
   margin-bottom: 1em;
 }
-@media screen and (max-width: 575px) {
-  .cp table.sirTb td {
-    width: 100%;
-    border-bottom: none !important;
-  }
-  .cp table.sirTb td img {
-    width: 100%;
-    margin: 0;
-  }
-}
 .cp table.sirTb td h3 {
   margin: 0 0 20px;
   padding: 10px;
   background-color: #337c80;
   color: #fff;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .cp table.sirTb td {
+    display: block;
+  }
+  .cp table.sirTb td.sirblock {
+    width: 100%;
+  }
 }
 .cp table.sirTb2 {
   margin-top: 1em;
@@ -14222,11 +14226,11 @@ h2.title {
   width: 320px;
 }
 .cp table.sirTb2 tbody tr td .picsir {
-  width: 250px;
+  max-width: 250px;
   margin: 0 auto;
 }
 .cp table.sirTb2 tbody tr td .picsir img {
-  width: 250px;
+  max-width: 250px;
 }
 .cp table.sirTb2 tbody tr td .name {
   font-size: 1.75em;
@@ -14323,11 +14327,11 @@ h2.title {
   width: 320px;
 }
 .cp table.sirTb3 tbody tr td .picsir {
-  width: 250px;
+  max-width: 250px;
   margin: 0 auto;
 }
 .cp table.sirTb3 tbody tr td .picsir img {
-  width: 250px;
+  max-width: 250px;
 }
 .cp table.sirTb3 tbody tr td .name {
   font-size: 1.625em;
@@ -14387,6 +14391,103 @@ h2.title {
     width: 100%;
   }
 }
+.cp table.sirTb2_e {
+  margin-top: 1em;
+}
+.cp table.sirTb2_e tbody tr td {
+  border: none;
+  vertical-align: top;
+  display: block;
+}
+.cp table.sirTb2_e tbody tr td.sirblock {
+  width: 100%;
+}
+.cp table.sirTb2_e tbody tr td .picsir {
+  max-width: 250px;
+  margin: 0 auto;
+}
+.cp table.sirTb2_e tbody tr td .picsir img {
+  max-width: 250px;
+}
+.cp table.sirTb2_e tbody tr td .name {
+  font-size: 1.75em;
+  font-weight: bolder;
+  color: #cf4b0c;
+  margin: 0 0 1em;
+  padding: 0 0 10px;
+  border-bottom: 4px solid #cf4b0c;
+}
+.cp table.sirTb2_e tbody tr td .title {
+  font-size: 1.375em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-left: 0.7em;
+  color: #337c80;
+  position: relative;
+  padding: 0 1em;
+  display: inline-block;
+}
+.cp table.sirTb2_e tbody tr td .title:before {
+  content: "";
+  border: 3px solid #337c80;
+  width: 16px;
+  height: 16px;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  left: 0;
+  top: 6px;
+  transform: rotate(45deg);
+}
+.cp table.sirTb2_e tbody tr td .title:after {
+  content: "";
+  border: 3px solid #337c80;
+  width: 16px;
+  height: 16px;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  transform: rotate(-135deg);
+}
+.cp table.sirTb2_e tbody tr td p {
+  margin-left: 1em;
+  margin-bottom: 1.5em;
+}
+.cp table.sirTb2_e tbody tr td ul,
+.cp table.sirTb2_e tbody tr td ol {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 3em;
+  list-style-type: none;
+}
+.cp table.sirTb2_e tbody tr td ul li,
+.cp table.sirTb2_e tbody tr td ol li {
+  margin-bottom: 0;
+  position: relative;
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  border-bottom: 1px solid #ddd;
+  overflow-wrap: break-word !important;
+}
+.cp table.sirTb2_e tbody tr td ul li:nth-child(2n),
+.cp table.sirTb2_e tbody tr td ol li:nth-child(2n) {
+  background-color: #efefef;
+}
+.cp table.sirTb2_e tbody tr td ul li:before,
+.cp table.sirTb2_e tbody tr td ol li:before {
+  content: "";
+  border: 8px solid #fec003;
+  border-color: transparent transparent transparent #fec003;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+@media screen and (max-width: 767px) {
+  .cp table.sirTb2_e {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 575px) {
   .cp table {
     width: 100%;
@@ -14429,7 +14530,8 @@ h2.title {
   }
   .cp table.sirTb2 td,
   .cp table.sirTb2 tr, .cp table.sirTb3 td,
-  .cp table.sirTb3 tr {
+  .cp table.sirTb3 tr, .cp table.sirTb2_e td,
+  .cp table.sirTb2_e tr {
     border: none !important;
   }
 }
