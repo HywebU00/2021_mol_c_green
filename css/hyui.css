@@ -13601,6 +13601,30 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background-position: 30px 8px;
   background-size: 32px;
 }
+.community_service_block .communitylink_block .communitylink_group .title.instagram {
+  position: relative;
+  background: #fec053;
+  background: linear-gradient(270deg, rgb(254, 192, 83) 0%, rgb(219, 35, 105) 48%, rgb(85, 65, 212) 98%);
+}
+.community_service_block .communitylink_block .communitylink_group .title.instagram:before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/community_instagram.svg");
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 32px;
+  position: absolute;
+  top: 10px;
+  left: 28px;
+}
+.community_service_block .communitylink_block .communitylink_group .title.threads {
+  background-color: #000;
+  background-image: url("../images/community_threads.svg");
+  background-repeat: no-repeat;
+  background-position: 30px 10px;
+  background-size: 28px;
+}
 .community_service_block .communitylink_block .communitylink_group .title.youtube {
   background-color: #b01711;
   background-image: url("../images/community_youtube.svg");

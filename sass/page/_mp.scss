@@ -1403,6 +1403,30 @@ a.more {
           background-position: 30px 8px;
           background-size: 32px;
         }
+        &.instagram {
+          position: relative;
+          background: #fec053;
+          background: linear-gradient(270deg, rgba(254, 192, 83, 1) 0%, rgba(219, 35, 105, 1) 48%, rgba(85, 65, 212, 1) 98%);
+          &:before {
+            content: '';
+            width: 32px;
+            height: 32px;
+            background-image: url('../images/community_instagram.svg');
+            background-repeat: no-repeat;
+            background-position: 0;
+            background-size: 32px;
+            position: absolute;
+            top: 10px;
+            left: 28px;
+          }
+        }
+        &.threads {
+          background-color: #000;
+          background-image: url('../images/community_threads.svg');
+          background-repeat: no-repeat;
+          background-position: 30px 10px;
+          background-size: 28px;
+        }
         &.youtube {
           background-color: #b01711;
           background-image: url('../images/community_youtube.svg');
