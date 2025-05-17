@@ -1,722 +1,743 @@
 //header
 .header {
-    position: relative;
-    z-index: 99;
-    background: #FFF;
-    background-image: url('../images/headerbg.svg');
-    background-repeat: no-repeat;
+  position: relative;
+  z-index: 99;
+  background: #fff;
+  background-image: url('../images/headerbg.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  // box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
+  @extend %clearfix;
+  @include screen('mobile') {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
+  }
+  // 中國年
+  &.chinesenewyear {
+    background-image: url('../images/header_chinesenewyear.png');
+    background-size: auto;
     background-position: center top;
-    background-size: 100%;
-    // box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
-    @extend %clearfix;
     @include screen('mobile') {
-        position: fixed;
-        width: 100%;
-        box-shadow: 0px 2px 5px RGBA(0, 0, 0, 0.3);
+      background-position: center -15px;
     }
-    // 中國年
-    &.chinesenewyear {
-        background-image: url('../images/header_chinesenewyear.png');
-        background-size: auto;
-        background-position: center top;
-        @include screen('mobile') {
-            background-position: center -15px;
-        }
+  }
+  // 元旦
+  &.newyear {
+    background-image: url('../images/header_newyear.png');
+    background-size: auto;
+    background-position: center top;
+    @include screen('notebook') {
+      background-position: left top;
     }
-    // 元旦
-    &.newyear {
-        background-image: url('../images/header_newyear.png');
-        background-size: auto;
-        background-position: center top;
-        @include screen('notebook') {
-            background-position: left top;
-        }
-        @include screen('mobile') {
-            background-position: 100%;
-        }
+    @include screen('mobile') {
+      background-position: 100%;
     }
-    // 勞工節
-    &.laborday {
-        background-image: url('../images/header_laborday.png');
-        background-size: auto;
-        background-position: center top;
-        @media(max-width: 1200px) {
-            background-position: 60px top;
-        }
-        @include screen('mobile') {
-            background-position: center;
-            background-size: 100%;
-        }
+  }
+  // 勞工節
+  &.laborday {
+    background-image: url('../images/header_laborday.png');
+    background-size: auto;
+    background-position: center top;
+    @media (max-width: 1200px) {
+      background-position: 60px top;
     }
-    // 端午節
-    &.dragon_boat {
-        background-image: url('../images/header_dragon_boat.png');
-        background-size: auto;
-        background-position: center top;
-        @media(max-width: 1200px) {
-            background-position: right top;
-        }
-        @include screen('mobile') {
-            background-position: center;
-            background-size: 100%;
-        }
+    @include screen('mobile') {
+      background-position: center;
+      background-size: 100%;
     }
-    // 中秋節
-    &.mid_autumn {
-        background-image: url('../images/header_mid_autumn.png');
-        background-size: auto;
-        background-position: center top;
-        @media(max-width: 1200px) {
-            background-position: right top;
-        }
-        @include screen('mobile') {
-            background-position: right center;
-            background-size: 100%;
-        }
+  }
+  // 端午節
+  &.dragon_boat {
+    background-image: url('../images/header_dragon_boat.png');
+    background-size: auto;
+    background-position: center top;
+    @media (max-width: 1200px) {
+      background-position: right top;
     }
-    // 虛擬底色 - navigation bg
-    // &:before {
-    //     content: "";
-    //     width: 100%;
-    //     height: 2.4em;
-    //     background: #F2F2F2;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     @include screen('mobile') {
-    //         display: none;
-    //     }
-    // }
-    // mobile btn for extend
-    %mobileCtrlBtn {
-        width: 60px !important;
-        height: 60px !important;
+    @include screen('mobile') {
+      background-position: center;
+      background-size: 100%;
+    }
+  }
+  // 中秋節
+  &.mid_autumn {
+    background-image: url('../images/header_mid_autumn.png');
+    background-size: auto;
+    background-position: center top;
+    @media (max-width: 1200px) {
+      background-position: right top;
+    }
+    @include screen('mobile') {
+      background-position: right center;
+      background-size: 100%;
+    }
+  }
+  // 虛擬底色 - navigation bg
+  // &:before {
+  //     content: "";
+  //     width: 100%;
+  //     height: 2.4em;
+  //     background: #F2F2F2;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     @include screen('mobile') {
+  //         display: none;
+  //     }
+  // }
+  // mobile btn for extend
+  %mobileCtrlBtn {
+    width: 60px !important;
+    height: 60px !important;
+    position: absolute;
+    top: 0px;
+    display: block;
+    font-size: 0em;
+    padding: 15px;
+    margin: 0;
+    min-width: auto;
+    min-height: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    @include screen('mobile') {
+      display: block !important;
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+  > .container {
+    max-width: $container-max;
+    overflow: visible;
+    position: relative; // menu
+    padding: 0;
+    .sidebarCtrl {
+      display: none;
+      left: 0px;
+      @extend %mobileCtrlBtn;
+      span {
         position: absolute;
-        top: 0px;
+        background: $primaryColor;
+        width: 50%;
+        height: 3px;
+        top: 20px;
+        left: 50%;
+        margin-left: -25%;
         display: block;
-        font-size: 0em;
-        padding: 15px;
+        &:nth-child(2) {
+          top: 28px;
+        }
+        &:nth-child(3) {
+          top: 36px;
+        }
+      }
+    }
+    // search
+    .searchCtrl {
+      display: none;
+      right: 60px;
+      top: 0px;
+      font-size: 0.562em;
+      width: 50px;
+      padding: 36px 0 0 0;
+      color: $primaryColor;
+      @extend %mobileCtrlBtn;
+      &:before {
+        width: 40px;
+        height: 40px;
+        background: url('../images/icon_search.svg') no-repeat center top;
+        background-size: 34px;
+        opacity: 1;
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: block;
+      }
+    }
+    .customerCtrl {
+      display: none;
+      right: 0px;
+      top: 0px;
+      font-size: 0.562em;
+      width: 50px;
+      padding: 36px 0 0 0;
+      color: $primaryColor;
+      @extend %mobileCtrlBtn;
+      &:before {
+        width: 40px;
+        height: 40px;
+        background: url('../images/icon_customer_service.svg') no-repeat center top;
+        background-size: 34px;
+        opacity: 1;
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: block;
+      }
+    }
+  }
+  h1 {
+    float: left;
+    width: 208px;
+    height: 60px;
+    margin: 0 0 20px;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    @include screen('notebook') {
+      margin: 0 0 20px 30px;
+    }
+    a {
+      display: inline-block;
+    }
+    img {
+      display: block;
+      width: 208px;
+      height: 60px;
+    }
+    @include screen('mobile') {
+      padding: 2px 60px;
+      width: 100%;
+      text-align: center;
+      height: 60px;
+      margin: 0;
+      img {
+        width: 100%;
+        height: 45px;
+        margin: 5px auto;
+      }
+    }
+    @media (max-width: 400px) {
+      text-align: left;
+    }
+  }
+  // 導覽列
+  .navigation {
+    @include screen('mobile') {
+      display: none;
+    }
+    &.have_language {
+      padding-right: 160px;
+    }
+    @extend %clearfix;
+    overflow: hidden;
+    // width: 100%;
+    // margin-bottom: .5em;
+    box-sizing: border-box;
+    display: flex;
+    //shuya 1090826
+    .navlist {
+      flex: 1 1 auto;
+      margin: 0.1em 0.5em 0 0;
+      ul {
+        padding: 0;
         margin: 0;
-        min-width: auto;
-        min-height: auto;
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        box-sizing: border-box;
-        @include screen('mobile') {
-            display: block !important;
-            background: rgba(255, 255, 255, .8);
-        }
-    }
-    >.container {
-        max-width: $container-max;
-        overflow: visible;
-        position: relative; // menu
-        padding: 0;
-        .sidebarCtrl {
-            display: none;
-            left: 0px;
-            @extend %mobileCtrlBtn;
-            span {
-                position: absolute;
-                background: $primaryColor;
-                width: 50%;
-                height: 3px;
-                top: 20px;
-                left: 50%;
-                margin-left: -25%;
-                display: block;
-                &:nth-child(2) {
-                    top: 28px;
-                }
-                &:nth-child(3) {
-                    top: 36px;
-                }
-            }
-        }
-        // search
-        .searchCtrl {
-            display: none;
-            right: 60px;
-            top:0px;
-            font-size: 0.562em;
-            width:50px;
-            padding:36px 0 0 0;
-            color:$primaryColor;
-            @extend %mobileCtrlBtn;
-            &:before {
-                width: 40px;
-                height: 40px;
-                background: url('../images/icon_search.svg') no-repeat center top;
-                background-size: 34px;
-                opacity: 1;
-                content: "";
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                display: block;
-            }
-        }
-        .customerCtrl {
-            display: none;
-            right:0px;
-            top:0px;
-            font-size: 0.562em;
-            width:50px;
-            padding:36px 0 0 0;
-            color:$primaryColor;
-            @extend %mobileCtrlBtn;
-            &:before {
-                width: 40px;
-                height: 40px;
-                background: url('../images/icon_customer_service.svg') no-repeat center top;
-                background-size: 34px;
-                opacity: 1;
-                content: "";
-                position: absolute;
-                top: 10px;
-                left: 10px;
-                display: block;
-            }
-        }
-    }
-    h1 {
-        float: left;
-        width: 208px;
-        height: 60px;
-        margin: 0 0 20px;
-        padding: 0;
-        box-sizing: border-box;
-        transition: .5s;
-        @include screen('notebook') {
-            margin: 0 0 20px 30px;
-        }
-        a {
-            display: inline-block;
-        }
-        img {
-            display: block;
-            width: 208px;
-            height: 60px;
-        }
-        @include screen('mobile') {
-            padding: 2px 60px;
-            width: 100%;
-            text-align: center;
-            height: 60px;
-            margin: 0;
-            img {
-                width: 100%;
-                height: 45px;
-                margin: 5px auto;
-            }
-        }
-        @media(max-width: 400px){
-            text-align: left;
-        }
-    }
-    // 導覽列
-    .navigation {
-        @include screen('mobile') {
-            display: none;
-        }
-        &.have_language {
-            padding-right: 160px;
-        }
-        @extend %clearfix;
-        overflow: hidden;
-        // width: 100%;
-        // margin-bottom: .5em;
-        box-sizing:border-box;
-        display: flex;
-        //shuya 1090826
-        .navlist {
-            flex: 1 1 auto;
-            margin: .1em .5em 0 0;
-            ul {
-                padding: 0;
-                margin: 0;
-                font-size: .875em;
-                list-style: none;
-                display: flex;
-                justify-content: flex-end;
-            }
-            li {
-                flex: 0 0 auto;
-                position: relative;
-                &:first-child {
-                    &:before {
-                        display: none;
-                    }
-                }
-                &:before {
-                    content: '';
-                    width: 1px;
-                    height: 12px;
-                    background-color: #333;
-                    position: absolute;
-                    left: 0;
-                    top: 12px;
-                }
-                a {
-                    display: block;
-                    padding: .5em 1em;
-                    text-decoration: none;
-                    @include aSetting_nocolor;
-                }
-            }
-        }
-        .language {
-            position: absolute;
-            right: 15px;
-            top: .35em;
-            font-size: .75em;
-        }
-    }
-    // 功能選項
-    .functionbtn_block {
-        // position:absolute;
-        // top:50px;
-        // right:0;
-        position: relative;
+        font-size: 0.875em;
+        list-style: none;
         display: flex;
         justify-content: flex-end;
-        margin-top: 10px;
-        button {
-            margin: 0 10px 0 0;
-        }
-        .menu_btn {
-            background-image: url('../images/icon_menu.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 36px;
-            height: 36px;
-            font-size: 0;
-            border: none;
-            padding: 0;
-            color: #fff;
-            background-color: transparent;
-        }
-        .search_btn {
-            background-image: url('../images/icon_search.svg');
-            background-repeat: no-repeat;
-            background-position: center 5px;
-            background-size: 40px;
-            width: 50px;
-            // height: 36px;
-            font-size: 0.688em;
-            font-weight: bolder;
-            border: none;
-            padding: 36px 0 0 0;
-            color: $primaryColor;
-            background-color: transparent;
-            cursor: pointer;
-            display: block;
-            @include screen('mobile'){
-                display: none;
-            }
-        }
-        .searchname {
-            position: absolute;
-            width: 80px;
-            right: 100px;
-            top: 2px;
-            background-color: $primaryColor;
-            color: #fff;
-            text-align: center;
-            padding: 2px;
-            border-radius: 5px;
-            font-size: 0.875em;
-            letter-spacing: 0.01em;
+      }
+      li {
+        flex: 0 0 auto;
+        position: relative;
+        &:first-child {
+          &:before {
             display: none;
-            &:after {
-                content: '';
-                border: 8px solid $primaryColor;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: transparent;
-                position: absolute;
-                right: -13px;
-                top: 4px;
-            }
+          }
         }
-        .customername {
-            position: absolute;
-            width: 80px;
-            right: 0px;
-            top: -35px;
-            background-color: $primaryColor;
-            color: #fff;
-            text-align: center;
-            padding: 2px;
-            border-radius: 5px;
-            font-size: 0.875em;
-            letter-spacing: 0.01em;
-            display: none;
-            &:after {
-                content: '';
-                border: 8px solid $primaryColor;
-                border-left-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: transparent;
-                position: absolute;
-                bottom: -13px;
-                left: 41%;
-            }
+        &:before {
+          content: '';
+          width: 1px;
+          height: 12px;
+          background-color: #333;
+          position: absolute;
+          left: 0;
+          top: 12px;
         }
-        @include screen('mobile') {
-            .search, .customer_service_block {
-                display: none !important;
-            }
+        a {
+          display: block;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          @include aSetting_nocolor;
         }
-        .customer_service_btn {
-            background-image: url('../images/icon_customer_service.svg');
-            background-repeat: no-repeat;
-            background-position: center 5px;
-            background-size: 40px;
-            width: 50px;
-            // height: 36px;
-            font-size: 0.688em;
-            font-weight: bolder;
-            border: none;
-            padding: 36px 0 0 0;
-            color: $primaryColor;
-            background-color: transparent;
-            @include screen('mobile'){
-                display: none;
-            }
-        }
+      }
     }
+    .language {
+      position: absolute;
+      right: 15px;
+      top: 0.35em;
+      font-size: 0.75em;
+    }
+  }
+  // 功能選項
+  .functionbtn_block {
+    // position:absolute;
+    // top:50px;
+    // right:0;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    align-items: flex-end;
+    button {
+      margin: 0 10px 0 0;
+    }
+    .popular_btn {
+      border: 2px solid $primaryColor;
+      background-color: #fff;
+      color: $primaryColor;
+      font-weight: bold;
+      height: 36px;
+      padding: 0.3em 0.5em;
+      transition: 0.5s;
+      margin-bottom: 4px;
+      @include screen('mobile') {
+        display: none;
+      }
+      &:hover {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+    .menu_btn {
+      background-image: url('../images/icon_menu.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 36px;
+      height: 36px;
+      font-size: 0;
+      border: none;
+      padding: 0;
+      color: #fff;
+      background-color: transparent;
+    }
+    .search_btn {
+      background-image: url('../images/icon_search.svg');
+      background-repeat: no-repeat;
+      background-position: center 5px;
+      background-size: 40px;
+      width: 50px;
+      // height: 36px;
+      font-size: 0.688em;
+      font-weight: bolder;
+      border: none;
+      padding: 36px 0 0 0;
+      color: $primaryColor;
+      background-color: transparent;
+      cursor: pointer;
+      display: block;
+      @include screen('mobile') {
+        display: none;
+      }
+    }
+    .searchname {
+      position: absolute;
+      width: 80px;
+      right: 100px;
+      top: 2px;
+      background-color: $primaryColor;
+      color: #fff;
+      text-align: center;
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 0.875em;
+      letter-spacing: 0.01em;
+      display: none;
+      &:after {
+        content: '';
+        border: 8px solid $primaryColor;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        right: -13px;
+        top: 4px;
+      }
+    }
+    .customername {
+      position: absolute;
+      width: 80px;
+      right: 0px;
+      top: -35px;
+      background-color: $primaryColor;
+      color: #fff;
+      text-align: center;
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 0.875em;
+      letter-spacing: 0.01em;
+      display: none;
+      &:after {
+        content: '';
+        border: 8px solid $primaryColor;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        position: absolute;
+        bottom: -13px;
+        left: 41%;
+      }
+    }
+    @include screen('mobile') {
+      .search,
+      .customer_service_block {
+        display: none !important;
+      }
+    }
+    .customer_service_btn {
+      background-image: url('../images/icon_customer_service.svg');
+      background-repeat: no-repeat;
+      background-position: center 5px;
+      background-size: 40px;
+      width: 50px;
+      // height: 36px;
+      font-size: 0.688em;
+      font-weight: bolder;
+      border: none;
+      padding: 36px 0 0 0;
+      color: $primaryColor;
+      background-color: transparent;
+      @include screen('mobile') {
+        display: none;
+      }
+    }
+  }
 }
 //search
 .search {
-    // display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    vertical-align: top;
-    font-size: 1em;
-    margin: 1em .5em;
-    box-sizing: border-box;
-    position: absolute;
-    width: 80%;
-    top: 45px;
-    right: 50px;
-    background-color: lighten($primaryColor, 30);
-    padding: 30px 30px 20px;
-    border-radius: 10px;
-    z-index: 100;
+  // display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  vertical-align: top;
+  font-size: 1em;
+  margin: 1em 0.5em;
+  box-sizing: border-box;
+  position: absolute;
+  width: 80%;
+  top: 45px;
+  right: 50px;
+  background-color: lighten($primaryColor, 30);
+  padding: 30px 30px 20px;
+  border-radius: 10px;
+  z-index: 100;
+  display: none;
+  @include screen('mobile') {
     display: none;
-    @include screen('mobile') {
-        display: none;
+  }
+  .leftblock {
+    float: left;
+    width: 60%;
+    @include screen('tablet') {
+      width: 100%;
     }
-    .leftblock {
+    .form_grp {
+      float: left;
+      margin: 0 0 1em;
+      label {
+        font-size: 0;
+        line-height: 1em;
         float: left;
-        width: 60%;
-        @include screen('tablet') {
-            width: 100%;
-        }
-        .form_grp {
-            float: left;
-            margin: 0 0 1em;
-            label {
-                font-size: 0;
-                line-height: 1em;
-                float: left;
-            }
-            input[type="text"] {
-                background-color: #fff;
-                border: 1px solid #fff;
-                margin: 0;
-                width: 150px;
-                &:focus {
-                    background-color: lighten($color-yellow, 40);
-                }
-            }
-            input {
-                margin: 0 5px 0 0;
-                padding: .3em;
-                box-shadow: none;
-                width: auto;
-                &[type="submit"] {
-                    min-width: auto;
-                    padding: .3em .8em;
-                }
-                &:focus {
-                    box-shadow: 0 0px 0px 2px $aFocus;
-                }
-            }
-        }
-        .btn_grp {
-            float: left;
-            padding: 0;
-            margin: 0;
-            input, input[type="submit"] {
-                min-width: auto;
-                padding: .3em .8em;
-                margin: 0;
-            }
-        }
-        .keywordHot {
-            clear: both;
-            float: none;
-            margin: 0 0 10px 0;
-            .title {
-                margin-bottom: 3px;
-                font-weight: bolder;
-            }
-            ul {
-                line-height: 1.65em;
-                margin: 0 0 8px;
-                padding: 0;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                list-style-type: none;
-                li {
-                    margin: 0;
-                    padding: 0 1em 0 0;
-                    flex: 0 0 auto;
-                    position: relative;
-                    &:after {
-                        content: '、';
-                        color: $color-word;
-                        position: absolute;
-                        right: 0px;
-                        top: 0px;
-                    }
-                    &:last-child {
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
-                a {
-                    color: $color-word;
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }
-    .rightblock {
-        float: left;
-        width: calc(100% - 60%);
-        @include screen('tablet') {
-            // flex-basis: 100%;
-            width: 100%;
-            padding-top: 20px;
-            border-top: 1px solid #fff;
-        }
-        .important_link {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            align-items: stretch;
-            div {
-                flex: none;
-                flex-basis: 46%;
-                margin: 0 2%;
-                color: #000;
-                position: relative;
-                a {
-                    color: #000;
-                    background-color: rgba(255, 255, 255, 0.4);
-                    display: block;
-                    padding: 8px;
-                    border-radius: 10px;
-                    transition: .5s;
-                    height: 100%;
-                    text-align: center;
-                    img {
-                        width: 100%;
-                        height: 54px;
-                        margin-bottom: 8px;
-                        display: block;
-                    }
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.8);
-                    }
-                }
-            }
-        }
-    }
-    // m_search
-    &.m_search {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: auto;
-        padding: 1em;
-        display: block;
-        height: auto;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        z-index: 98;
-        background: #7ed5e0;
-        display: none;
+      }
+      input[type='text'] {
+        background-color: #fff;
+        border: 1px solid #fff;
         margin: 0;
-        border-radius: 0;
-        label {
-            font-size: 0em;
-            line-height: 0;
+        width: 150px;
+        &:focus {
+          background-color: lighten($color-yellow, 40);
         }
-        .form_grp {
-            display: flex;
-            float: none;
-            margin: 0;
-            label {
-                display: none;
-                flex: 0 0 0%;
-            }
-            input {
-                margin: .5em;
-                padding: .5em;
-                flex: 1 1 50%;
-                &[type="submit"] {
-                    flex: 0 1 15%;
-                    margin: 0;
-                    &:hover, &:focus {}
-                }
-                &[type="text"] {
-                    margin: 0 7px 0 0;
-                }
-            }
+      }
+      input {
+        margin: 0 5px 0 0;
+        padding: 0.3em;
+        box-shadow: none;
+        width: auto;
+        &[type='submit'] {
+          min-width: auto;
+          padding: 0.3em 0.8em;
         }
-        .btn_grp {
-            flex: 1 1 auto;
-            padding: .5em 0;
-            box-sizing: border-box;
-            float: none;
-            margin: 0 0 10px;
-            input {
-                width: 100% !important;
-                padding: .6em .5em !important;
-                margin: 0;
-            }
+        &:focus {
+          box-shadow: 0 0px 0px 2px $aFocus;
         }
-        .keywordHot {
-            @extend %clearfix;
-            ul {
-                justify-content: flex-start;
-            }
-            a {
-                color: #FFF;
-                &:hover,
-                &:focus {
-                    color: $primaryColor;
-                }
-            }
-        }
+      }
     }
+    .btn_grp {
+      float: left;
+      padding: 0;
+      margin: 0;
+      input,
+      input[type='submit'] {
+        min-width: auto;
+        padding: 0.3em 0.8em;
+        margin: 0;
+      }
+    }
+    .keywordHot {
+      clear: both;
+      float: none;
+      margin: 0 0 10px 0;
+      .title {
+        margin-bottom: 3px;
+        font-weight: bolder;
+      }
+      ul {
+        line-height: 1.65em;
+        margin: 0 0 8px;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        list-style-type: none;
+        li {
+          margin: 0;
+          padding: 0 1em 0 0;
+          flex: 0 0 auto;
+          position: relative;
+          &:after {
+            content: '、';
+            color: $color-word;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+        a {
+          color: $color-word;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .rightblock {
+    float: left;
+    width: calc(100% - 60%);
+    @include screen('tablet') {
+      // flex-basis: 100%;
+      width: 100%;
+      padding-top: 20px;
+      border-top: 1px solid #fff;
+    }
+    .important_link {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: stretch;
+      div {
+        flex: none;
+        flex-basis: 46%;
+        margin: 0 2%;
+        color: #000;
+        position: relative;
+        a {
+          color: #000;
+          background-color: rgba(255, 255, 255, 0.4);
+          display: block;
+          padding: 8px;
+          border-radius: 10px;
+          transition: 0.5s;
+          height: 100%;
+          text-align: center;
+          img {
+            width: 100%;
+            height: 54px;
+            margin-bottom: 8px;
+            display: block;
+          }
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  }
+  // m_search
+  &.m_search {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto;
+    padding: 1em;
+    display: block;
+    height: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 98;
+    background: #7ed5e0;
+    display: none;
+    margin: 0;
+    border-radius: 0;
+    label {
+      font-size: 0em;
+      line-height: 0;
+    }
+    .form_grp {
+      display: flex;
+      float: none;
+      margin: 0;
+      label {
+        display: none;
+        flex: 0 0 0%;
+      }
+      input {
+        margin: 0.5em;
+        padding: 0.5em;
+        flex: 1 1 50%;
+        &[type='submit'] {
+          flex: 0 1 15%;
+          margin: 0;
+          &:hover,
+          &:focus {
+          }
+        }
+        &[type='text'] {
+          margin: 0 7px 0 0;
+        }
+      }
+    }
+    .btn_grp {
+      flex: 1 1 auto;
+      padding: 0.5em 0;
+      box-sizing: border-box;
+      float: none;
+      margin: 0 0 10px;
+      input {
+        width: 100% !important;
+        padding: 0.6em 0.5em !important;
+        margin: 0;
+      }
+    }
+    .keywordHot {
+      @extend %clearfix;
+      ul {
+        justify-content: flex-start;
+      }
+      a {
+        color: #fff;
+        &:hover,
+        &:focus {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
 }
 // 客服 start
 .customer_service_block {
+  font-size: 1em;
+  margin: 1em 0.5em;
+  box-sizing: border-box;
+  position: absolute;
+  width: 40%;
+  top: 45px;
+  right: 0;
+  background-color: $secondaryColor;
+  padding: 20px 30px 20px 130px;
+  border-radius: 10px;
+  z-index: 100;
+  color: #fff;
+  background-image: url('../images/customer_service_icon01.svg');
+  background-repeat: no-repeat;
+  background-position: 30px 25px;
+  background-size: 70px;
+  display: none;
+  @include screen('tablet') {
+    padding: 100px 30px 20px 30px;
+    background-position: center 20px;
+    text-align: center;
+  }
+  div {
     font-size: 1em;
-    margin: 1em .5em;
-    box-sizing: border-box;
-    position: absolute;
-    width: 40%;
-    top: 45px;
-    right: 0;
-    background-color: $secondaryColor;
-    padding: 20px 30px 20px 130px;
-    border-radius: 10px;
-    z-index: 100;
+    line-height: 1.45em;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+    span {
+      display: block;
+      font-size: 1.25em;
+      margin: 0 0 5px;
+    }
+  }
+  .service_btn {
+    padding: 0.3em 1.5em;
+    background-color: darken($primaryColor, 10);
+    border: 1px solid darken($primaryColor, 10);
     color: #fff;
-    background-image: url('../images/customer_service_icon01.svg');
-    background-repeat: no-repeat;
-    background-position: 30px 25px;
-    background-size: 70px;
+  }
+  &.m_customer {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: auto;
+    padding: 20px 30px 20px 130px;
+    display: block;
+    height: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 98;
+    background-color: $secondaryColor;
     display: none;
-    @include screen('tablet'){
-        padding: 100px 30px 20px 30px;
-        background-position: center 20px;
-        text-align: center;
-
+    margin: 0;
+    border-radius: 0;
+    @include screen('mobile') {
+      padding: 40px 30px 40px 130px;
+      background-position: 30px 25px;
+      text-align: left;
+      display: flex;
+      align-items: flex-end;
+      div {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
     }
-    div {
-        font-size: 1em;
-        line-height: 1.45em;
-        margin-bottom: 10px;
-        letter-spacing: 0.01em;
-        span {
-            display: block;
-            font-size: 1.25em;
-            margin: 0 0 5px;
-        }
-    }
-    .service_btn {
-        padding: .3em 1.5em;
-        background-color: darken($primaryColor, 10);
-        border: 1px solid darken($primaryColor, 10);
-        color: #fff;
-    }
-    &.m_customer{
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: auto;
-         padding: 20px 30px 20px 130px;
-        display: block;
-        height: auto;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        z-index: 98;
-        background-color: $secondaryColor;
-        display: none;
+    @media (max-width: 480px) {
+      display: block;
+      div {
+        margin: 0 0 15px;
+      }
+      .service_btn {
         margin: 0;
-        border-radius: 0;
-        @include screen('mobile'){
-            padding: 40px 30px 40px 130px;
-            background-position: 30px 25px;
-            text-align: left;
-            display: flex;
-            align-items:flex-end;
-            div{
-                margin-right: 20px;
-                margin-bottom: 0;
-            }
-        }
-        @media(max-width: 480px){
-             display: block;
-             div{
-                margin:0 0 15px ;
-             }
-             .service_btn{
-                margin:0;
-             }
-        }
+      }
     }
+  }
 }
 // header fix
 .header.fixed {
-    position: fixed;
-    width: 100%;
-    right: 0;
-    top: 0;
-    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
-    background: rgba(0, 0, 0, .9);
-    z-index: 999;
-    @include screen('mobile') {
-        background: #FFF;
-    }
-    .menu {
-        >ul {
-            >li {
-                >a {
-                    color: #FFF;
-                }
-            }
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 25px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  @include screen('mobile') {
+    background: #fff;
+  }
+  .menu {
+    > ul {
+      > li {
+        > a {
+          color: #fff;
         }
+      }
     }
-    .megamenu {
-        >ul {
-            >li {
-                >a {
-                    color: #FFF;
-                }
-            }
+  }
+  .megamenu {
+    > ul {
+      > li {
+        > a {
+          color: #fff;
         }
+      }
     }
+  }
 }
