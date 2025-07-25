@@ -843,6 +843,13 @@
               color: $aColor;
             }
           }
+          p {
+            display: block;
+            padding: 0 0 0 15px;
+            margin: 0 0 8px;
+            line-height: 1.7em;
+            color: #333;
+          }
           &:hover {
             background-color: lighten($primaryColor, 65);
             text-decoration: none;

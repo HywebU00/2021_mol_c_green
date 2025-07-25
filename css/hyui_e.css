@@ -99,9 +99,9 @@ img {
 }
 .demosection [class^=col] {
   border: 1px solid #0066cc;
-  background: #66b3ff;
+  background: rgb(102, 178.5, 255);
   min-height: 200px;
-  color: #151515;
+  color: rgb(21.25, 21.25, 21.25);
   text-align: center;
   line-height: 200px;
   font-size: 1.5em;
@@ -112,7 +112,7 @@ img {
   padding-top: 2em;
 }
 .demosection + .bg {
-  background: #c9e8e9;
+  background: rgb(200.6536312849, 231.6480446927, 233.3463687151);
 }
 .demosection.full .container {
   max-width: 100% !important;
@@ -4371,14 +4371,14 @@ kbd kbd {
   text-shadow: none;
 }
 .btn:hover {
-  background: #c7c7c7;
+  background: rgb(198.5, 198.5, 198.5);
   border: 1px solid #adadad;
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn:focus {
-  background: #c7c7c7;
+  background: rgb(198.5, 198.5, 198.5);
   border: 1px solid #adadad;
   cursor: pointer;
   color: #FFF;
@@ -4386,7 +4386,7 @@ kbd kbd {
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn.active {
-  background: #ededed;
+  background: rgb(236.75, 236.75, 236.75);
   cursor: pointer;
 }
 .btn:hover, .btn:focus {
@@ -4400,22 +4400,22 @@ kbd kbd {
   color: #FFF;
 }
 .btn-green:hover {
-  background: #1d601d;
-  border: 1px solid #113911;
+  background: rgb(29.1193181818, 95.8806818182, 29.1193181818);
+  border: 1px solid rgb(17.2386363636, 56.7613636364, 17.2386363636);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-green:focus {
-  background: #1d601d;
-  border: 1px solid #113911;
+  background: rgb(29.1193181818, 95.8806818182, 29.1193181818);
+  border: 1px solid rgb(17.2386363636, 56.7613636364, 17.2386363636);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-green.active {
-  background: #2f9b2f;
+  background: rgb(46.9403409091, 154.5596590909, 46.9403409091);
   cursor: pointer;
 }
 
@@ -4425,14 +4425,14 @@ kbd kbd {
   color: #FFF;
 }
 .btn-blue:hover {
-  background: #004d99;
+  background: rgb(0, 76.5, 153);
   border: 1px solid #003366;
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-blue:focus {
-  background: #004d99;
+  background: rgb(0, 76.5, 153);
   border: 1px solid #003366;
   cursor: pointer;
   color: #FFF;
@@ -4440,32 +4440,32 @@ kbd kbd {
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-blue.active {
-  background: #0073e6;
+  background: rgb(0, 114.75, 229.5);
   cursor: pointer;
 }
 
 .btn-yellow {
-  background: #fec61c;
-  border: 1px solid #fec61c;
+  background: rgb(254.1007905138, 198.3498023715, 28.3992094862);
+  border: 1px solid rgb(254.1007905138, 198.3498023715, 28.3992094862);
   color: #333;
 }
 .btn-yellow:hover {
-  background: #e7ae01;
-  border: 1px solid #b48801;
+  background: rgb(230.5849802372, 173.8537549407, 0.9150197628);
+  border: 1px solid rgb(179.7865612648, 135.5533596838, 0.7134387352);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-yellow:focus {
-  background: #e7ae01;
-  border: 1px solid #b48801;
+  background: rgb(230.5849802372, 173.8537549407, 0.9150197628);
+  border: 1px solid rgb(179.7865612648, 135.5533596838, 0.7134387352);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-yellow.active {
-  background: #fecd36;
+  background: rgb(254.2015810277, 204.6996047431, 53.7984189723);
   cursor: pointer;
 }
 
@@ -4475,22 +4475,22 @@ kbd kbd {
   color: #FFF;
 }
 .btn-orange:hover {
-  background: #9f3a09;
-  border: 1px solid #6f2806;
+  background: rgb(158.7945205479, 57.5342465753, 9.2054794521);
+  border: 1px solid rgb(110.5890410959, 40.0684931507, 6.4109589041);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-orange:focus {
-  background: #9f3a09;
-  border: 1px solid #6f2806;
+  background: rgb(158.7945205479, 57.5342465753, 9.2054794521);
+  border: 1px solid rgb(110.5890410959, 40.0684931507, 6.4109589041);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-orange.active {
-  background: #e7540d;
+  background: rgb(231.102739726, 83.7328767123, 13.397260274);
   cursor: pointer;
 }
 
@@ -4500,77 +4500,77 @@ kbd kbd {
   color: #FFF;
 }
 .btn-red:hover {
-  background: #b80202;
-  border: 1px solid #860101;
+  background: rgb(184.4303797468, 1.5696202532, 1.5696202532);
+  border: 1px solid rgb(133.8607594937, 1.1392405063, 1.1392405063);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-red:focus {
-  background: #b80202;
-  border: 1px solid #860101;
+  background: rgb(184.4303797468, 1.5696202532, 1.5696202532);
+  border: 1px solid rgb(133.8607594937, 1.1392405063, 1.1392405063);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-red.active {
-  background: #fd0a0a;
+  background: rgb(252.9113924051, 9.5886075949, 9.5886075949);
   cursor: pointer;
 }
 
 .btn-purple {
-  background: #8c248d;
-  border: 1px solid #8c248d;
+  background: rgb(140.1315789474, 36.2006578947, 141.2993421053);
+  border: 1px solid rgb(140.1315789474, 36.2006578947, 141.2993421053);
   color: #FFF;
 }
 .btn-purple:hover {
-  background: #641a65;
-  border: 1px solid #3c0f3c;
+  background: rgb(99.8684210526, 25.7993421053, 100.7006578947);
+  border: 1px solid rgb(59.6052631579, 15.3980263158, 60.1019736842);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-purple:focus {
-  background: #641a65;
-  border: 1px solid #3c0f3c;
+  background: rgb(99.8684210526, 25.7993421053, 100.7006578947);
+  border: 1px solid rgb(59.6052631579, 15.3980263158, 60.1019736842);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-purple.active {
-  background: #a029a2;
+  background: rgb(160.2631578947, 41.4013157895, 161.5986842105);
   cursor: pointer;
 }
 
 .btn-submit {
-  background: #3a8e92;
-  border: 1px solid #3a8e92;
+  background: rgb(58.2653631285, 141.6648044693, 146.2346368715);
+  border: 1px solid rgb(58.2653631285, 141.6648044693, 146.2346368715);
   color: #FFF;
 }
 .btn-submit:hover {
-  background: #2c6a6e;
-  border: 1px solid #1d4749;
+  background: rgb(43.7346368715, 106.3351955307, 109.7653631285);
+  border: 1px solid rgb(29.2039106145, 71.0055865922, 73.2960893855);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-submit:focus {
-  background: #2c6a6e;
-  border: 1px solid #1d4749;
+  background: rgb(43.7346368715, 106.3351955307, 109.7653631285);
+  border: 1px solid rgb(29.2039106145, 71.0055865922, 73.2960893855);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-submit.active {
-  background: #429fa4;
+  background: rgb(65.530726257, 159.3296089385, 164.469273743);
   cursor: pointer;
 }
 
 .btn-reset {
-  color: #484848;
+  color: rgb(72.25, 72.25, 72.25);
 }
 
 .btn-search {
@@ -4579,22 +4579,22 @@ kbd kbd {
   color: #FFF;
 }
 .btn-search:hover {
-  background: #24595c;
-  border: 1px solid #163537;
+  background: rgb(36.469273743, 88.6703910615, 91.530726257);
+  border: 1px solid rgb(21.938547486, 53.3407821229, 55.061452514);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .btn-search:focus {
-  background: #24595c;
-  border: 1px solid #163537;
+  background: rgb(36.469273743, 88.6703910615, 91.530726257);
+  border: 1px solid rgb(21.938547486, 53.3407821229, 55.061452514);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .btn-search.active {
-  background: #3a8e92;
+  background: rgb(58.2653631285, 141.6648044693, 146.2346368715);
   cursor: pointer;
 }
 
@@ -4604,18 +4604,18 @@ kbd kbd {
   border: solid 1px #337c80 !important;
 }
 .btn-primary:hover, .btn-primary:focus {
-  background: #24595c !important;
+  background: rgb(36.469273743, 88.6703910615, 91.530726257) !important;
   border: solid 1px #337c80 !important;
 }
 
 .btn-secondary {
   background: #fff !important;
-  color: #1d4749 !important;
+  color: rgb(29.2039106145, 71.0055865922, 73.2960893855) !important;
   border: solid 1px #337c80 !important;
   text-shadow: none !important;
 }
 .btn-secondary:hover, .btn-secondary:focus {
-  color: #071213 !important;
+  color: rgb(7.4078212291, 18.0111731844, 18.5921787709) !important;
   background: #b5deff !important;
   border: solid 1px #b5deff !important;
 }
@@ -4627,7 +4627,7 @@ kbd kbd {
   text-shadow: none !important;
 }
 .btn-normal:hover, .btn-normal:focus {
-  color: #404046 !important;
+  color: rgb(64.3815165877, 64.3815165877, 70.1184834123) !important;
   background: #c3c3c3 !important;
   border: solid 1px #c3c3c3 !important;
 }
@@ -4638,7 +4638,7 @@ kbd kbd {
   border: 1px solid #ddd !important;
 }
 .btn-back:hover, .btn-back:focus {
-  background: #24595c !important;
+  background: rgb(36.469273743, 88.6703910615, 91.530726257) !important;
   border: 1px solid #ddd !important;
 }
 
@@ -6177,61 +6177,61 @@ span.file_doc a, span.file_docx a, span.file_odt a {
   background: #275cb7;
 }
 span.file_doc a:hover, span.file_doc a:focus, span.file_docx a:hover, span.file_docx a:focus, span.file_odt a:hover, span.file_odt a:focus {
-  background: #2351a2;
+  background: rgb(34.5202702703, 81.4324324324, 161.9797297297);
 }
 span.file_xls a, span.file_xlsx a, span.file_csv a, span.file_ods a {
   background: #387947;
 }
 span.file_xls a:hover, span.file_xls a:focus, span.file_xlsx a:hover, span.file_xlsx a:focus, span.file_csv a:hover, span.file_csv a:focus, span.file_ods a:hover, span.file_ods a:focus {
-  background: #30683d;
+  background: rgb(47.9322033898, 103.5677966102, 60.7711864407);
 }
 span.file_ppt a, span.file_pptx a, span.file_odp a, span.file_pdf a {
   background: #c55a3b;
 }
 span.file_ppt a:hover, span.file_ppt a:focus, span.file_pptx a:hover, span.file_pptx a:focus, span.file_odp a:hover, span.file_odp a:focus, span.file_pdf a:hover, span.file_pdf a:focus {
-  background: #b25135;
+  background: rgb(177.8661417323, 80.7657480315, 52.6338582677);
 }
 span.file_pdf a {
   background: #c00;
 }
 span.file_pdf a:hover, span.file_pdf a:focus {
-  background: #b30000;
+  background: rgb(178.5, 0, 0);
 }
 span.file_zip a, span.file_rar a {
   background: #eb712e;
 }
 span.file_zip a:hover, span.file_zip a:focus, span.file_rar a:hover, span.file_rar a:focus {
-  background: #e96117;
+  background: rgb(232.7729257642, 97.1877729258, 22.7270742358);
 }
 span.file_txt a, span.file_other a {
   background: #555;
 }
 span.file_txt a:hover, span.file_txt a:focus, span.file_other a:hover, span.file_other a:focus {
-  background: #484848;
+  background: rgb(72.25, 72.25, 72.25);
 }
 span.file_mov a {
   background: #009999;
 }
 span.file_mov a:hover, span.file_mov a:focus {
-  background: teal;
+  background: rgb(0, 127.5, 127.5);
 }
 span.file_mp3 a, span.file_mp4 a {
   background: #088ecc;
 }
 span.file_mp3 a:hover, span.file_mp3 a:focus, span.file_mp4 a:hover, span.file_mp4 a:focus {
-  background: #077db3;
+  background: rgb(7.0377358491, 124.9198113208, 179.4622641509);
 }
 span.file_jpg a {
   background: #6c29a4;
 }
 span.file_jpg a:hover, span.file_jpg a:focus {
-  background: #5f2490;
+  background: rgb(94.5658536585, 35.9, 143.6);
 }
 span.file_wmv a {
   background: #430a1f;
 }
 span.file_wmv a:hover, span.file_wmv a:focus {
-  background: #2d0715;
+  background: rgb(44.8116883117, 6.6883116883, 20.7337662338);
 }
 
 .header {
@@ -6599,7 +6599,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   width: 150px;
 }
 .search .leftblock .form_grp input[type=text]:focus {
-  background-color: #fff3ce;
+  background-color: rgb(254.8063241107, 242.7984189723, 206.1936758893);
 }
 .search .leftblock .form_grp input {
   margin: 0 5px 0 0;
@@ -6889,7 +6889,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   min-height: 2.5em;
   font-weight: bold;
   line-height: 1.5em;
-  color: #3a9253;
+  color: rgb(58.2653631285, 146.2346368715, 83.3994413408);
   font-size: 1.25em;
   border-bottom: 2px solid #fff;
 }
@@ -6906,11 +6906,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   border-left: none;
 }
 .menu > ul > li:hover > a {
-  color: #42a45e;
-  border-bottom: 2px solid #42a45e;
+  color: rgb(65.530726257, 164.469273743, 93.7988826816);
+  border-bottom: 2px solid rgb(65.530726257, 164.469273743, 93.7988826816);
 }
 .menu > ul > li:hover > a:after {
-  border: #42a45e;
+  border: rgb(65.530726257, 164.469273743, 93.7988826816);
   border: 2px solid #338049;
   transform: rotate(135deg);
   border-bottom: none;
@@ -7171,7 +7171,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   border-top: none;
 }
 .sidebar .navigation ul li a:hover, .sidebar .navigation ul li a:focus {
-  background: #163537;
+  background: rgb(21.938547486, 53.3407821229, 55.061452514);
 }
 .sidebar .navigation .language {
   position: relative;
@@ -7220,7 +7220,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   margin: 1em auto;
 }
 .sidebar button.popular_btn:hover {
-  background: #163537;
+  background: rgb(21.938547486, 53.3407821229, 55.061452514);
   color: #fff;
 }
 .sidebar button.sidebarClose {
@@ -7601,7 +7601,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   border-top: none;
 }
 .sidebar .navigation ul li a:hover, .sidebar .navigation ul li a:focus {
-  background: #163537;
+  background: rgb(21.938547486, 53.3407821229, 55.061452514);
 }
 .sidebar .navigation .language {
   position: relative;
@@ -9304,8 +9304,8 @@ input[type=email]:focus,
 input[type=password]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #fed969;
-  box-shadow: 0px 0px 0px 2px #fed969;
+  border: 1px solid rgb(254.4031620553, 217.3992094862, 104.5968379447);
+  box-shadow: 0px 0px 0px 2px rgb(254.4031620553, 217.3992094862, 104.5968379447);
   outline: none;
 }
 
@@ -9393,22 +9393,22 @@ input[type=checkbox]:focus {
   border-radius: 4px;
 }
 .upload_grp .upload_btn:hover {
-  background: #cd9b01;
-  border: 1px solid #9a7401;
+  background: rgb(205.185770751, 154.7035573123, 0.814229249);
+  border: 1px solid rgb(154.3873517787, 116.4031620553, 0.6126482213);
   cursor: pointer;
   color: #FFF;
   outline: none;
 }
 .upload_grp .upload_btn:focus {
-  background: #cd9b01;
-  border: 1px solid #9a7401;
+  background: rgb(205.185770751, 154.7035573123, 0.814229249);
+  border: 1px solid rgb(154.3873517787, 116.4031620553, 0.6126482213);
   cursor: pointer;
   color: #FFF;
   outline: none;
   box-shadow: 0 0px 0px 2px #fec003 !important;
 }
 .upload_grp .upload_btn.active {
-  background: #fec61c;
+  background: rgb(254.1007905138, 198.3498023715, 28.3992094862);
   cursor: pointer;
 }
 .upload_grp .upload_btn:hover, .upload_grp .upload_btn:focus {
@@ -10045,7 +10045,7 @@ table.table_sprite tr:nth-child(even) {
   }
 }
 .tabs.themetab > .tabItem {
-  background-color: #80cc96;
+  background-color: rgb(127.7150837989, 204.2849162011, 149.5921787709);
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   color: #222;
@@ -10088,7 +10088,7 @@ table.table_sprite tr:nth-child(even) {
   }
 }
 .tabs.plantab > .tabItem {
-  background-color: #80cc96;
+  background-color: rgb(127.7150837989, 204.2849162011, 149.5921787709);
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
   color: #222;
@@ -14977,6 +14977,13 @@ h2.title {
 .accordion_grounp .accordionblock .answer .answer_list li a:hover {
   color: #337c80;
 }
+.accordion_grounp .accordionblock .answer .answer_list li p {
+  display: block;
+  padding: 0 0 0 15px;
+  margin: 0 0 8px;
+  line-height: 1.7em;
+  color: #333;
+}
 .accordion_grounp .accordionblock .answer .answer_list li:hover {
   background-color: white;
   text-decoration: none;
@@ -15019,7 +15026,7 @@ h2.title {
   transition: transform 0.5s;
 }
 .accordionqa .accordionblock button.Q:hover, .accordionqa .accordionblock button.Q:focus {
-  background-color: #a4d8db;
+  background-color: rgb(164.1843575419, 215.9776536313, 218.8156424581);
   box-shadow: none;
 }
 .accordionqa .accordionblock button.Q.turnicon:after {
@@ -15186,7 +15193,7 @@ h2.title {
 }
 .ask_questions .questions_block .close a {
   padding: 5px;
-  background-color: #b7420b;
+  background-color: rgb(182.897260274, 66.2671232877, 10.602739726);
   display: block;
   border-radius: 5px;
   width: 30px;
@@ -15274,7 +15281,7 @@ h2.title {
   top: 21px;
 }
 .annual_report_list ul li a:hover {
-  background-color: #24595c;
+  background-color: rgb(36.469273743, 88.6703910615, 91.530726257);
 }
 
 .epaperform {
