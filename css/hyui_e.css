@@ -13515,11 +13515,11 @@ h2.title {
 }
 
 .publish_info_top {
-  font-size: 0.938em;
+  font-size: 1rem;
   line-height: 1.5em !important;
   list-style: none;
   margin: 0 0 5px 0 !important;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 0em;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -13532,13 +13532,13 @@ h2.title {
 }
 .publish_info_top li:before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: #333;
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 8px;
 }
 
 .publish_info_down {
@@ -15879,6 +15879,52 @@ h2.title {
 }
 .main.large_size .accordionqa .accordionblock button.Q span {
   margin-left: -91px;
+}
+
+.listexplain {
+  margin-bottom: 2em;
+  padding: 0 0 0 0.2em;
+}
+.listexplain ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.listexplain ul li {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.listexplain ul li:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  top: 19px;
+}
+.listexplain ul li a {
+  display: block;
+  padding: 10px 10px 8px 15px;
+  text-decoration: underline;
+  color: #337c80;
+  line-height: 1.3;
+}
+.listexplain ul li a:hover {
+  background-color: white;
+  text-decoration: none;
+}
+.listexplain ul li p {
+  display: block;
+  padding: 0 0 0 15px;
+  margin: 0 0 8px;
+  line-height: 1.7em;
+  color: #333;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 @media print {

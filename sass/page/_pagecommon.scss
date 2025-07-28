@@ -1840,3 +1840,49 @@
     //
   }
 }
+
+.listexplain {
+  margin-bottom: 2em;
+  padding: 0 0 0 0.2em;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      font-size: 1.25em;
+      font-weight: bold;
+      &:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #333;
+        position: absolute;
+        left: 0;
+        top: 19px;
+      }
+      a {
+        display: block;
+        padding: 10px 10px 8px 15px;
+        text-decoration: underline;
+        color: $primaryColor;
+        line-height: 1.3;
+        &:hover {
+          background-color: lighten($primaryColor, 65);
+          text-decoration: none;
+        }
+      }
+      p {
+        display: block;
+        padding: 0 0 0 15px;
+        margin: 0 0 8px;
+        line-height: 1.7em;
+        color: #333;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+    }
+  }
+}
